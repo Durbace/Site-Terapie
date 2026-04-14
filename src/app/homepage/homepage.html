@@ -1,120 +1,32 @@
 <!-- TopNavBar -->
-<nav class="bg-surface/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50">
-    <div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6 max-w-7xl mx-auto">
-        <a class="text-lg sm:text-2xl font-serif tracking-tight text-primary dark:text-stone-100" href="#">
-            The Breath of Silence
-        </a>
-
-        <!-- Desktop Nav -->
-        <div class="hidden min-[1147px]:flex items-center gap-10">
-            <a class="text-primary font-semibold border-b-2 border-primary/30 pb-1 hover:scale-102 transition-transform duration-300"
-                href="#">
-                Acasă
-            </a>
-            <a class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300"
-                href="#about">
-                Despre Terapie
-            </a>
-            <a class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300"
-                href="#services">
-                Servicii
-            </a>
-            <a class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300"
-                href="#testimonials">
-                Testimoniale
-            </a>
-            <a class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300"
-                href="#contact">
-                Contact
-            </a>
-        </div>
-
-        <!-- Desktop CTA -->
-        <button
-            class="hidden min-[1147px]:inline-flex bg-primary text-on-primary px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:scale-102 active:scale-95 transition-all shadow-sm">
-            Programează-te
-        </button>
-
-        <!-- Mobile Hamburger -->
-        <button
-            type="button"
-            (click)="toggleMobileMenu()"
-            class="min-[1147px]:hidden bg-primary text-on-primary w-11 h-11 rounded-full flex items-center justify-center shadow-sm"
-            aria-label="Deschide meniul">
-            <span class="material-symbols-outlined">
-                {{ mobileMenuOpen ? 'close' : 'menu' }}
-            </span>
-        </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div *ngIf="mobileMenuOpen" class="min-[1147px]:hidden px-4 sm:px-6 pb-4 sm:pb-6 max-w-7xl mx-auto">
-        <div class="bg-surface-container-low rounded-2xl p-4 shadow-lg flex flex-col gap-2">
-            <a
-                (click)="closeMobileMenu()"
-                class="px-4 py-3 rounded-xl text-primary font-semibold bg-primary/10"
-                href="#">
-                Acasă
-            </a>
-            <a
-                (click)="closeMobileMenu()"
-                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors"
-                href="#about">
-                Despre Terapie
-            </a>
-            <a
-                (click)="closeMobileMenu()"
-                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors"
-                href="#services">
-                Servicii
-            </a>
-            <a
-                (click)="closeMobileMenu()"
-                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors"
-                href="#testimonials">
-                Testimoniale
-            </a>
-            <a
-                (click)="closeMobileMenu()"
-                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors"
-                href="#contact">
-                Contact
-            </a>
-
-            <button
-                (click)="closeMobileMenu()"
-                class="mt-2 bg-primary text-on-primary px-6 py-3 rounded-full text-sm font-medium shadow-sm">
-                Programează-te
-            </button>
-        </div>
-    </div>
-</nav>
+<app-navbar></app-navbar>
 
 <main class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
     <!-- Hero Section -->
-    <section class="relative min-h-auto lg:min-h-[921px] flex items-center overflow-hidden pt-8 sm:pt-12 pb-12 sm:pb-16">
-    <!-- Mobile hero background -->
-    <div class="absolute inset-0 lg:hidden">
-        <img
-            alt="Wellness Sanctuary"
-            class="w-full h-full object-cover"
-            src="assets/images/poza-hero.jpg" />
-        <div class="absolute inset-0 bg-black/45"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-black/55"></div>
-    </div>
+    <section
+        class="relative min-h-auto lg:min-h-[921px] flex items-center overflow-hidden pt-8 sm:pt-12 pb-12 sm:pb-16">
+        <!-- Mobile hero background -->
+        <div class="absolute inset-0 lg:hidden">
+            <img alt="Wellness Sanctuary" class="w-full h-full object-cover" src="assets/images/poza-hero.jpg" />
+            <div class="absolute inset-0 bg-black/45"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-black/55"></div>
+        </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div
+            class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             <div class="lg:col-span-6 z-10 order-1 lg:order-1 text-center lg:text-left py-10 sm:py-12 lg:py-0">
                 <span
                     class="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-white/15 lg:bg-primary-fixed text-white lg:text-on-primary-fixed-variant backdrop-blur-sm text-xs sm:text-sm font-semibold tracking-wide mb-6 sm:mb-8 uppercase border border-white/20 lg:border-0">
                     Sanctuarul tău de liniște
                 </span>
 
-                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif text-white lg:text-on-surface leading-tight mb-6 sm:mb-8 tracking-tight">
+                <h1
+                    class="text-4xl sm:text-5xl lg:text-7xl font-serif text-white lg:text-on-surface leading-tight mb-6 sm:mb-8 tracking-tight">
                     Recâștigă-ți <br /><span class="italic text-primary">echilibrul</span> și scapă de durere
                 </h1>
 
-                <p class="text-base sm:text-lg text-white/85 lg:text-on-surface-variant leading-relaxed mb-8 sm:mb-10 max-w-lg mx-auto lg:mx-0">
+                <p
+                    class="text-base sm:text-lg text-white/85 lg:text-on-surface-variant leading-relaxed mb-8 sm:mb-10 max-w-lg mx-auto lg:mx-0">
                     Terapie corporală specializată pentru eliberarea tensiunii musculare și relaxare profundă.
                     Recuperează-ți starea de bine într-un spațiu creat pentru vindecare.
                 </p>
@@ -133,9 +45,7 @@
 
             <div class="hidden lg:block lg:col-span-6 relative h-[700px] order-1 lg:order-2">
                 <div class="absolute inset-0 bg-primary-fixed/20 rounded-xl -rotate-2 scale-105"></div>
-                <img
-                    alt="Wellness Sanctuary"
-                    class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-2xl"
+                <img alt="Wellness Sanctuary" class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-2xl"
                     src="assets/images/poza-hero.jpg" />
             </div>
         </div>
@@ -161,7 +71,8 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-                <div class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg hover:translate-y-[-8px] transition-all duration-500">
                     <div class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-full mb-6 sm:mb-8">
                         <span class="material-symbols-outlined text-primary text-3xl">healing</span>
                     </div>
@@ -171,7 +82,8 @@
                     </p>
                 </div>
 
-                <div class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg hover:translate-y-[-8px] transition-all duration-500">
                     <div class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-full mb-6 sm:mb-8">
                         <span class="material-symbols-outlined text-primary text-3xl">self_improvement</span>
                     </div>
@@ -181,7 +93,8 @@
                     </p>
                 </div>
 
-                <div class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg hover:translate-y-[-8px] transition-all duration-500">
                     <div class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-full mb-6 sm:mb-8">
                         <span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
                     </div>
@@ -191,7 +104,8 @@
                     </p>
                 </div>
 
-                <div class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg hover:translate-y-[-8px] transition-all duration-500">
                     <div class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-full mb-6 sm:mb-8">
                         <span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
                     </div>
@@ -215,7 +129,8 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-stone-100 rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-stone-100 rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
                     <span class="material-symbols-outlined text-primary text-4xl mb-4">accessibility_new</span>
                     <h3 class="text-xl font-serif mb-2">Durere de spate</h3>
                     <p class="text-on-surface-variant text-sm">
@@ -223,15 +138,18 @@
                     </p>
                 </div>
 
-                <div class="bg-secondary-fixed rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
-                    <span class="material-symbols-outlined text-on-secondary-fixed text-4xl mb-4">health_and_beauty</span>
+                <div
+                    class="bg-secondary-fixed rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
+                    <span
+                        class="material-symbols-outlined text-on-secondary-fixed text-4xl mb-4">health_and_beauty</span>
                     <h3 class="text-xl font-serif mb-2">Tensiune la nivelul gâtului</h3>
                     <p class="text-on-secondary-fixed-variant text-sm">
                         Eliberăm tensiunea acumulată în zona cervicală.
                     </p>
                 </div>
 
-                <div class="bg-surface-container-high rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-surface-container-high rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
                     <span class="material-symbols-outlined text-primary text-4xl mb-4">weekend</span>
                     <h3 class="text-xl font-serif mb-2">Stres și oboseală</h3>
                     <p class="text-on-surface-variant text-sm">
@@ -239,7 +157,8 @@
                     </p>
                 </div>
 
-                <div class="bg-primary text-on-primary rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-primary text-on-primary rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
                     <span class="material-symbols-outlined text-on-primary text-4xl mb-4">straighten</span>
                     <h3 class="text-xl font-serif mb-2">Postură incorectă</h3>
                     <p class="text-on-primary/80 text-sm">
@@ -247,7 +166,8 @@
                     </p>
                 </div>
 
-                <div class="bg-tertiary-fixed rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-tertiary-fixed rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
                     <span class="material-symbols-outlined text-on-tertiary-fixed text-4xl mb-4">bolt</span>
                     <h3 class="text-xl font-serif mb-2">Rigiditate musculară</h3>
                     <p class="text-on-tertiary-fixed-variant text-sm">
@@ -255,7 +175,8 @@
                     </p>
                 </div>
 
-                <div class="bg-primary-fixed rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-primary-fixed rounded-lg p-6 sm:p-8 min-h-[180px] sm:min-h-[220px] flex flex-col justify-start hover:translate-y-[-8px] transition-all duration-500">
                     <span class="material-symbols-outlined text-primary text-4xl mb-4">bedtime</span>
                     <h3 class="text-xl font-serif mb-2">Somn agitat</h3>
                     <p class="text-on-surface-variant text-sm">
@@ -278,7 +199,8 @@
                 <div class="absolute top-1/2 left-0 w-full h-px bg-stone-800 hidden md:block"></div>
 
                 <div class="relative z-10 group">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 sm:mb-8 group-hover:scale-110 transition-transform">
+                    <div
+                        class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 sm:mb-8 group-hover:scale-110 transition-transform">
                         1
                     </div>
                     <h3 class="text-2xl font-serif mb-4">Discuție inițială</h3>
@@ -288,7 +210,8 @@
                 </div>
 
                 <div class="relative z-10 group">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 sm:mb-8 group-hover:scale-110 transition-transform">
+                    <div
+                        class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 sm:mb-8 group-hover:scale-110 transition-transform">
                         2
                     </div>
                     <h3 class="text-2xl font-serif mb-4">Sesiune personalizată</h3>
@@ -298,7 +221,8 @@
                 </div>
 
                 <div class="relative z-10 group">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 sm:mb-8 group-hover:scale-110 transition-transform">
+                    <div
+                        class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 sm:mb-8 group-hover:scale-110 transition-transform">
                         3
                     </div>
                     <h3 class="text-2xl font-serif mb-4">Plan de recuperare</h3>
@@ -315,7 +239,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between md:items-end mb-12 sm:mb-16 lg:mb-20 gap-6 sm:gap-8">
                 <div class="max-w-2xl">
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif mb-4 sm:mb-6">Alege terapia potrivită ție</h2>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif mb-4 sm:mb-6">Alege terapia potrivită ție
+                    </h2>
                     <p class="text-on-surface-variant">
                         Fiecare sesiune este o investiție în sănătatea și longevitatea corpului tău.
                     </p>
@@ -326,7 +251,8 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                <div class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/10 flex flex-col justify-between hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/10 flex flex-col justify-between hover:translate-y-[-8px] transition-all duration-500">
                     <div>
                         <h3 class="text-2xl font-serif mb-2">Sesiune Inițială</h3>
                         <p class="text-primary font-bold text-lg mb-6">Consultare + Terapie</p>
@@ -336,23 +262,28 @@
                         </p>
                         <ul class="space-y-4 mb-10">
                             <li class="flex items-center gap-3 text-sm">
-                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span> 90 minute
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span> 90
+                                minute
                             </li>
                             <li class="flex items-center gap-3 text-sm">
-                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span> Raport evaluare
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span> Raport
+                                evaluare
                             </li>
                         </ul>
                     </div>
-                    <button class="w-full py-4 rounded-full border border-primary text-primary font-bold hover:bg-primary hover:text-on-primary transition-all">
+                    <button
+                        class="w-full py-4 rounded-full border border-primary text-primary font-bold hover:bg-primary hover:text-on-primary transition-all">
                         Alege Sesiunea
                     </button>
                 </div>
 
-                <div class="bg-primary text-on-primary p-6 sm:p-8 lg:p-10 rounded-lg shadow-2xl lg:scale-105 z-10 flex flex-col justify-between hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-primary text-on-primary p-6 sm:p-8 lg:p-10 rounded-lg shadow-2xl lg:scale-105 z-10 flex flex-col justify-between hover:translate-y-[-8px] transition-all duration-500">
                     <div>
                         <div class="flex justify-between items-start mb-2 gap-3">
                             <h3 class="text-2xl font-serif">Terapie Țintită</h3>
-                            <span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-tighter shrink-0">
+                            <span
+                                class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-tighter shrink-0">
                                 Popular
                             </span>
                         </div>
@@ -372,12 +303,14 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="w-full py-4 rounded-full bg-on-primary text-primary font-bold hover:scale-102 transition-all">
+                    <button
+                        class="w-full py-4 rounded-full bg-on-primary text-primary font-bold hover:scale-102 transition-all">
                         Rezervă Acum
                     </button>
                 </div>
 
-                <div class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/10 flex flex-col justify-between hover:translate-y-[-8px] transition-all duration-500">
+                <div
+                    class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/10 flex flex-col justify-between hover:translate-y-[-8px] transition-all duration-500">
                     <div>
                         <h3 class="text-2xl font-serif mb-2">Full Body Wellness</h3>
                         <p class="text-primary font-bold text-lg mb-6">Relaxare și Recuperare</p>
@@ -387,7 +320,8 @@
                         </p>
                         <ul class="space-y-4 mb-10">
                             <li class="flex items-center gap-3 text-sm">
-                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span> 120 minute
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span> 120
+                                minute
                             </li>
                             <li class="flex items-center gap-3 text-sm">
                                 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
@@ -395,7 +329,8 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="w-full py-4 rounded-full border border-primary text-primary font-bold hover:bg-primary hover:text-on-primary transition-all">
+                    <button
+                        class="w-full py-4 rounded-full border border-primary text-primary font-bold hover:bg-primary hover:text-on-primary transition-all">
                         Alege Sesiunea
                     </button>
                 </div>
@@ -412,7 +347,8 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
                 <div class="bg-white p-6 sm:p-8 lg:p-12 rounded-lg shadow-sm relative italic">
-                    <span class="absolute top-6 sm:top-8 left-6 sm:left-8 text-5xl sm:text-6xl text-primary/10 font-serif">“</span>
+                    <span
+                        class="absolute top-6 sm:top-8 left-6 sm:left-8 text-5xl sm:text-6xl text-primary/10 font-serif">“</span>
                     <p class="text-base sm:text-lg text-on-surface leading-relaxed mb-8 relative z-10">
                         "Am venit cu o durere lombară care nu mă lăsa să dorm. După doar trei sesiuni, mă simt cu 10 ani
                         mai tânăr.
@@ -428,7 +364,8 @@
                 </div>
 
                 <div class="bg-white p-6 sm:p-8 lg:p-12 rounded-lg shadow-sm relative italic">
-                    <span class="absolute top-6 sm:top-8 left-6 sm:left-8 text-5xl sm:text-6xl text-primary/10 font-serif">“</span>
+                    <span
+                        class="absolute top-6 sm:top-8 left-6 sm:left-8 text-5xl sm:text-6xl text-primary/10 font-serif">“</span>
                     <p class="text-base sm:text-lg text-on-surface leading-relaxed mb-8 relative z-10">
                         "The Breath of Silence este singurul loc unde reușesc să mă deconectez total. Recomand oricui se
                         luptă cu stresul de la birou și tensiunea musculară."
@@ -448,7 +385,8 @@
     <!-- Final CTA -->
     <section class="py-16 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="hero-gradient rounded-xl p-8 sm:p-12 lg:p-16 text-center text-on-primary relative overflow-hidden">
+            <div
+                class="hero-gradient rounded-xl p-8 sm:p-12 lg:p-16 text-center text-on-primary relative overflow-hidden">
                 <div class="relative z-10">
                     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif mb-6 sm:mb-8 max-w-3xl mx-auto">
                         Începe călătoria ta spre o viață fără durere.
@@ -458,7 +396,8 @@
                     </p>
 
                     <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-                        <button class="w-full sm:w-auto bg-white text-primary px-8 sm:px-12 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:scale-105 transition-all">
+                        <button
+                            class="w-full sm:w-auto bg-white text-primary px-8 sm:px-12 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:scale-105 transition-all">
                             Fă o programare
                         </button>
                         <a class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-full border-2 border-white/30 hover:bg-white/10 transition-all font-bold"
@@ -513,18 +452,15 @@
                 </div>
             </div>
 
-            <div class="h-[320px] sm:h-[400px] lg:h-[500px] bg-surface-container rounded-lg overflow-hidden relative shadow-inner">
-                <iframe
-                    id="mapFrame"
-                    class="w-full h-full grayscale"
+            <div
+                class="h-[320px] sm:h-[400px] lg:h-[500px] bg-surface-container rounded-lg overflow-hidden relative shadow-inner">
+                <iframe id="mapFrame" class="w-full h-full grayscale"
                     src="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
 
                 <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <button
-                        type="button"
+                    <button type="button"
                         onclick="document.getElementById('mapFrame').src='https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed'"
                         class="bg-primary text-on-primary p-4 rounded-full animate-bounce shadow-lg pointer-events-auto hover:scale-110 transition-all"
                         aria-label="Centrează harta pe locație">
@@ -572,7 +508,8 @@
             <div class="flex flex-col sm:flex-row gap-2">
                 <input class="bg-white border-0 rounded-full px-4 py-3 text-sm w-full focus:ring-1 focus:ring-primary"
                     placeholder="Emailul tău" type="email" />
-                <button class="bg-primary text-on-primary w-full sm:w-10 h-11 sm:h-10 rounded-full flex items-center justify-center shrink-0">
+                <button
+                    class="bg-primary text-on-primary w-full sm:w-10 h-11 sm:h-10 rounded-full flex items-center justify-center shrink-0">
                     <span class="material-symbols-outlined">arrow_forward</span>
                 </button>
             </div>
@@ -580,7 +517,8 @@
     </div>
 
     <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-stone-200">
-        <p class="text-stone-500 text-sm tracking-wide text-center">© 2026 The Breath of Silence. Sanctuary for the Soul.</p>
+        <p class="text-stone-500 text-sm tracking-wide text-center">© 2026 The Breath of Silence. Sanctuary for the
+            Soul.</p>
     </div>
 </footer>
 
@@ -589,7 +527,8 @@
     <a class="bg-primary dark:bg-stone-800 text-white rounded-full p-3 sm:p-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center shadow-2xl shadow-primary/20 hover:scale-110 hover:rotate-3 transition-all animate-pulse group relative"
         href="https://wa.me/40700000000">
         <span class="material-symbols-outlined filled-icon">chat</span>
-        <div class="absolute right-16 sm:right-20 bg-primary text-white py-2 px-4 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block">
+        <div
+            class="absolute right-16 sm:right-20 bg-primary text-white py-2 px-4 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block">
             Contact Rapid pe WhatsApp
         </div>
     </a>

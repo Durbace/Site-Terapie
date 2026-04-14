@@ -1,16 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-
-import { NavbarComponent } from '../navbar/navbar';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-homepage',
-  imports: [CommonModule, NavbarComponent, RouterLink],
-  templateUrl: './homepage.html',
-  styleUrl: './homepage.css',
+  selector: 'app-navbar',
+  standalone: true,
+  imports: [CommonModule, RouterLink, RouterLinkActive],
+  templateUrl: './navbar.html',
+  styleUrl: './navbar.css',
 })
-export class Homepage {
+export class NavbarComponent {
   mobileMenuOpen = false;
 
   toggleMobileMenu() {
