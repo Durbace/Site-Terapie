@@ -1,133 +1,88 @@
-
 <nav class="bg-surface/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50">
-  <div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6 max-w-7xl mx-auto">
-    <a
-      class="text-lg sm:text-2xl font-serif tracking-tight text-primary dark:text-stone-100"
-      routerLink="/"
-      (click)="closeMobileMenu()"
-    >
-      The Breath of Silence
-    </a>
+    <div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6 max-w-7xl mx-auto">
+        <a class="text-lg sm:text-2xl font-serif tracking-tight text-primary dark:text-stone-100" routerLink="/"
+            (click)="closeMobileMenu()">
+            The Breath of Silence
+        </a>
 
-    <!-- Desktop Nav -->
-    <div class="hidden min-[1147px]:flex items-center gap-10">
-      <a
-        routerLink="/"
-        [routerLinkActiveOptions]="{ exact: true }"
-        routerLinkActive="text-primary font-semibold border-b-2 border-primary/30 pb-1"
-        class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300"
-      >
-        Acasă
-      </a>
+        <!-- Desktop Nav -->
+        <div class="hidden min-[1147px]:flex items-center gap-10">
+            <a routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="text-primary font-semibold border-b-2 border-primary/30 pb-1"
+                class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300">
+                Acasă
+            </a>
 
-      <a
-        [routerLink]="['/']"
-        fragment="about"
-        class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300"
-      >
-        Despre Terapie
-      </a>
+            <a routerLink="/despre-osteopatie"
+                routerLinkActive="text-primary font-semibold border-b-2 border-primary/30 pb-1"
+                class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300">
+                Despre Osteopatie
+            </a>
 
-      <a
-        routerLink="/servicii"
-        routerLinkActive="text-primary font-semibold border-b-2 border-primary/30 pb-1"
-        class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300"
-      >
-        Servicii
-      </a>
+            <a routerLink="/servicii" routerLinkActive="text-primary font-semibold border-b-2 border-primary/30 pb-1"
+                class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300">
+                Servicii
+            </a>
 
-      <a
-        routerLink="/blog"
-        routerLinkActive="text-primary font-semibold border-b-2 border-primary/30 pb-1"
-        class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300"
-      >
-        Blog
-      </a>
+            <a routerLink="/blog" routerLinkActive="text-primary font-semibold border-b-2 border-primary/30 pb-1"
+                class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300">
+                Blogs
+            </a>
 
-      <a
-        [routerLink]="['/']"
-        fragment="contact"
-        class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300"
-      >
-        Contact
-      </a>
+            <a [routerLink]="['/']" fragment="contact"
+                class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300">
+                Contact
+            </a>
+        </div>
+
+        <!-- Desktop CTA -->
+        <a [routerLink]="['/']" fragment="contact"
+            class="hidden min-[1147px]:inline-flex bg-primary text-on-primary px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:scale-102 active:scale-95 transition-all shadow-sm">
+            Programează-te
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button type="button" (click)="toggleMobileMenu()"
+            class="min-[1147px]:hidden bg-primary text-on-primary w-11 h-11 rounded-full flex items-center justify-center shadow-sm"
+            aria-label="Deschide meniul">
+            <span class="material-symbols-outlined">
+                {{ mobileMenuOpen ? 'close' : 'menu' }}
+            </span>
+        </button>
     </div>
 
-    <!-- Desktop CTA -->
-    <a
-      [routerLink]="['/']"
-      fragment="contact"
-      class="hidden min-[1147px]:inline-flex bg-primary text-on-primary px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:scale-102 active:scale-95 transition-all shadow-sm"
-    >
-      Programează-te
-    </a>
+    <!-- Mobile Menu -->
+    <div *ngIf="mobileMenuOpen" class="min-[1147px]:hidden px-4 sm:px-6 pb-4 sm:pb-6 max-w-7xl mx-auto">
+        <div class="bg-surface-container-low rounded-2xl p-4 shadow-lg flex flex-col gap-2">
+            <a routerLink="/" (click)="closeMobileMenu()"
+                class="px-4 py-3 rounded-xl text-primary font-semibold bg-primary/10">
+                Acasă
+            </a>
 
-    <!-- Mobile Hamburger -->
-    <button
-      type="button"
-      (click)="toggleMobileMenu()"
-      class="min-[1147px]:hidden bg-primary text-on-primary w-11 h-11 rounded-full flex items-center justify-center shadow-sm"
-      aria-label="Deschide meniul"
-    >
-      <span class="material-symbols-outlined">
-        {{ mobileMenuOpen ? 'close' : 'menu' }}
-      </span>
-    </button>
-  </div>
+            <a routerLink="/despre-osteopatie" (click)="closeMobileMenu()"
+                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors">
+                Despre Osteopatie
+            </a>
 
-  <!-- Mobile Menu -->
-  <div *ngIf="mobileMenuOpen" class="min-[1147px]:hidden px-4 sm:px-6 pb-4 sm:pb-6 max-w-7xl mx-auto">
-    <div class="bg-surface-container-low rounded-2xl p-4 shadow-lg flex flex-col gap-2">
-      <a
-        routerLink="/"
-        (click)="closeMobileMenu()"
-        class="px-4 py-3 rounded-xl text-primary font-semibold bg-primary/10"
-      >
-        Acasă
-      </a>
+            <a routerLink="/servicii" (click)="closeMobileMenu()"
+                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors">
+                Servicii
+            </a>
 
-      <a
-        [routerLink]="['/']"
-        fragment="about"
-        (click)="closeMobileMenu()"
-        class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors"
-      >
-        Despre Terapie
-      </a>
+            <a routerLink="/blog" (click)="closeMobileMenu()"
+                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors">
+                Blog
+            </a>
 
-      <a
-        routerLink="/servicii"
-        (click)="closeMobileMenu()"
-        class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors"
-      >
-        Servicii
-      </a>
+            <a [routerLink]="['/']" fragment="contact" (click)="closeMobileMenu()"
+                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors">
+                Contact
+            </a>
 
-      <a
-        routerLink="/blog"
-        (click)="closeMobileMenu()"
-        class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors"
-      >
-        Blog
-      </a>
-
-      <a
-        [routerLink]="['/']"
-        fragment="contact"
-        (click)="closeMobileMenu()"
-        class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors"
-      >
-        Contact
-      </a>
-
-      <a
-        [routerLink]="['/']"
-        fragment="contact"
-        (click)="closeMobileMenu()"
-        class="mt-2 bg-primary text-on-primary px-6 py-3 rounded-full text-sm font-medium shadow-sm text-center"
-      >
-        Programează-te
-      </a>
+            <a [routerLink]="['/']" fragment="contact" (click)="closeMobileMenu()"
+                class="mt-2 bg-primary text-on-primary px-6 py-3 rounded-full text-sm font-medium shadow-sm text-center">
+                Programează-te
+            </a>
+        </div>
     </div>
-  </div>
 </nav>
