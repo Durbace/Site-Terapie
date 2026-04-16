@@ -4,7 +4,7 @@
 <main class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
     <!-- Hero Section -->
     <section
-        class="relative min-h-auto lg:min-h-[921px] flex items-center overflow-hidden pt-8 sm:pt-12 pb-12 sm:pb-16">
+        class="relative min-h-auto lg:min-h-[921px] flex items-start overflow-hidden pt-6 sm:pt-8 lg:pt-10 pb-12 sm:pb-16">
         <!-- Mobile hero background -->
         <div class="absolute inset-0 lg:hidden">
             <img alt="Wellness Sanctuary" class="w-full h-full object-cover" src="assets/images/poza-hero.jpg" />
@@ -14,7 +14,7 @@
 
         <div
             class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            <div class="lg:col-span-6 z-10 order-1 lg:order-1 text-center lg:text-left py-10 sm:py-12 lg:py-0">
+            <div class="lg:col-span-6 z-10 order-1 lg:order-1 text-center lg:text-left py-4 sm:py-6 lg:py-0">
                 <span
                     class="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-white/15 lg:bg-primary-fixed text-white lg:text-on-primary-fixed-variant backdrop-blur-sm text-xs sm:text-sm font-semibold tracking-wide mb-6 sm:mb-8 uppercase border border-white/20 lg:border-0">
                     Sanctuarul tău de liniște
@@ -33,12 +33,12 @@
 
                 <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <a routerLink="/contact"
-                        class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary px-6 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-semibold hover:scale-102 transition-all shadow-xl shadow-primary/10">
+                        class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 transition-all shadow-xl shadow-primary/10">
                         Programează o Sesiune
                     </a>
 
                     <a routerLink="/despre-osteopatie"
-                        class="w-full sm:w-auto inline-flex items-center justify-center bg-white/15 lg:bg-surface-container-highest text-white lg:text-on-surface backdrop-blur-sm border border-white/20 lg:border-0 px-6 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-semibold hover:scale-102 transition-all">
+                        class="w-full sm:w-auto inline-flex items-center justify-center bg-white/15 lg:bg-surface-container-highest text-white lg:text-on-surface backdrop-blur-sm border border-white/20 lg:border-0 px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 transition-all">
                         Află mai multe
                     </a>
                 </div>
@@ -205,7 +205,7 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="mb-12 sm:mb-16 lg:mb-24">
+            <div class="mb-12 sm:mb-16 lg:mb-24 text-center md:text-left">
                 <h2 class="text-3xl sm:text-4xl font-serif mb-4">Călătoria ta spre bine</h2>
                 <p class="text-on-primary/70">Un proces simplu, transparent și dedicat ție.</p>
             </div>
@@ -213,7 +213,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 relative">
                 <div class="absolute top-1/2 left-0 w-full h-px bg-white/10 hidden md:block"></div>
 
-                <div class="relative z-10 group">
+                <div class="relative z-10 group flex flex-col items-center md:items-start text-center md:text-left">
                     <div
                         class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-2xl font-bold mb-6 sm:mb-8 group-hover:scale-110 transition-transform">
                         1
@@ -224,7 +224,7 @@
                     </p>
                 </div>
 
-                <div class="relative z-10 group">
+                <div class="relative z-10 group flex flex-col items-center md:items-start text-center md:text-left">
                     <div
                         class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-2xl font-bold mb-6 sm:mb-8 group-hover:scale-110 transition-transform">
                         2
@@ -235,7 +235,7 @@
                     </p>
                 </div>
 
-                <div class="relative z-10 group">
+                <div class="relative z-10 group flex flex-col items-center md:items-start text-center md:text-left">
                     <div
                         class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-2xl font-bold mb-6 sm:mb-8 group-hover:scale-110 transition-transform">
                         3
@@ -286,10 +286,6 @@
                             </li>
                         </ul>
                     </div>
-                    <button
-                        class="w-full py-4 rounded-full border border-primary text-primary font-bold hover:bg-primary hover:text-on-primary transition-all">
-                        Alege Sesiunea
-                    </button>
                 </div>
 
                 <div
@@ -318,10 +314,6 @@
                             </li>
                         </ul>
                     </div>
-                    <button
-                        class="w-full py-4 rounded-full bg-on-primary text-primary font-bold hover:scale-102 transition-all">
-                        Rezervă Acum
-                    </button>
                 </div>
 
                 <div
@@ -344,10 +336,6 @@
                             </li>
                         </ul>
                     </div>
-                    <button
-                        class="w-full py-4 rounded-full border border-primary text-primary font-bold hover:bg-primary hover:text-on-primary transition-all">
-                        Alege Sesiunea
-                    </button>
                 </div>
             </div>
         </div>
@@ -412,12 +400,13 @@
 
                     <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
                         <button
-                            class="w-full sm:w-auto bg-white text-primary px-8 sm:px-12 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:scale-105 transition-all">
+                            class="w-full sm:w-auto bg-white text-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-bold hover:scale-105 transition-all">
                             Fă o programare
                         </button>
-                        <a class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-full border-2 border-white/30 hover:bg-white/10 transition-all font-bold"
+
+                        <a class="w-full sm:w-auto flex items-center justify-center gap-2.5 px-5 sm:px-8 py-3.5 sm:py-4 rounded-full border-2 border-white/30 hover:bg-white/10 transition-all text-sm sm:text-base font-bold"
                             href="https://wa.me/40742638613">
-                            <span class="material-symbols-outlined">chat</span>
+                            <span class="material-symbols-outlined text-[20px]">chat</span>
                             WhatsApp
                         </a>
                     </div>

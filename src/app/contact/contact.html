@@ -1,8 +1,7 @@
 <app-navbar></app-navbar>
 
-<main class="bg-surface text-on-surface selection:bg-primary/20 pt-24">
-  <!-- Hero Section -->
-  <section class="relative min-h-[716px] flex items-center">
+<main class="bg-surface text-on-surface selection:bg-primary/20">
+  <section class="relative min-h-[870px] flex items-start overflow-hidden pt-4 sm:pt-6 lg:pt-8">
     <div class="absolute inset-0 z-0">
       <div class="w-full h-full bg-surface-container-low overflow-hidden">
         <img alt="Interior clinică" class="w-full h-full object-cover opacity-20 grayscale brightness-125"
@@ -188,78 +187,82 @@
   </section>
 
   <!-- Location Section -->
-<section class="py-20 sm:py-24">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="bg-surface-container-lowest rounded-[2rem] border border-outline-variant/10 shadow-xl overflow-hidden">
-      <div class="grid grid-cols-1 lg:grid-cols-2">
-        <!-- Left content -->
-        <div class="p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
-          <span
-            class="inline-flex w-fit px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">
-            Locație
-          </span>
+  <section class="py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="bg-surface-container-lowest rounded-[2rem] border border-outline-variant/10 shadow-xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <!-- Left content -->
+          <div class="p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
+            <span
+              class="inline-flex w-fit px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">
+              Locație
+            </span>
 
-          <h2 class="text-3xl sm:text-4xl font-serif mb-6">
-            Unde ne găsești
-          </h2>
+            <h2 class="text-3xl sm:text-4xl font-serif mb-6">
+              Unde ne găsești
+            </h2>
 
-          <p class="text-on-surface-variant text-lg leading-relaxed mb-8 max-w-xl">
-            Ne găsești pe Strada Brașovului Nr. 100, în Brașov, într-un spațiu liniștit și confortabil,
-            creat pentru relaxare, echilibru și recuperare.
-          </p>
+            <p class="text-on-surface-variant text-lg leading-relaxed mb-8 max-w-xl">
+              Ne găsești pe Strada Brașovului Nr. 100, în Brașov, într-un spațiu liniștit și confortabil,
+              creat pentru relaxare, echilibru și recuperare.
+            </p>
 
-          <div class="space-y-5 mb-8">
-            <div class="flex gap-4">
-              <span class="material-symbols-outlined text-primary text-2xl">location_on</span>
-              <div>
-                <h4 class="font-bold mb-1">Adresă</h4>
-                <p class="text-on-surface-variant">Strada Brașovului Nr. 100, Brașov</p>
+            <div class="space-y-5 mb-8">
+              <div class="flex gap-4">
+                <span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+                <div>
+                  <h4 class="font-bold mb-1">Adresă</h4>
+                  <p class="text-on-surface-variant">Strada Brașovului Nr. 100, Brașov</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+                <div>
+                  <h4 class="font-bold mb-1">Program</h4>
+                  <p class="text-on-surface-variant">Luni - Vineri: 10:00 - 20:00</p>
+                </div>
               </div>
             </div>
 
-            <div class="flex gap-4">
-              <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
-              <div>
-                <h4 class="font-bold mb-1">Program</h4>
-                <p class="text-on-surface-variant">Luni - Vineri: 10:00 - 20:00</p>
-              </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania" target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded-full font-bold hover:scale-102 transition-all shadow-lg shadow-primary/10">
+                <span class="material-symbols-outlined mr-2">directions</span>
+                Obține indicații
+              </a>
+
+              <a href="tel:+40742638613"
+                class="inline-flex items-center justify-center border border-primary/20 text-primary px-8 py-4 rounded-full font-bold hover:bg-primary hover:text-on-primary transition-all">
+                <span class="material-symbols-outlined mr-2">call</span>
+                Sună acum
+              </a>
             </div>
           </div>
 
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a
-              href="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded-full font-bold hover:scale-102 transition-all shadow-lg shadow-primary/10">
-              <span class="material-symbols-outlined mr-2">directions</span>
-              Obține indicații
-            </a>
+          <!-- Right map -->
+          <div
+            class="relative min-h-[320px] lg:min-h-full bg-surface-container rounded-r-[2rem] overflow-hidden shadow-inner">
+            <iframe id="contactMapFrame" class="absolute inset-0 w-full h-full grayscale"
+              src="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
 
-            <a
-              href="tel:+40742638613"
-              class="inline-flex items-center justify-center border border-primary/20 text-primary px-8 py-4 rounded-full font-bold hover:bg-primary hover:text-on-primary transition-all">
-              <span class="material-symbols-outlined mr-2">call</span>
-              Sună acum
-            </a>
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <button type="button"
+                onclick="document.getElementById('contactMapFrame').src='https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed'"
+                class="bg-primary text-on-primary p-4 rounded-full animate-bounce shadow-lg pointer-events-auto hover:scale-110 transition-all"
+                aria-label="Centrează harta pe locație">
+                <span class="material-symbols-outlined">location_on</span>
+              </button>
+            </div>
           </div>
-        </div>
-
-        <!-- Right map -->
-        <div class="relative min-h-[320px] lg:min-h-full bg-surface-container">
-          <iframe
-            class="absolute inset-0 w-full h-full"
-            src="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&z=16&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-
-          <div class="absolute inset-0 ring-1 ring-black/5 pointer-events-none"></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- FAQ -->
   <section class="py-24 sm:py-28 lg:py-32">
