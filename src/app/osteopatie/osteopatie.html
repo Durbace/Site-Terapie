@@ -2,31 +2,62 @@
 
 <main class="bg-surface text-on-surface selection:bg-primary/20 pt-2 sm:pt-3 lg:pt-4">
   <!-- Hero -->
-  <section class="relative min-h-[870px] flex items-start lg:items-center overflow-hidden pt-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center w-full">
-      <div class="z-10 order-2 lg:order-1">
-        <h1 class="text-4xl sm:text-5xl md:text-7xl font-serif text-primary mb-6 leading-tight">
-          Arta echilibrului prin osteopatie
+  <section
+    class="relative min-h-auto lg:min-h-[calc(100svh-90px)] flex items-start lg:items-center overflow-hidden pt-6 sm:pt-8 lg:pt-10 pb-8 sm:pb-10 lg:pb-6">
+
+    <!-- Mobile hero background -->
+    <div class="absolute inset-0 lg:hidden">
+      <img alt="Osteopatie" class="w-full h-full object-cover" src="assets/images/osteopatie-hero.png" />
+      <div class="absolute inset-0 bg-black/45"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-black/55"></div>
+    </div>
+
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+
+      <div class="lg:col-span-6 z-10 order-1 lg:order-1 text-center lg:text-left py-4 sm:py-6 lg:py-0">
+        <span appRevealOnScroll [delay]="100"
+          class="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-white/15 lg:bg-primary-fixed text-white lg:text-on-primary-fixed-variant backdrop-blur-sm text-xs sm:text-sm font-semibold tracking-wide mb-6 sm:mb-8 uppercase border border-white/20 lg:border-0">
+          Echilibru, mobilitate, armonie
+        </span>
+
+        <h1 appRevealOnScroll [delay]="200"
+          class="text-4xl sm:text-5xl lg:text-7xl font-serif text-white lg:text-primary leading-tight mb-6 sm:mb-8 tracking-tight">
+          Arta <span class="italic text-primary">echilibrului</span><br />
+          prin osteopatie
         </h1>
 
-        <p class="text-lg md:text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+        <p appRevealOnScroll [delay]="300"
+          class="text-base sm:text-lg text-white/85 lg:text-on-surface-variant leading-relaxed mb-8 sm:mb-10 max-w-lg mx-auto lg:mx-0">
           Descoperă o metodă terapeutică blândă care privește corpul ca pe un întreg, redând armonia
           naturală și vitalitatea de care ai nevoie.
         </p>
 
-        <button
-          class="bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 transition-all shadow-xl shadow-primary/10">
-          Programează o ședință
-        </button>
+        <div appRevealOnScroll [delay]="400" class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a routerLink="/contact"
+            class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 transition-all shadow-xl shadow-primary/10">
+            Programează o ședință
+          </a>
+
+          <a routerLink="/contact"
+            class="w-full sm:w-auto inline-flex items-center justify-center bg-white/15 lg:bg-surface-container-highest text-white lg:text-on-surface backdrop-blur-sm border border-white/20 lg:border-0 px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 transition-all">
+            Contactează-ne
+          </a>
+        </div>
       </div>
 
-      <div class="relative order-1 lg:order-2">
-        <div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container shadow-2xl">
-          <img class="w-full h-full object-cover grayscale-[20%] hover:scale-105 transition-transform duration-700"
-            alt="Spațiu calm de wellness"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBYE_NJ9PRnLNfT_GyXt_J9xfpln2V99uBwSxWipbvu7RRo-HpQtkyWVgwErYlrwjNt5wpNwjU4zi_rgCPjdCzGDNCWDgGWXXhxwobvkYToOQWnqDbnoDP2GFP5RtqykjyiQYtX3w7s04cw6f-fn_nF6C3805YQSyeE4D6H6zSLvvuFjbCYz0UpawZweYIEw9X3kQHDe8CdHy-Dkr2QUO93lBUVxPTv2GmCxBjzNWFe79lLsM3_7h9Oto45Gh5GbPXrd16hak9P2CX" />
+      <div appRevealOnScroll [delay]="250"
+        class="hidden lg:block lg:col-span-6 relative lg:h-[72svh] lg:max-h-[620px] lg:min-h-[520px] order-1 lg:order-2 group">
+        <div
+          class="absolute inset-0 bg-primary-fixed/20 rounded-xl -rotate-2 scale-105 transition-all duration-500 group-hover:scale-[1.07] group-hover:-translate-y-2">
         </div>
 
+        <div
+          class="absolute inset-0 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
+          <img alt="Ilustrație osteopatie"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            src="assets/images/osteopatie-hero.png" />
+        </div>
       </div>
     </div>
   </section>
@@ -35,21 +66,22 @@
   <section class="py-24 sm:py-28 lg:py-32 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
-        <span class="text-primary font-medium tracking-widest uppercase text-xs mb-4 block">
+        <span appRevealOnScroll [delay]="100"
+          class="text-primary font-medium tracking-widest uppercase text-xs mb-4 block">
           Esența Terapiei
         </span>
 
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif mb-8 text-on-surface">
+        <h2 appRevealOnScroll [delay]="200" class="text-3xl sm:text-4xl md:text-5xl font-serif mb-8 text-on-surface">
           Ce este osteopatia?
         </h2>
 
         <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
-          <p>
+          <p appRevealOnScroll [delay]="300">
             Osteopatia este o abordare terapeutică manuală, non-invazivă, care se concentrează pe sănătatea
             întregului corp prin manipularea și întărirea sistemului musculo-scheletic.
           </p>
 
-          <p>
+          <p appRevealOnScroll [delay]="400">
             Filozofia noastră se bazează pe capacitatea înnăscută a organismului de a se vindeca atunci când
             structurile sale sunt în echilibru. Prin tehnici blânde și precise, eliminăm blocajele care stau în
             calea mobilității tale.
@@ -62,33 +94,36 @@
   <!-- Cum te putem ajuta -->
   <section class="py-24 sm:py-28 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl font-serif text-center mb-16">
+      <h2 appRevealOnScroll [delay]="100" class="text-3xl md:text-4xl font-serif text-center mb-16">
         Cum te putem ajuta?
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div
+        <div appRevealOnScroll [delay]="150"
           class="md:col-span-2 bg-white p-10 rounded-lg flex flex-col justify-between hover:bg-surface-container-low transition-colors duration-500 min-h-[300px]">
           <div>
             <span class="material-symbols-outlined text-primary text-4xl mb-6">back_hand</span>
             <h3 class="text-2xl font-serif mb-4">Dureri de spate și coloană</h3>
-            <p class="text-on-surface-variant max-w-md">
+            <p appRevealOnScroll [delay]="180" class="text-on-surface-variant max-w-2xl">
               De la disconfortul lombar cronic la tensiuni acute, restabilim aliniamentul natural pentru o
               postură fără efort.
             </p>
           </div>
         </div>
 
-        <div
-          class="bg-secondary-container/20 p-10 rounded-lg flex flex-col justify-center hover:bg-secondary-container/30 transition-all">
-          <span class="material-symbols-outlined text-secondary text-4xl mb-4">relax</span>
+        <div appRevealOnScroll [delay]="220"
+          class="bg-surface-container-low p-10 rounded-lg border border-outline-variant/15 min-h-[300px] flex flex-col justify-center hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all group">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">
+            relax
+          </span>
           <h3 class="text-xl font-serif mb-2">Stres și oboseală</h3>
           <p class="text-sm text-on-surface-variant">
             Eliberarea tensiunii acumulate în sistemul nervos pentru o stare de calm profund.
           </p>
         </div>
 
-        <div class="bg-surface-container-low p-10 rounded-lg hover:bg-white transition-all group">
+        <div appRevealOnScroll [delay]="290"
+          class="bg-surface-container-low p-10 rounded-lg hover:bg-white transition-all group">
           <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">
             personal_injury
           </span>
@@ -98,7 +133,8 @@
           </p>
         </div>
 
-        <div class="bg-surface-container-low p-10 rounded-lg hover:bg-white transition-all group">
+        <div appRevealOnScroll [delay]="360"
+          class="bg-surface-container-low p-10 rounded-lg hover:bg-white transition-all group">
           <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">
             fitness_center
           </span>
@@ -108,7 +144,8 @@
           </p>
         </div>
 
-        <div class="bg-surface-container-low p-10 rounded-lg hover:bg-white transition-all group">
+        <div appRevealOnScroll [delay]="430"
+          class="bg-surface-container-low p-10 rounded-lg hover:bg-white transition-all group">
           <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">
             self_improvement
           </span>
@@ -130,12 +167,12 @@
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl sm:text-4xl font-serif mb-16 text-center">
+      <h2 appRevealOnScroll [delay]="100" class="text-3xl sm:text-4xl font-serif mb-16 text-center">
         Călătoria spre recuperare
       </h2>
 
       <div class="grid md:grid-cols-4 gap-12">
-        <div class="group flex flex-col items-center text-center space-y-4">
+        <div appRevealOnScroll [delay]="150" class="group flex flex-col items-center text-center space-y-4">
           <div
             class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-2xl font-bold group-hover:scale-110 transition-transform">
             01
@@ -146,7 +183,7 @@
           </p>
         </div>
 
-        <div class="group flex flex-col items-center text-center space-y-4">
+        <div appRevealOnScroll [delay]="230" class="group flex flex-col items-center text-center space-y-4">
           <div
             class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-2xl font-bold group-hover:scale-110 transition-transform">
             02
@@ -157,7 +194,7 @@
           </p>
         </div>
 
-        <div class="group flex flex-col items-center text-center space-y-4">
+        <div appRevealOnScroll [delay]="310" class="group flex flex-col items-center text-center space-y-4">
           <div
             class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-2xl font-bold group-hover:scale-110 transition-transform">
             03
@@ -168,7 +205,7 @@
           </p>
         </div>
 
-        <div class="group flex flex-col items-center text-center space-y-4">
+        <div appRevealOnScroll [delay]="390" class="group flex flex-col items-center text-center space-y-4">
           <div
             class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-2xl font-bold group-hover:scale-110 transition-transform">
             04
@@ -186,14 +223,14 @@
   <section class="py-24 sm:py-28 lg:py-32 bg-surface-container-lowest">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-20">
-        <h2 class="text-3xl sm:text-4xl font-serif mb-4">De ce Respirația Liniștii?</h2>
+        <h2 appRevealOnScroll [delay]="100" class="text-3xl sm:text-4xl font-serif mb-4">De ce Respirația Liniștii?</h2>
         <p class="text-on-surface-variant max-w-2xl">
           Alegem excelența în îngrijire, oferind un mediu unde știința medicală întâlnește liniștea interioară.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div
+        <div appRevealOnScroll [delay]="150"
           class="p-8 rounded-lg border border-outline-variant/15 hover:shadow-xl hover:shadow-primary/5 transition-all">
           <div class="w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center mb-6">
             <span class="material-symbols-outlined text-secondary">spa</span>
@@ -204,7 +241,7 @@
           </p>
         </div>
 
-        <div
+        <div appRevealOnScroll [delay]="230"
           class="p-8 rounded-lg border border-outline-variant/15 hover:shadow-xl hover:shadow-primary/5 transition-all">
           <div class="w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center mb-6">
             <span class="material-symbols-outlined text-secondary">person_search</span>
@@ -215,7 +252,7 @@
           </p>
         </div>
 
-        <div
+        <div appRevealOnScroll [delay]="310"
           class="p-8 rounded-lg border border-outline-variant/15 hover:shadow-xl hover:shadow-primary/5 transition-all">
           <div class="w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center mb-6">
             <span class="material-symbols-outlined text-secondary">directions_run</span>
@@ -226,7 +263,7 @@
           </p>
         </div>
 
-        <div
+        <div appRevealOnScroll [delay]="390"
           class="p-8 rounded-lg border border-outline-variant/15 hover:shadow-xl hover:shadow-primary/5 transition-all">
           <div class="w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center mb-6">
             <span class="material-symbols-outlined text-secondary">nights_stay</span>
@@ -244,29 +281,39 @@
   <section class="py-24 sm:py-28 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class="relative">
-          <img class="rounded-xl shadow-2xl grayscale-[10%]" alt="Terapeut lucrând într-un spațiu luminos"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzJYT06hMxjP_vMzy89wAyJGGcSumMbZXVbzInDDUSzMZfRerxlTAxw1hOiSaETK6Zk1djNw28LWANqTMk5OnQC9JqPW3x4yc7UtXplWW9hNJ_sOyeLNXSAAX21oMQLgTSiZIZBWr_omGJK9d_5ZSXolKgao_B__OTVhdqIyIOtl62x7kkR9oS6ZR41wwHRzEejF9xd9NNbycsK6CWX3e1V6RVu1_bK19Cm8meUqkRHxS7tYbhtWI5Cjgoe4TJZEV63YJdqtfXh1cS" />
+        <div appRevealOnScroll [delay]="150"
+          class="relative group h-[320px] sm:h-[420px] lg:h-[72svh] lg:max-h-[620px] lg:min-h-[520px]">
+          <div
+            class="absolute inset-0 bg-primary-fixed/20 rounded-xl -rotate-2 scale-105 transition-all duration-500 group-hover:scale-[1.07] group-hover:-translate-y-2">
+          </div>
+
+          <div
+            class="absolute inset-0 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
+            <img
+              class="w-full h-full object-cover grayscale-[10%] transition-transform duration-700 group-hover:scale-105"
+              alt="Ilustrație osteopatie" src="assets/images/osteopatie.png">
+          </div>
+
           <div class="absolute -top-6 -right-6 w-32 h-32 bg-primary-container/20 rounded-full -z-10"></div>
         </div>
 
         <div class="space-y-8">
-          <h2 class="text-3xl sm:text-4xl font-serif text-primary">
+          <h2 appRevealOnScroll [delay]="220" class="text-3xl sm:text-4xl font-serif text-primary">
             Îngrijire bazată pe profesionalism și calm
           </h2>
 
-          <p class="text-lg text-on-surface-variant leading-relaxed">
+          <p appRevealOnScroll [delay]="300" class="text-lg text-on-surface-variant leading-relaxed">
             Echipa noastră combină ani de studiu clinic cu o pasiune profundă pentru wellness. Credem că un
             mediu liniștit este esențial pentru succesul terapiei.
           </p>
 
-          <p class="text-lg text-on-surface-variant leading-relaxed">
+          <p appRevealOnScroll [delay]="380" class="text-lg text-on-surface-variant leading-relaxed">
             La Respirația Liniștii, nu tratăm doar simptome; ascultăm corpul tău pentru a găsi rădăcina
             problemei. Atmosfera caldă și expertiza noastră te vor ajuta să te simți în siguranță de la primul
             pas în clinica noastră.
           </p>
 
-          <div class="flex items-center space-x-4 pt-4">
+          <div appRevealOnScroll [delay]="460" class="flex items-center space-x-4 pt-4">
             <div class="w-12 h-[1px] bg-primary"></div>
             <span class="italic font-serif text-primary">
               Angajamentul nostru față de sănătatea ta.
