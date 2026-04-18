@@ -1,67 +1,53 @@
 <app-navbar></app-navbar>
 
 <main class="bg-surface text-on-surface selection:bg-primary/20">
-  <section class="relative min-h-[620px] sm:min-h-[720px] lg:min-h-[calc(100svh-90px)] flex items-start lg:items-center overflow-hidden pt-6 sm:pt-8 lg:pt-10 pb-10 sm:pb-12 lg:pb-8">
+  <section
+    class="relative min-h-[620px] sm:min-h-[720px] lg:min-h-[calc(100svh-90px)] flex items-start lg:items-center overflow-hidden pt-6 sm:pt-8 lg:pt-10 pb-10 sm:pb-12 lg:pb-8">
     <div class="absolute inset-0 z-0">
       <div class="w-full h-full bg-surface-container-low overflow-hidden">
-        <img
-          alt="Interior clinică"
-          class="w-full h-full object-cover opacity-20 grayscale brightness-125"
+        <img alt="Interior clinică" class="w-full h-full object-cover opacity-20 grayscale brightness-125"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRIlSpIlv-8J8rg18KndY5x6V6vyt9-z_N4hyUepktOvgp1wVNQKuUl6hBWobzed-V_3z-jrOqDjGGJNOOvEngi5BBOeeHJFcoAdV8UOMNAGfeb-akzyd6gYK8jdL4gK1Xvds1hM0bTgSoSqw09yjJRUk5pCF-rCVcAzMhXICYWg2xpyF2KaJWTYwgbxk3XtVAZpWfVlOneXN9Pq8p-GZXe4bKm0M4ovBd5ovQMnR5aTdoDIAST9HFb41_r1G76pVwLEGYJGIzrIDG" />
       </div>
       <div class="absolute inset-0 bg-gradient-to-b from-surface/90 via-surface/75 to-surface/90 lg:hidden"></div>
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 xl:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center w-full">
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 xl:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center w-full">
       <div class="space-y-6 sm:space-y-8 text-center xl:text-left">
-        <span
-          appRevealOnScroll
-          [delay]="100"
+        <span appRevealOnScroll [delay]="100"
           class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] sm:text-xs font-bold tracking-widest uppercase">
           Contact
         </span>
 
-        <h1
-          appRevealOnScroll
-          [delay]="180"
+        <h1 appRevealOnScroll [delay]="180"
           class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif tracking-tight leading-tight text-on-surface">
           Suntem aici <br /><span class="italic text-primary/80">pentru tine</span>
         </h1>
 
-        <p
-          appRevealOnScroll
-          [delay]="260"
+        <p appRevealOnScroll [delay]="260"
           class="text-base sm:text-lg text-on-surface-variant max-w-md sm:max-w-xl mx-auto xl:mx-0 font-light leading-relaxed">
           Un spațiu dedicat echilibrului tău interior. Contactează-ne pentru a găsi împreună calea către starea ta de
           bine.
         </p>
 
         <div appRevealOnScroll [delay]="340" class="pt-2 sm:pt-4">
-          <a
-            routerLink="/contact"
-            class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary px-8 sm:px-10 py-4 sm:py-5 rounded-full hover:scale-102 active:scale-95 transition-transform duration-300 font-bold text-sm sm:text-base lg:text-lg hero-gradient shadow-xl shadow-primary/20">
+          <a routerLink="/contact"
+            class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
             Programează-te acum
           </a>
         </div>
       </div>
 
-      <div
-        appRevealOnScroll
-        [delay]="220"
-        class="hidden xl:block relative h-[560px] 2xl:h-[620px]">
+      <div appRevealOnScroll [delay]="220" class="hidden xl:block relative h-[560px] 2xl:h-[620px]">
         <div
           class="absolute right-0 top-0 w-4/5 h-[460px] 2xl:h-[500px] bg-surface-container rounded-lg overflow-hidden transform translate-x-8 translate-y-10">
-          <img
-            alt="Cabinet terapie"
-            class="w-full h-full object-cover"
+          <img alt="Cabinet terapie" class="w-full h-full object-cover"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnbus3dDAwiJ3wyh1rQNPZMcrNTAVJz4ew4y56WfoXin4xJY5OA8-vxCWZolNnTV9d8ZsNBvCCsj29kl4l1j3qqCleJ_Zi36rk5vk-TUOoMLBCghecY8qHaPnmkoemTDD_PTXcVkRTErHs5aYKRSeFlgEt2FbLxQZoSM-tPrcH09jcjdThViAWOYl1iBxjn2dk_TKST5oKEzziWdt_2Rf2XqiZgy4f3UDg6c5r580WdG77-3wUlOH6zt_bXfkqwzqHEmNR9LXT4Zqm" />
         </div>
 
         <div
           class="absolute left-0 bottom-0 w-2/3 h-[360px] 2xl:h-[400px] border-[12px] border-surface-bright rounded-lg overflow-hidden shadow-2xl">
-          <img
-            alt="Tratament osteopatic"
-            class="w-full h-full object-cover"
+          <img alt="Tratament osteopatic" class="w-full h-full object-cover"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJW9gxmsxJZCzhl3Ycsmkvu3HH7PKnuVIE36Y5uP5tBJN0cbAoGQCuy4rJqoUDKmzOvRqPfc2l2Y27GZgYJqv1IpDvBALjEF0-FDEqgKEqlmcfoBOS-6a4kfHZf83Gj2uRkEOjpOThRvymvh_oOXATCLuwmJivxQfUVZ4FK4FmTkFkfiFpQwSWclR_DI66RQV5Bo_wmBmSkGDHpkWhiIgjbK9MSgfXab4ahSKO6UdvxNfTwyUEXM0T2RvLBboQPBcVHTN-7luD6GMz" />
         </div>
       </div>
@@ -71,9 +57,7 @@
   <section class="py-16 sm:py-20 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-        <div
-          appRevealOnScroll
-          [delay]="100"
+        <div appRevealOnScroll [delay]="100"
           class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg shadow-sm border border-outline-variant/10 hover:border-primary/20 transition-all group">
           <div
             class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
@@ -83,30 +67,25 @@
           <p class="text-on-surface-variant font-light text-sm sm:text-base">Strada Brașovului Nr. 100, Brașov</p>
         </div>
 
-        <div
-          appRevealOnScroll
-          [delay]="180"
+        <div appRevealOnScroll [delay]="180"
           class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5 sm:mb-6">
+            <div
+              class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5 sm:mb-6">
               <span class="material-symbols-outlined">call</span>
             </div>
             <h3 class="text-lg font-bold mb-2">Telefon &amp; WhatsApp</h3>
             <p class="text-on-surface-variant font-light mb-4 text-sm sm:text-base">+40 742 638 613</p>
           </div>
-          <a
-            class="text-primary font-bold flex items-center group text-sm sm:text-base"
-            href="https://wa.me/40742638613"
-            target="_blank"
-            rel="noopener noreferrer">
+          <a class="text-primary font-bold flex items-center group text-sm sm:text-base"
+            href="https://wa.me/40742638613" target="_blank" rel="noopener noreferrer">
             Trimite mesaj
-            <span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">arrow_forward</span>
+            <span
+              class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">arrow_forward</span>
           </a>
         </div>
 
-        <div
-          appRevealOnScroll
-          [delay]="260"
+        <div appRevealOnScroll [delay]="260"
           class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg shadow-sm border border-outline-variant/10">
           <div class="w-12 h-12 bg-primary/5 text-primary rounded-full flex items-center justify-center mb-5 sm:mb-6">
             <span class="material-symbols-outlined">mail</span>
@@ -115,9 +94,7 @@
           <p class="text-on-surface-variant font-light text-sm sm:text-base break-words">contact@breathofsilence.ro</p>
         </div>
 
-        <div
-          appRevealOnScroll
-          [delay]="340"
+        <div appRevealOnScroll [delay]="340"
           class="bg-primary text-on-primary p-6 sm:p-8 lg:p-10 rounded-lg hero-gradient">
           <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-5 sm:mb-6">
             <span class="material-symbols-outlined">schedule</span>
@@ -133,18 +110,15 @@
   </section>
 
   <section class="bg-surface-container-low py-16 sm:py-20 lg:py-28 overflow-hidden relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 xl:grid-cols-12 gap-12 sm:gap-14 lg:gap-16 items-start">
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 xl:grid-cols-12 gap-12 sm:gap-14 lg:gap-16 items-start">
       <div class="xl:col-span-5 space-y-8 sm:space-y-10 lg:space-y-12">
         <div>
-          <h2
-            appRevealOnScroll
-            [delay]="100"
+          <h2 appRevealOnScroll [delay]="100"
             class="text-2xl sm:text-3xl lg:text-4xl font-serif mb-6 sm:mb-8 leading-tight">
             Cum poți face o programare?
           </h2>
-          <p
-            appRevealOnScroll
-            [delay]="180"
+          <p appRevealOnScroll [delay]="180"
             class="text-on-surface-variant font-light leading-relaxed text-base sm:text-lg">
             Prețuim timpul și liniștea ta. Procesul nostru de rezervare este creat pentru a fi cât mai simplu și empatic
             posibil.
@@ -175,34 +149,29 @@
           </div>
         </div>
 
-        <div
-          appRevealOnScroll
-          [delay]="420"
+        <div appRevealOnScroll [delay]="420"
           class="p-6 sm:p-8 bg-surface-container-lowest rounded-lg border border-outline-variant/20 italic text-on-surface-variant font-light text-sm sm:text-base">
           "Sănătatea nu este doar absența bolii, ci o stare de armonie deplină între minte, corp și suflet."
         </div>
       </div>
 
-      <div
-        appRevealOnScroll
-        [delay]="180"
+      <div appRevealOnScroll [delay]="180"
         class="xl:col-span-7 bg-surface-container-lowest p-6 sm:p-8 lg:p-10 xl:p-12 rounded-xl shadow-2xl shadow-primary/5">
         <form class="space-y-6 sm:space-y-8">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <div class="space-y-2">
-              <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Nume Complet</label>
+              <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Nume
+                Complet</label>
               <input
                 class="w-full bg-surface-variant/30 border-none rounded-lg px-5 sm:px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none"
-                placeholder="Ex: Maria Popescu"
-                type="text" />
+                placeholder="Ex: Maria Popescu" type="text" />
             </div>
 
             <div class="space-y-2">
               <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Telefon</label>
               <input
                 class="w-full bg-surface-variant/30 border-none rounded-lg px-5 sm:px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none"
-                placeholder="07xx xxx xxx"
-                type="tel" />
+                placeholder="07xx xxx xxx" type="tel" />
             </div>
           </div>
 
@@ -210,20 +179,18 @@
             <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Email</label>
             <input
               class="w-full bg-surface-variant/30 border-none rounded-lg px-5 sm:px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none"
-              placeholder="nume@exemplu.ro"
-              type="email" />
+              placeholder="nume@exemplu.ro" type="email" />
           </div>
 
           <div class="space-y-2">
             <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Mesajul tău</label>
             <textarea
               class="w-full bg-surface-variant/30 border-none rounded-lg px-5 sm:px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none"
-              placeholder="Cum te putem ajuta?"
-              rows="4"></textarea>
+              placeholder="Cum te putem ajuta?" rows="4"></textarea>
           </div>
 
           <button
-            class="w-full bg-primary text-on-primary py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:scale-101 active:scale-95 transition-transform hero-gradient shadow-lg">
+            class="w-full inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
             Trimite mesajul
           </button>
         </form>
@@ -233,9 +200,7 @@
 
   <section class="py-16 sm:py-20 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div
-        appRevealOnScroll
-        [delay]="120"
+      <div appRevealOnScroll [delay]="120"
         class="bg-surface-container-lowest rounded-[1.5rem] sm:rounded-[2rem] border border-outline-variant/10 shadow-xl overflow-hidden">
         <div class="grid grid-cols-1 lg:grid-cols-2">
           <div class="p-6 sm:p-8 lg:p-12 xl:p-14 flex flex-col justify-center">
@@ -272,36 +237,30 @@
             </div>
 
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a
-                href="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania"
-                target="_blank"
+              <a href="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania" target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center justify-center bg-primary text-on-primary px-6 sm:px-8 py-4 rounded-full font-bold hover:scale-102 active:scale-95 transition-all shadow-lg shadow-primary/10">
+                class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
                 <span class="material-symbols-outlined mr-2">directions</span>
                 Obține indicații
               </a>
 
-              <a
-                href="tel:+40742638613"
-                class="inline-flex items-center justify-center border border-primary/20 text-primary px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-primary hover:text-on-primary transition-all">
+              <a href="tel:+40742638613"
+                class="w-full sm:w-auto inline-flex items-center justify-center border border-primary/20 text-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-primary hover:text-on-primary transition-all">
                 <span class="material-symbols-outlined mr-2">call</span>
                 Sună acum
               </a>
             </div>
           </div>
 
-          <div class="relative min-h-[320px] sm:min-h-[380px] lg:min-h-full bg-surface-container overflow-hidden shadow-inner">
-            <iframe
-              id="contactMapFrame"
-              class="absolute inset-0 w-full h-full grayscale"
-              src="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed"
-              loading="lazy"
+          <div
+            class="relative min-h-[320px] sm:min-h-[380px] lg:min-h-full bg-surface-container overflow-hidden shadow-inner">
+            <iframe id="contactMapFrame" class="absolute inset-0 w-full h-full grayscale"
+              src="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
 
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <button
-                type="button"
+              <button type="button"
                 onclick="document.getElementById('contactMapFrame').src='https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed'"
                 class="bg-primary text-on-primary p-4 rounded-full animate-bounce shadow-lg pointer-events-auto hover:scale-110 transition-all"
                 aria-label="Centrează harta pe locație">
@@ -317,10 +276,7 @@
   <section class="py-16 sm:py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 sm:mb-16 lg:mb-20">
-        <h2
-          appRevealOnScroll
-          [delay]="100"
-          class="text-2xl sm:text-3xl lg:text-4xl font-serif mb-4">
+        <h2 appRevealOnScroll [delay]="100" class="text-2xl sm:text-3xl lg:text-4xl font-serif mb-4">
           Întrebări frecvente
         </h2>
         <div appRevealOnScroll [delay]="180" class="w-20 h-1 bg-tertiary-fixed-dim mx-auto rounded-full"></div>
@@ -366,7 +322,8 @@
             Pot lua legătura pe WhatsApp?
           </h4>
           <p class="text-on-surface-variant font-light pl-5 text-sm sm:text-base">
-            Desigur! Este metoda noastră preferată de comunicare pentru a gestiona programările în mod eficient și discret.
+            Desigur! Este metoda noastră preferată de comunicare pentru a gestiona programările în mod eficient și
+            discret.
           </p>
         </div>
       </div>
@@ -375,9 +332,7 @@
 
   <section class="py-16 sm:py-20 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div
-        appRevealOnScroll
-        [delay]="120"
+      <div appRevealOnScroll [delay]="120"
         class="bg-primary text-on-primary rounded-xl p-8 sm:p-12 lg:p-16 hero-gradient relative overflow-hidden text-center">
         <div class="relative z-10 space-y-6 sm:space-y-8">
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif">Începe călătoria către echilibru</h2>
@@ -386,18 +341,14 @@
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-2 sm:pt-4">
-            <a
-              href="tel:+40742638613"
-              class="bg-surface-container-lowest text-primary px-8 sm:px-12 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:scale-105 active:scale-95 transition-transform flex items-center justify-center">
+            <a href="tel:+40742638613"
+              class="w-full sm:w-auto inline-flex items-center justify-center bg-surface-container-lowest text-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all">
               <span class="material-symbols-outlined mr-2">phone_in_talk</span>
               Sună acum
             </a>
 
-            <a
-              href="https://wa.me/40742638613"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="bg-secondary-container text-on-secondary-container px-8 sm:px-12 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:scale-105 active:scale-95 transition-transform flex items-center justify-center">
+            <a href="https://wa.me/40742638613" target="_blank" rel="noopener noreferrer"
+              class="w-full sm:w-auto inline-flex items-center justify-center bg-secondary-container text-on-secondary-container px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all">
               <span class="material-symbols-outlined mr-2">chat</span>
               Scrie-ne pe WhatsApp
             </a>

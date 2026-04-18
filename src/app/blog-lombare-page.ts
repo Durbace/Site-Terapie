@@ -25,7 +25,7 @@ export class BlogLombarePageComponent {
     authorImage: 'assets/images/blog/author-placeholder.jpg',
     publishedAt: '18 Aprilie 2026',
 
-    heroImage: 'assets/images/home.png',
+    heroImage: 'assets/images/home.webp',
     heroImageAlt: 'Pietre echilibrate, simbol al recuperării blânde',
 
     learnings: [
