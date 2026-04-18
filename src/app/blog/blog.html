@@ -26,29 +26,27 @@
 
   <!-- Categories Section -->
   <section class="px-4 sm:px-6 lg:px-8 pb-12">
-    <div class="max-w-7xl mx-auto flex flex-wrap gap-4 items-center border-y border-[#c6c7bd]/30 py-8">
-      <span class="text-sm font-bold text-[#565f45] mr-4">Categorii:</span>
+  <div class="max-w-7xl mx-auto flex flex-wrap gap-4 items-center border-y border-[#c6c7bd]/30 py-8">
+    <span class="text-sm font-bold text-[#565f45] mr-4">Categorii:</span>
 
-      <button class="px-6 py-2 rounded-full bg-[#f3e0c4] text-[#70624d] text-sm font-medium hover:scale-105 transition-all">
-        Toate
-      </button>
-      <button class="px-6 py-2 rounded-full bg-[#f5f3ef] text-[#6a5c47] text-sm font-medium hover:bg-[#f3e0c4] hover:text-[#70624d] transition-all">
-        Postură
-      </button>
-      <button class="px-6 py-2 rounded-full bg-[#f5f3ef] text-[#6a5c47] text-sm font-medium hover:bg-[#f3e0c4] hover:text-[#70624d] transition-all">
-        Relaxare
-      </button>
-      <button class="px-6 py-2 rounded-full bg-[#f5f3ef] text-[#6a5c47] text-sm font-medium hover:bg-[#f3e0c4] hover:text-[#70624d] transition-all">
-        Recuperare
-      </button>
-      <button class="px-6 py-2 rounded-full bg-[#f5f3ef] text-[#6a5c47] text-sm font-medium hover:bg-[#f3e0c4] hover:text-[#70624d] transition-all">
-        Stil de viață
-      </button>
-    </div>
-  </section>
+    <button
+      *ngFor="let category of categories"
+      type="button"
+      (click)="setCategory(category)"
+      [ngClass]="
+        activeCategory === category
+          ? 'bg-[#f3e0c4] text-[#70624d]'
+          : 'bg-[#f5f3ef] text-[#6a5c47] hover:bg-[#f3e0c4] hover:text-[#70624d]'
+      "
+      class="px-6 py-2 rounded-full text-sm font-medium hover:scale-105 transition-all"
+    >
+      {{ category }}
+    </button>
+  </div>
+</section>
 
   <!-- Featured Article -->
-  <section class="px-4 sm:px-6 lg:px-8 pb-24">
+  <section *ngIf="showFeaturedArticle" class="px-4 sm:px-6 lg:px-8 pb-24">
     <div class="max-w-7xl mx-auto">
       <div class="group relative grid grid-cols-1 md:grid-cols-12 items-center gap-0 overflow-hidden rounded-[2rem] bg-[#f5f3ef] shadow-sm">
         <div class="md:col-span-7 h-[320px] sm:h-[420px] md:h-[500px] overflow-hidden">
@@ -92,168 +90,38 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-        <!-- Article 1 -->
-        <article class="flex flex-col">
-          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-[#eae8e4] shadow-sm">
-            <img
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiLcIL2qOM7kuFacKhRaQ-edmIzBJb9Bmc8oolt8KLpYT4AYMcHtiVJmi4nczQ4two2gbsHWW4kmZPuoSKWDjpBUd5u-6qCmZRQgsSAsGqQXIWcsFPa0ec-kG6NLqQE_RsKxtGXNHtEob7bbhu4oNUkrSXa18hDN6TSUZouG1-rqgDOwlO5jE2MPSrb9U5YHYNITdN-iOGPdun_JtJFHug8sP4HohNAePomW-UZ9F7Q0xH5ZGwzg44hTe3tBxcrVHRguhyHe0eFfp-"
-              alt="Recuperare"
-            />
-          </div>
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold uppercase tracking-widest text-[#565f45] shadow-sm">
-              Recuperare
-            </span>
-            <span class="text-xs text-[#6a5c47]/50 font-medium italic">5 min lectură</span>
-          </div>
-          <h4 class="text-2xl font-serif text-[#565f45] mb-4 leading-snug">
-            Abordări blânde pentru durerile lombare cronice
-          </h4>
-          <p class="text-[#6a5c47] text-sm leading-relaxed mb-6">
-            De ce forțarea recuperării poate încetini procesul de vindecare și cum să asculți semnalele corpului.
-          </p>
-          <a class="mt-auto text-[#565f45] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group" href="#">
-            Detalii
-            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
-          </a>
-        </article>
+  <article *ngFor="let article of filteredArticles" class="flex flex-col">
+    <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-[#eae8e4] shadow-sm">
+      <img
+        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+        [src]="article.image"
+        [alt]="article.alt"
+      />
+    </div>
 
-        <!-- Article 2 -->
-        <article class="flex flex-col">
-          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-[#eae8e4] shadow-sm">
-            <img
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnNne6vdWHMWEGaKVcQBK3r2WCAIBEWYEL-lnLCKDMZUuAMXS2deDxn2qVK-FgbxZmXzvzySVyj6FVYZgko5eJVg4HWyol-BDR7wzAZP-Oyj1OePu-cC2RiESJr3riF9OfYL40467CbGwe8iMHAuAJwA2V0y7aMHonx-9BLaR7y4rI0nSg90EYDm4aTaCKVTfN__-ILgj5uLgxlKSey862g1rO3-hQxdQNLFfYzgFN1XyvbwxBhZejimBwYryRW4nmj8pETjusM9Pf"
-              alt="Postură"
-            />
-          </div>
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold uppercase tracking-widest text-[#565f45] shadow-sm">
-              Postură
-            </span>
-            <span class="text-xs text-[#6a5c47]/50 font-medium italic">4 min lectură</span>
-          </div>
-          <h4 class="text-2xl font-serif text-[#565f45] mb-4 leading-snug">
-            Importanța ergonomiei în lucrul de acasă
-          </h4>
-          <p class="text-[#6a5c47] text-sm leading-relaxed mb-6">
-            Mici ajustări ale scaunului și monitorului care pot salva sănătatea coloanei tale vertebrale pe termen lung.
-          </p>
-          <a class="mt-auto text-[#565f45] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group" href="#">
-            Detalii
-            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
-          </a>
-        </article>
+    <div class="flex items-center gap-3 mb-4">
+      <span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold uppercase tracking-widest text-[#565f45] shadow-sm">
+        {{ article.category }}
+      </span>
+      <span class="text-xs text-[#6a5c47]/50 font-medium italic">{{ article.readTime }}</span>
+    </div>
 
-        <!-- Article 3 -->
-        <article class="flex flex-col">
-          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-[#eae8e4] shadow-sm">
-            <img
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCawG4m9jN-f202XiVw8v51qxDbasG27ho0IamY-uudGkDkMcZyERgyxDm4kGN6x9c16mrsMCepflsvgJZpcQAL6uJoX6D3cKJDrpFZtUs3Xg01VJfRHU1BXFXisi0T1FdCUseEL2lc7ZkbO-6s4jiiESAbn6ISrjOAyR21GBN_dLD3DiFR69-ygTi70TxIPTvH2HrcKz-56nEio-erD-Fz5kvDuBLqt683-0aXpajTcX72mV7wknk1ai8yW-F8ocRvVsbh3_0W8cOW"
-              alt="Relaxare"
-            />
-          </div>
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold uppercase tracking-widest text-[#565f45] shadow-sm">
-              Relaxare
-            </span>
-            <span class="text-xs text-[#6a5c47]/50 font-medium italic">7 min lectură</span>
-          </div>
-          <h4 class="text-2xl font-serif text-[#565f45] mb-4 leading-snug">
-            Ritualuri de seară pentru un somn cu adevărat reparator
-          </h4>
-          <p class="text-[#6a5c47] text-sm leading-relaxed mb-6">
-            Cum să pregătești sistemul nervos pentru odihnă profundă folosind tehnici de respirație conștientă.
-          </p>
-          <a class="mt-auto text-[#565f45] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group" href="#">
-            Detalii
-            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
-          </a>
-        </article>
+    <h4 class="text-2xl font-serif text-[#565f45] mb-4 leading-snug">
+      {{ article.title }}
+    </h4>
 
-        <!-- Article 4 -->
-        <article class="flex flex-col">
-          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-[#eae8e4] shadow-sm">
-            <img
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIHuDopi4kw2ZUwEjrUkcxvRXpaVZupW4ItWfJUfF97ZAbSMc3Idxk4NjzrRsdDNuz60NgsWMZBNnsEIZcyJ4pCWfjLhfj1xMP1cOUYJAZQXbM1p5cFsPiDEpHlBb7FSaGFjshnYZrSArEla4p6yshxJLWh0VXnUippCUzami3BJWPlUNbbIp8G9Gsf9etdKcskanzYVyLE3QysJmXFEqBa7_FdWYM8D8XX6YTRX-JbgGJLKZ6RcfgwLcC1U6G-NGatAEboi7IZX8u"
-              alt="Stres"
-            />
-          </div>
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold uppercase tracking-widest text-[#565f45] shadow-sm">
-              Stres
-            </span>
-            <span class="text-xs text-[#6a5c47]/50 font-medium italic">6 min lectură</span>
-          </div>
-          <h4 class="text-2xl font-serif text-[#565f45] mb-4 leading-snug">
-            Impactul stresului asupra fasciilor musculare
-          </h4>
-          <p class="text-[#6a5c47] text-sm leading-relaxed mb-6">
-            O privire științifică dar accesibilă asupra modului în care emoțiile se „stochează” în țesutul conjunctiv.
-          </p>
-          <a class="mt-auto text-[#565f45] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group" href="#">
-            Detalii
-            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
-          </a>
-        </article>
+    <p class="text-[#6a5c47] text-sm leading-relaxed mb-6">
+      {{ article.excerpt }}
+    </p>
 
-        <!-- Article 5 -->
-        <article class="flex flex-col">
-          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-[#eae8e4] shadow-sm">
-            <img
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDef-KSSlGpqOY4SSzUcjHoXHJ5hUafpnTu1RIwBTMKxfg9aVvPReBp52G3Y8H8SfSSh7WMZYbiN7U4N9_mZ4jPY1gsGOw6in80LbvqQqRYmdQFmxCIvbyTzGT1tpZdf_fKRAs5XnWbg51SVsS7l4_cFNvIZaq3aIxWB74nXGsv1Q6loG24ktg43__GxI4UZjyMsBA0S45NAqwFoiK7I9ATCd0Dn57KdhcpIMFH8Bp9Yx4s4sgLa4jwEsFPYeVlZD5OEYQa2GZcZSNo"
-              alt="Postură"
-            />
-          </div>
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold uppercase tracking-widest text-[#565f45] shadow-sm">
-              Postură
-            </span>
-            <span class="text-xs text-[#6a5c47]/50 font-medium italic">5 min lectură</span>
-          </div>
-          <h4 class="text-2xl font-serif text-[#565f45] mb-4 leading-snug">
-            Mersul pe jos – cel mai simplu exercițiu de osteopatie
-          </h4>
-          <p class="text-[#6a5c47] text-sm leading-relaxed mb-6">
-            Cum să transformi o plimbare banală într-o sesiune de realiniere pentru întregul corp.
-          </p>
-          <a class="mt-auto text-[#565f45] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group" href="#">
-            Detalii
-            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
-          </a>
-        </article>
-
-        <!-- Article 6 -->
-        <article class="flex flex-col">
-          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-[#eae8e4] shadow-sm">
-            <img
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE16ttTNe94tmqIXICp3zRfyuvzc-Mo2xD2DGRiqlacj6tfCok3HDHiBoBOslVdGM0SMkW6-sMY44VLeyAHv2XRfKt75Dkx_l1Xrf4I8z8VSZsd7uFY-pXpRp2brww2ahxO-lU_g-Cwt0xvxik2lEUWmvc-Ezylpw79wLOR3bBJBBK9jMchkdVGwu9P2z9dIc55iCffxmqCe4BJpM31dAJxLrhRhPrWGtWFRkQad74kJVd__QVjNAwykchGWyy2jrfg551I2UazZvO"
-              alt="Relaxare"
-            />
-          </div>
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold uppercase tracking-widest text-[#565f45] shadow-sm">
-              Relaxare
-            </span>
-            <span class="text-xs text-[#6a5c47]/50 font-medium italic">4 min lectură</span>
-          </div>
-          <h4 class="text-2xl font-serif text-[#565f45] mb-4 leading-snug">
-            Hidratarea și elasticitatea musculară
-          </h4>
-          <p class="text-[#6a5c47] text-sm leading-relaxed mb-6">
-            De ce apa este esențială nu doar pentru organe, ci și pentru mobilitatea articulațiilor tale.
-          </p>
-          <a class="mt-auto text-[#565f45] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group" href="#">
-            Detalii
-            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
-          </a>
-        </article>
-      </div>
+    <a
+  [routerLink]="article.link"
+  class="mt-auto text-[#565f45] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group">
+  Detalii
+  <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</a>
+  </article>
+</div>
 
       <div class="mt-24 flex justify-center">
         <button class="px-12 py-4 rounded-full border border-[#565f45]/20 text-[#565f45] font-bold hover:bg-[#565f45] hover:text-white transition-all duration-300">

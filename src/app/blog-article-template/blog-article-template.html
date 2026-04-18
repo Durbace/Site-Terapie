@@ -1,0 +1,372 @@
+<app-navbar></app-navbar>
+
+<main *ngIf="article as articleData" class="bg-surface text-on-surface selection:bg-primary-fixed pt-2 sm:pt-3 lg:pt-4">
+    <!-- Hero -->
+    <section
+        class="relative lg:min-h-[calc(100svh-90px)] flex items-start overflow-hidden pt-4 sm:pt-6 lg:pt-6 pb-8 sm:pb-10 lg:pb-8">
+        <div
+            class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-start w-full">
+
+            <!-- Text -->
+            <div class="lg:col-span-6 order-2 lg:order-1 text-left py-2 sm:py-4 lg:py-0">
+                <!-- Mobile / tablet image -->
+                <div class="lg:hidden mb-6 sm:mb-8">
+                    <div class="relative h-[220px] sm:h-[300px] md:h-[360px] w-full rounded-xl overflow-hidden shadow-xl">
+                        <img
+                            [src]="articleData.heroImage"
+                            [alt]="articleData.heroImageAlt"
+                            class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 flex-wrap">
+                    <span
+                        class="bg-primary-fixed text-on-primary-fixed px-3 sm:px-4 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest">
+                        {{ articleData.category }}
+                    </span>
+
+                    <span class="text-on-surface-variant text-xs sm:text-sm font-medium">
+                        {{ articleData.readTime }}
+                    </span>
+                </div>
+
+                <h1
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif text-on-surface leading-tight mb-4 sm:mb-6 lg:mb-8 tracking-tight">
+                    {{ articleData.title }}
+                </h1>
+
+                <p
+                    class="text-sm sm:text-base md:text-lg lg:text-lg text-on-surface-variant leading-relaxed mb-6 sm:mb-8 lg:mb-10 max-w-2xl">
+                    {{ articleData.excerpt }}
+                </p>
+
+                <div class="flex items-center gap-3 sm:gap-4">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-surface-container shrink-0">
+                        <img
+                            [src]="articleData.authorImage"
+                            [alt]="articleData.authorName"
+                            class="w-full h-full object-cover" />
+                    </div>
+
+                    <div>
+                        <p class="font-bold text-sm sm:text-base text-on-surface">{{ articleData.authorName }}</p>
+                        <p class="text-xs sm:text-sm text-on-surface-variant italic">
+                            {{ articleData.publishedAt }}
+                            <span *ngIf="articleData.authorRole"> · {{ articleData.authorRole }}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop image -->
+            <div
+                class="hidden lg:block lg:col-span-6 relative lg:h-[72svh] lg:max-h-[620px] lg:min-h-[520px] order-1 lg:order-2 group">
+                <div
+                    class="absolute inset-0 bg-primary-fixed/20 rounded-xl -rotate-2 scale-105 transition-all duration-500 group-hover:scale-[1.07] group-hover:-translate-y-2">
+                </div>
+
+                <div
+                    class="absolute inset-0 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
+                    <img
+                        [src]="articleData.heroImage"
+                        [alt]="articleData.heroImageAlt"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile / tablet article info -->
+    <section class="lg:hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
+        <div class="bg-surface-container rounded-xl p-5 sm:p-6 space-y-5">
+            <div>
+                <h4 class="font-bold uppercase tracking-widest text-xs text-on-surface-variant mb-3">
+                    Cuprins
+                </h4>
+
+                <nav class="space-y-3">
+                    <a
+                        *ngFor="let section of tocSections; let i = index"
+                        [attr.href]="'#' + section.id"
+                        class="block text-sm text-on-surface-variant hover:text-primary transition-colors">
+                        {{ i + 1 }}. {{ section.title }}
+                    </a>
+                </nav>
+            </div>
+
+            <div class="border-t border-outline-variant pt-5">
+                <h4 class="font-bold text-primary mb-2">{{ articleData.sidebarCtaTitle }}</h4>
+                <p class="text-sm text-on-surface-variant mb-5">
+                    {{ articleData.sidebarCtaText }}
+                </p>
+
+                <a
+                    [routerLink]="articleData.sidebarCtaLink"
+                    class="w-full inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
+                    {{ articleData.sidebarCtaLabel }}
+                </a>
+            </div>
+
+            <div class="border-t border-outline-variant pt-5 flex flex-col gap-3 text-sm text-on-surface-variant">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-lg">category</span>
+                    <span>Categorie: {{ articleData.category }}</span>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-lg">schedule</span>
+                    <span>Timp citire: {{ articleData.readTime }}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main content + sidebar -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[minmax(0,1fr)_300px] gap-10 sm:gap-12 lg:gap-16 relative">
+        <!-- Article Body -->
+        <article class="min-w-0 space-y-10 sm:space-y-12">
+            <!-- Learnings -->
+            <div class="bg-surface-container-low rounded-lg p-6 sm:p-8 lg:p-12 border-l-4 border-primary">
+                <h2 class="text-2xl sm:text-3xl text-primary mb-5 sm:mb-6 font-serif">Ce vei învăța din acest articol</h2>
+
+                <ul class="grid lg:grid-cols-2 gap-4">
+                    <li
+                        *ngFor="let item of articleData.learnings"
+                        class="flex items-start gap-3 text-on-surface-variant leading-relaxed text-sm sm:text-base">
+                        <span class="material-symbols-outlined text-primary text-[20px] sm:text-[22px] mt-0.5">check_circle</span>
+                        <span>{{ item }}</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Quote -->
+            <blockquote
+                *ngIf="articleData.quote"
+                class="text-lg sm:text-xl font-light italic text-on-surface border-l-2 border-outline-variant pl-5 sm:pl-8">
+                “{{ articleData.quote }}”
+            </blockquote>
+
+            <!-- Dynamic sections -->
+            <section
+                *ngFor="let section of articleData.sections"
+                [attr.id]="section.id"
+                class="scroll-mt-28 sm:scroll-mt-32 space-y-5 sm:space-y-6">
+
+                <h2 *ngIf="section.level !== 'h3'" class="text-2xl sm:text-3xl text-primary font-serif">
+                    {{ section.title }}
+                </h2>
+
+                <h3 *ngIf="section.level === 'h3'" class="text-xl sm:text-2xl text-secondary font-serif">
+                    {{ section.title }}
+                </h3>
+
+                <p
+                    *ngFor="let paragraph of section.paragraphs"
+                    class="text-on-surface-variant leading-relaxed text-base sm:text-lg">
+                    {{ paragraph }}
+                </p>
+
+                <div *ngIf="section.imageSrc" class="rounded-lg overflow-hidden aspect-video my-6 sm:my-8">
+                    <img
+                        [src]="section.imageSrc"
+                        [alt]="section.imageAlt || section.title"
+                        class="w-full h-full object-cover" />
+                </div>
+
+                <div *ngIf="section.tipText" class="bg-tertiary-fixed-dim/20 p-6 sm:p-8 rounded-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-3 sm:p-4 opacity-10">
+                        <span class="material-symbols-outlined text-5xl sm:text-6xl">lightbulb</span>
+                    </div>
+
+                    <h4 class="text-on-tertiary-fixed-variant font-bold uppercase tracking-widest text-xs sm:text-sm mb-3 sm:mb-4">
+                        {{ section.tipTitle || 'Sfat util' }}
+                    </h4>
+
+                    <p class="text-on-tertiary-fixed-variant font-medium text-sm sm:text-base">
+                        {{ section.tipText }}
+                    </p>
+                </div>
+
+                <ul *ngIf="section.bullets?.length" class="space-y-3 sm:space-y-4">
+                    <li
+                        *ngFor="let bullet of section.bullets"
+                        class="flex items-start gap-3 text-on-surface-variant leading-relaxed text-sm sm:text-base">
+                        <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                        <span>{{ bullet }}</span>
+                    </li>
+                </ul>
+
+                <ul *ngIf="section.numberedItems?.length" class="space-y-3 sm:space-y-4">
+                    <li *ngFor="let item of section.numberedItems; let i = index" class="flex items-start gap-3 sm:gap-4">
+                        <span
+                            class="bg-primary text-on-primary w-6 h-6 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-1">
+                            {{ i + 1 }}
+                        </span>
+
+                        <span class="text-on-surface-variant leading-relaxed text-sm sm:text-base">
+                            <strong>{{ item.title }}</strong> {{ item.text }}
+                        </span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Key takeaways -->
+            <div class="bg-primary-container text-on-primary-container p-6 sm:p-8 lg:p-12 rounded-lg shadow-xl shadow-primary/10">
+                <h2 class="text-2xl sm:text-3xl font-serif mb-6 sm:mb-8 flex items-center gap-3">
+                    <span class="material-symbols-outlined">auto_awesome</span>
+                    Concluzii esențiale
+                </h2>
+
+                <div class="grid sm:grid-cols-2 gap-5 sm:gap-8">
+                    <div
+                        *ngFor="let takeaway of articleData.keyTakeaways"
+                        class="bg-white/10 p-5 sm:p-6 rounded-lg backdrop-blur-sm">
+                        <p class="text-xs sm:text-sm font-bold uppercase tracking-widest opacity-70 mb-2">
+                            {{ takeaway.label }}
+                        </p>
+                        <p class="text-sm sm:text-base">{{ takeaway.text }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="pt-12 sm:pt-16 border-t border-outline-variant">
+                <h2 class="text-2xl sm:text-3xl text-primary mb-8 sm:mb-10 font-serif">Întrebări frecvente</h2>
+
+                <div class="space-y-4 sm:space-y-6">
+                    <details
+                        *ngFor="let item of articleData.faq"
+                        class="group bg-surface-container-lowest rounded-lg p-5 sm:p-6 border border-transparent hover:border-outline-variant transition-all duration-300">
+                        <summary class="flex justify-between items-start gap-4 cursor-pointer list-none">
+                            <span class="font-bold text-base sm:text-lg text-on-surface">{{ item.question }}</span>
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                        </summary>
+
+                        <p class="mt-4 text-sm sm:text-base text-on-surface-variant leading-relaxed">
+                            {{ item.answer }}
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="hidden lg:block">
+            <div class="sticky top-32 space-y-10">
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs text-on-surface-variant mb-4">
+                        Cuprins
+                    </h4>
+
+                    <nav class="space-y-4">
+                        <a
+                            *ngFor="let section of tocSections; let i = index"
+                            [attr.href]="'#' + section.id"
+                            class="block text-on-surface-variant hover:text-primary hover:pl-2 transition-all duration-300">
+                            {{ i + 1 }}. {{ section.title }}
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="bg-surface-container rounded-lg p-8">
+                    <h4 class="font-bold text-primary mb-2">{{ articleData.sidebarCtaTitle }}</h4>
+                    <p class="text-sm text-on-surface-variant mb-6">
+                        {{ articleData.sidebarCtaText }}
+                    </p>
+
+                    <a
+                        [routerLink]="articleData.sidebarCtaLink"
+                        class="w-full inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
+                        {{ articleData.sidebarCtaLabel }}
+                    </a>
+                </div>
+
+                <div class="flex flex-col gap-4 text-sm text-on-surface-variant">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-lg">category</span>
+                        <span>Categorie: {{ articleData.category }}</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-lg">schedule</span>
+                        <span>Timp citire: {{ articleData.readTime }}</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <!-- Related articles -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 sm:mt-24 lg:mt-32">
+        <h2 class="text-2xl sm:text-3xl text-primary mb-8 sm:mb-12 font-serif">Articole similare</h2>
+
+        <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+            <div
+                *ngFor="let related of articleData.relatedArticles"
+                class="bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-stone-200/40 flex flex-col group">
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img
+                        [src]="related.imageSrc"
+                        [alt]="related.imageAlt"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+
+                <div class="p-6 sm:p-8 flex flex-col flex-1">
+                    <span class="text-xs font-bold uppercase tracking-widest text-secondary mb-3 block">
+                        {{ related.category }}
+                    </span>
+
+                    <h3 class="text-lg sm:text-xl text-primary mb-4 leading-snug font-serif">
+                        {{ related.title }}
+                    </h3>
+
+                    <a
+                        [routerLink]="related.link"
+                        class="mt-auto text-sm font-bold text-on-surface flex items-center gap-2 group-hover:gap-4 transition-all">
+                        Citește mai mult
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 sm:mt-24 lg:mt-32 mb-16 sm:mb-20">
+        <div class="bg-primary text-surface rounded-xl p-8 sm:p-12 lg:p-16 text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif mb-6 sm:mb-8">
+                    {{ articleData.finalCtaTitle }}
+                </h2>
+
+                <p class="text-base sm:text-lg lg:text-xl opacity-90 max-w-2xl mx-auto mb-8 sm:mb-12">
+                    {{ articleData.finalCtaText }}
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                    <a
+                        [routerLink]="articleData.finalCtaPrimaryLink"
+                        class="w-full sm:w-auto inline-flex items-center justify-center bg-surface text-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all">
+                        {{ articleData.finalCtaPrimaryLabel }}
+                    </a>
+
+                    <a
+                        [routerLink]="articleData.finalCtaSecondaryLink"
+                        class="w-full sm:w-auto inline-flex items-center justify-center border border-surface/30 text-surface px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 hover:bg-white/10 transition-all">
+                        {{ articleData.finalCtaSecondaryLabel }}
+                    </a>
+                </div>
+            </div>
+
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <svg height="100%" viewBox="0 0 1000 1000" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0,500 C200,300 400,700 600,500 C800,300 1000,500 1000,500 L1000,1000 L0,1000 Z"
+                        fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

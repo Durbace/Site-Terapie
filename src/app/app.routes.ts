@@ -11,4 +11,9 @@ export const routes: Routes = [
   { path: 'servicii', component: ServiciiComponent },
   { path: 'despre-osteopatie', component: OsteopatieComponent },
   { path: 'contact', component: ContactComponent },
+  {
+    path: 'blog/abordari-blande-pentru-durerile-lombare-cronice',
+    loadComponent: () =>
+      import('./blog-lombare-page').then(m => m.BlogLombarePageComponent),
+  },
 ];
