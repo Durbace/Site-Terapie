@@ -5,17 +5,19 @@
   <section class="relative pt-20 sm:pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-end gap-8">
       <div class="w-full md:w-3/5">
-        <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif italic text-[#565f45] leading-tight tracking-tight mb-8">
+        <h1 appRevealOnScroll [delay]="100"
+          class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif italic text-[#565f45] leading-tight tracking-tight mb-8">
           Gânduri despre <br />
           echilibru
         </h1>
-        <p class="text-base sm:text-lg md:text-xl text-[#6a5c47] max-w-lg leading-relaxed">
+        <p appRevealOnScroll [delay]="200"
+          class="text-base sm:text-lg md:text-xl text-[#6a5c47] max-w-lg leading-relaxed">
           Descoperă sfaturi utile pentru sănătatea corpului tău, explicate cu blândețe și autoritate medicală.
           Un spațiu dedicat regăsirii liniștii interioare.
         </p>
       </div>
 
-      <div class="hidden md:block w-2/5 pb-4">
+      <div appRevealOnScroll [delay]="280" class="hidden md:block w-2/5 pb-4">
         <div class="flex items-center gap-4 text-[#565f45] opacity-60">
           <span class="h-px w-24 bg-[#565f45]"></span>
           <span class="text-sm tracking-widest uppercase font-bold">Educație &amp; Wellness</span>
@@ -26,35 +28,35 @@
 
   <!-- Categories Section -->
   <section class="px-4 sm:px-6 lg:px-8 pb-12">
-  <div class="max-w-7xl mx-auto flex flex-wrap gap-4 items-center border-y border-[#c6c7bd]/30 py-8">
-    <span class="text-sm font-bold text-[#565f45] mr-4">Categorii:</span>
+    <div appRevealOnScroll [delay]="100"
+      class="max-w-7xl mx-auto flex flex-wrap gap-4 items-center border-y border-[#c6c7bd]/30 py-8">
+      <span class="text-sm font-bold text-[#565f45] mr-4">Categorii:</span>
 
-    <button
-      *ngFor="let category of categories"
-      type="button"
-      (click)="setCategory(category)"
-      [ngClass]="
-        activeCategory === category
-          ? 'bg-[#f3e0c4] text-[#70624d]'
-          : 'bg-[#f5f3ef] text-[#6a5c47] hover:bg-[#f3e0c4] hover:text-[#70624d]'
-      "
-      class="px-6 py-2 rounded-full text-sm font-medium hover:scale-105 transition-all"
-    >
-      {{ category }}
-    </button>
-  </div>
-</section>
+      <button
+        *ngFor="let category of categories"
+        type="button"
+        (click)="setCategory(category)"
+        [ngClass]="
+          activeCategory === category
+            ? 'bg-[#f3e0c4] text-[#70624d]'
+            : 'bg-[#f5f3ef] text-[#6a5c47] hover:bg-[#f3e0c4] hover:text-[#70624d]'
+        "
+        class="px-6 py-2 rounded-full text-sm font-medium hover:scale-105 transition-all">
+        {{ category }}
+      </button>
+    </div>
+  </section>
 
   <!-- Featured Article -->
   <section *ngIf="showFeaturedArticle" class="px-4 sm:px-6 lg:px-8 pb-24">
     <div class="max-w-7xl mx-auto">
-      <div class="group relative grid grid-cols-1 md:grid-cols-12 items-center gap-0 overflow-hidden rounded-[2rem] bg-[#f5f3ef] shadow-sm">
+      <div appRevealOnScroll [delay]="120"
+        class="group relative grid grid-cols-1 md:grid-cols-12 items-center gap-0 overflow-hidden rounded-[2rem] bg-[#f5f3ef] shadow-sm">
         <div class="md:col-span-7 h-[320px] sm:h-[420px] md:h-[500px] overflow-hidden">
           <img
             alt="Articol recomandat"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVEpYHfVZyAxB2tPoR21KeA3tpHR86Fx6AMv0SzzyrAqyvraLN3lPq02qz-py22FjbYK68IxbBi5OPKoBDVhYi9dmHmWFgiQVmr_EG1RkprDyiK4Kkttg0n-QamjhbG0uUhqnH8_w42npNC4tKSFurrYAjZdnSzHGGbLU5pea8RMiakTm9zA79RO7oej0VokD-gK7WRJEQq46KPOrF_6snCFG1bDp47krykKTVUbJIISFH3q7oVHXecVaCEdtgQXd2nfI9bvnCANmh"
-          />
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVEpYHfVZyAxB2tPoR21KeA3tpHR86Fx6AMv0SzzyrAqyvraLN3lPq02qz-py22FjbYK68IxbBi5OPKoBDVhYi9dmHmWFgiQVmr_EG1RkprDyiK4Kkttg0n-QamjhbG0uUhqnH8_w42npNC4tKSFurrYAjZdnSzHGGbLU5pea8RMiakTm9zA79RO7oej0VokD-gK7WRJEQq46KPOrF_6snCFG1bDp47krykKTVUbJIISFH3q7oVHXecVaCEdtgQXd2nfI9bvnCANmh" />
         </div>
 
         <div class="md:col-span-5 p-8 sm:p-10 md:p-16 flex flex-col justify-center">
@@ -85,46 +87,54 @@
   <section class="px-4 sm:px-6 lg:px-8 pb-32 bg-[#f5f3ef]/40 py-24">
     <div class="max-w-7xl mx-auto">
       <div class="flex justify-between items-end mb-16">
-        <h3 class="text-3xl sm:text-4xl font-serif italic text-[#565f45]">Ultimele descoperiri</h3>
-        <div class="hidden md:block text-[#6a5c47]/60 font-medium">Pagina 1 din 4</div>
+        <h3 appRevealOnScroll [delay]="100" class="text-3xl sm:text-4xl font-serif italic text-[#565f45]">
+          Ultimele descoperiri
+        </h3>
+        <div appRevealOnScroll [delay]="180" class="hidden md:block text-[#6a5c47]/60 font-medium">
+          Pagina 1 din 4
+        </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-  <article *ngFor="let article of filteredArticles" class="flex flex-col">
-    <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-[#eae8e4] shadow-sm">
-      <img
-        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-        [src]="article.image"
-        [alt]="article.alt"
-      />
-    </div>
+        <article
+          *ngFor="let article of filteredArticles; let i = index"
+          appRevealOnScroll
+          [delay]="120 + (i * 80)"
+          class="flex flex-col">
+          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-[#eae8e4] shadow-sm">
+            <img
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              [src]="article.image"
+              [alt]="article.alt" />
+          </div>
 
-    <div class="flex items-center gap-3 mb-4">
-      <span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold uppercase tracking-widest text-[#565f45] shadow-sm">
-        {{ article.category }}
-      </span>
-      <span class="text-xs text-[#6a5c47]/50 font-medium italic">{{ article.readTime }}</span>
-    </div>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold uppercase tracking-widest text-[#565f45] shadow-sm">
+              {{ article.category }}
+            </span>
+            <span class="text-xs text-[#6a5c47]/50 font-medium italic">{{ article.readTime }}</span>
+          </div>
 
-    <h4 class="text-2xl font-serif text-[#565f45] mb-4 leading-snug">
-      {{ article.title }}
-    </h4>
+          <h4 class="text-2xl font-serif text-[#565f45] mb-4 leading-snug">
+            {{ article.title }}
+          </h4>
 
-    <p class="text-[#6a5c47] text-sm leading-relaxed mb-6">
-      {{ article.excerpt }}
-    </p>
+          <p class="text-[#6a5c47] text-sm leading-relaxed mb-6">
+            {{ article.excerpt }}
+          </p>
 
-    <a
-  [routerLink]="article.link"
-  class="mt-auto text-[#565f45] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group">
-  Detalii
-  <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
-</a>
-  </article>
-</div>
+          <a
+            [routerLink]="article.link"
+            class="mt-auto text-[#565f45] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group">
+            Detalii
+            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+          </a>
+        </article>
+      </div>
 
-      <div class="mt-24 flex justify-center">
-        <button class="px-12 py-4 rounded-full border border-[#565f45]/20 text-[#565f45] font-bold hover:bg-[#565f45] hover:text-white transition-all duration-300">
+      <div appRevealOnScroll [delay]="200" class="mt-24 flex justify-center">
+        <button
+          class="px-12 py-4 rounded-full border border-[#565f45]/20 text-[#565f45] font-bold hover:bg-[#565f45] hover:text-white transition-all duration-300">
           Încarcă mai multe articole
         </button>
       </div>
@@ -134,21 +144,21 @@
 
 <footer class="bg-[#f5f3ef] py-12">
   <div class="flex flex-col md:flex-row justify-between items-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto gap-8">
-    <div class="flex flex-col items-center md:items-start gap-4">
+    <div appRevealOnScroll [delay]="100" class="flex flex-col items-center md:items-start gap-4">
       <div class="font-serif text-lg italic text-[#565f45]">Respirația Liniștii</div>
       <div class="font-sans text-sm tracking-wide text-[#6a5c47]">
         © 2026 Respirația Liniștii. Sanctuary for the Soul.
       </div>
     </div>
 
-    <div class="flex flex-wrap justify-center gap-8 font-sans text-sm tracking-wide">
+    <div appRevealOnScroll [delay]="180" class="flex flex-wrap justify-center gap-8 font-sans text-sm tracking-wide">
       <a class="text-[#6a5c47]/70 hover:text-[#565f45] transition-colors" href="#">Termeni și Condiții</a>
       <a class="text-[#6a5c47]/70 hover:text-[#565f45] transition-colors" href="#">Politica de Confidențialitate</a>
       <a class="text-[#6a5c47]/70 hover:text-[#565f45] transition-colors" href="#">Cookies</a>
       <a class="text-[#6a5c47]/70 hover:text-[#565f45] transition-colors" href="#">Newsletter</a>
     </div>
 
-    <div class="flex gap-4">
+    <div appRevealOnScroll [delay]="260" class="flex gap-4">
       <a class="w-10 h-10 rounded-full border border-[#c6c7bd]/50 flex items-center justify-center text-[#565f45] hover:bg-[#565f45] hover:text-white transition-all" href="#">
         <span class="material-symbols-outlined text-lg">share</span>
       </a>

@@ -1,6 +1,5 @@
 <app-navbar></app-navbar>
 
-
 <main class="bg-[#fbf9f5] text-[#1b1c1a] font-body selection:bg-[#f3e0c4] selection:text-[#70624d]">
   <!-- Hero Section -->
   <section
@@ -14,24 +13,24 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
       <div class="max-w-xl sm:max-w-2xl lg:max-w-3xl">
-        <span
+        <span appRevealOnScroll [delay]="100"
           class="inline-block px-3 sm:px-4 py-1 bg-[#565f45]/10 text-[#565f45] rounded-full text-[10px] sm:text-xs font-semibold tracking-widest uppercase mb-5 sm:mb-6">
           Tratamente personalizate
         </span>
 
-        <h1
+        <h1 appRevealOnScroll [delay]="200"
           class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-serif italic leading-[1.05] mb-5 sm:mb-6 lg:mb-8 text-[#565f45]">
           Servicii concepute <br />
-          pentru binele tău
+          pentru binele tăuKs
         </h1>
 
-        <p
+        <p appRevealOnScroll [delay]="300"
           class="text-sm sm:text-base md:text-lg lg:text-2xl text-[#454840] font-light leading-relaxed mb-7 sm:mb-8 lg:mb-10 max-w-xl">
           Descoperă o abordare terapeutică blândă, menită să aline durerea și să redea corpului tău
           echilibrul și libertatea de mișcare.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4" appRevealOnScroll [delay]="400">
           <a routerLink="/contact"
             class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
             Fă o programare
@@ -45,7 +44,7 @@
   <section class="py-16 sm:py-20 lg:py-24 bg-[#f5f3ef]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row gap-10 sm:gap-12 lg:gap-16 items-center">
-        <div class="w-full lg:w-1/2">
+        <div class="w-full lg:w-1/2" appRevealOnScroll [delay]="100">
           <div class="relative group w-full h-[220px] sm:h-[280px] md:h-[340px] lg:h-[420px] lg:max-h-[420px]">
             <div
               class="absolute inset-0 bg-primary-fixed/20 rounded-xl -rotate-2 scale-105 transition-all duration-500 group-hover:scale-[1.07] group-hover:-translate-y-2">
@@ -60,22 +59,22 @@
         </div>
 
         <div class="w-full lg:w-1/2">
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif italic mb-6 sm:mb-8 text-[#565f45]">
+          <h2 appRevealOnScroll [delay]="180" class="text-2xl sm:text-3xl lg:text-4xl font-serif italic mb-6 sm:mb-8 text-[#565f45]">
             O abordare unică pentru fiecare pacient
           </h2>
 
           <div class="space-y-5 sm:space-y-6 text-base sm:text-lg text-[#454840] leading-relaxed font-light">
-            <p>
+            <p appRevealOnScroll [delay]="240">
               La Respirația Liniștii, înțelegem că fiecare corp are propria sa poveste și propriul său ritm
               de vindecare.
             </p>
-            <p>
+            <p appRevealOnScroll [delay]="320">
               Fiecare ședință este adaptată nevoilor tale specifice din acel moment. Nu folosim protocoale
               rigide, ci ascultăm subtilitățile sistemului tău prin palpări fine, asigurându-ne că
               intervenția noastră este exact ceea ce ai nevoie pentru a progresa.
             </p>
 
-            <div class="pt-2 sm:pt-4">
+            <div class="pt-2 sm:pt-4" appRevealOnScroll [delay]="400">
               <span class="flex items-start sm:items-center gap-3 text-[#6a5c47] font-medium italic">
                 <span class="material-symbols-outlined shrink-0">auto_awesome</span>
                 Fiecare atingere este o invitație la relaxare profundă.
@@ -91,17 +90,16 @@
   <section class="py-16 sm:py-20 lg:py-32 bg-[#fbf9f5]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 sm:mb-16 lg:mb-20">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif italic text-[#565f45] mb-4">
+        <h2 appRevealOnScroll [delay]="100" class="text-3xl sm:text-4xl lg:text-5xl font-serif italic text-[#565f45] mb-4">
           Experiențele noastre terapeutice
         </h2>
-        <p class="text-sm sm:text-base text-[#454840] max-w-2xl mx-auto">
+        <p appRevealOnScroll [delay]="180" class="text-sm sm:text-base text-[#454840] max-w-2xl mx-auto">
           Alege parcursul care rezonează cel mai mult cu starea ta actuală.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
-        <!-- Initial Session -->
-        <div
+        <div appRevealOnScroll [delay]="120"
           class="bg-white p-6 sm:p-8 lg:p-10 rounded-[1.5rem] sm:rounded-[2rem] flex flex-col h-full border border-[#c6c7bd]/20 hover:shadow-xl transition-all duration-500 group">
           <div class="mb-6 sm:mb-8 overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem]">
             <img class="w-full h-44 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-700"
@@ -138,8 +136,7 @@
           </button>
         </div>
 
-        <!-- Targeted Therapy -->
-        <div
+        <div appRevealOnScroll [delay]="220"
           class="bg-[#6e785c] p-6 sm:p-8 lg:p-10 rounded-[1.5rem] sm:rounded-[2rem] flex flex-col h-full text-white shadow-2xl xl:scale-105 relative z-10 overflow-hidden">
           <div class="absolute top-0 right-0 p-4 opacity-20">
             <span class="material-symbols-outlined text-7xl sm:text-8xl" style="font-variation-settings: 'FILL' 1">spa</span>
@@ -175,8 +172,7 @@
           </button>
         </div>
 
-        <!-- Relaxation & Recovery -->
-        <div
+        <div appRevealOnScroll [delay]="320"
           class="bg-white p-6 sm:p-8 lg:p-10 rounded-[1.5rem] sm:rounded-[2rem] flex flex-col h-full border border-[#c6c7bd]/20 hover:shadow-xl transition-all duration-500 group md:col-span-2 xl:col-span-1">
           <div class="mb-6 sm:mb-8 overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem]">
             <img class="w-full h-44 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-700"
@@ -220,36 +216,37 @@
   <section class="py-16 sm:py-20 lg:py-24 bg-[#f5f3ef] overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-5xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif italic text-center mb-10 sm:mb-12 lg:mb-16 text-[#565f45]">
+        <h2 appRevealOnScroll [delay]="100"
+          class="text-2xl sm:text-3xl lg:text-4xl font-serif italic text-center mb-10 sm:mb-12 lg:mb-16 text-[#565f45]">
           Pentru ce poți alege o ședință
         </h2>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
-          <div
+          <div appRevealOnScroll [delay]="120"
             class="bg-white p-5 sm:p-6 lg:p-8 rounded-[1.5rem] sm:rounded-[2rem] text-center flex flex-col items-center justify-center gap-3 sm:gap-4 hover:bg-[#f3e0c4] transition-colors duration-500">
             <span class="material-symbols-outlined text-3xl sm:text-4xl text-[#565f45]">accessibility_new</span>
             <span class="text-xs sm:text-sm font-medium">Dureri lombare</span>
           </div>
 
-          <div
+          <div appRevealOnScroll [delay]="200"
             class="bg-white p-5 sm:p-6 lg:p-8 rounded-[1.5rem] sm:rounded-[2rem] text-center flex flex-col items-center justify-center gap-3 sm:gap-4 hover:bg-[#f3e0c4] transition-colors duration-500 lg:translate-y-8">
             <span class="material-symbols-outlined text-3xl sm:text-4xl text-[#565f45]">location_on</span>
             <span class="text-xs sm:text-sm font-medium">Tensiune cervicală</span>
           </div>
 
-          <div
+          <div appRevealOnScroll [delay]="280"
             class="bg-white p-5 sm:p-6 lg:p-8 rounded-[1.5rem] sm:rounded-[2rem] text-center flex flex-col items-center justify-center gap-3 sm:gap-4 hover:bg-[#f3e0c4] transition-colors duration-500">
             <span class="material-symbols-outlined text-3xl sm:text-4xl text-[#565f45]">hardware</span>
             <span class="text-xs sm:text-sm font-medium">Rigiditate</span>
           </div>
 
-          <div
+          <div appRevealOnScroll [delay]="360"
             class="bg-white p-5 sm:p-6 lg:p-8 rounded-[1.5rem] sm:rounded-[2rem] text-center flex flex-col items-center justify-center gap-3 sm:gap-4 hover:bg-[#f3e0c4] transition-colors duration-500 lg:translate-y-8">
             <span class="material-symbols-outlined text-3xl sm:text-4xl text-[#565f45]">psychology</span>
             <span class="text-xs sm:text-sm font-medium">Stres</span>
           </div>
 
-          <div
+          <div appRevealOnScroll [delay]="440"
             class="bg-white p-5 sm:p-6 lg:p-8 rounded-[1.5rem] sm:rounded-[2rem] text-center flex flex-col items-center justify-center gap-3 sm:gap-4 hover:bg-[#f3e0c4] transition-colors duration-500 col-span-2 md:col-span-1">
             <span class="material-symbols-outlined text-3xl sm:text-4xl text-[#565f45]">align_vertical_center</span>
             <span class="text-xs sm:text-sm font-medium">Postură</span>
@@ -262,12 +259,13 @@
   <!-- FAQ -->
   <section class="py-16 sm:py-20 lg:py-32 bg-[#fbf9f5]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif italic text-center mb-10 sm:mb-12 lg:mb-16 text-[#565f45]">
+      <h2 appRevealOnScroll [delay]="100"
+        class="text-2xl sm:text-3xl lg:text-4xl font-serif italic text-center mb-10 sm:mb-12 lg:mb-16 text-[#565f45]">
         Întrebări frecvente
       </h2>
 
       <div class="space-y-4 sm:space-y-6 lg:space-y-8">
-        <div class="p-5 sm:p-6 lg:p-8 bg-[#f0eeea] rounded-[1.5rem] sm:rounded-[2rem]">
+        <div appRevealOnScroll [delay]="120" class="p-5 sm:p-6 lg:p-8 bg-[#f0eeea] rounded-[1.5rem] sm:rounded-[2rem]">
           <h4 class="text-lg sm:text-xl font-bold mb-3 flex items-start gap-3">
             <span class="text-[#565f45] material-symbols-outlined shrink-0">help</span>
             Cât durează o ședință obișnuită?
@@ -278,7 +276,7 @@
           </p>
         </div>
 
-        <div class="p-5 sm:p-6 lg:p-8 bg-[#f0eeea] rounded-[1.5rem] sm:rounded-[2rem]">
+        <div appRevealOnScroll [delay]="200" class="p-5 sm:p-6 lg:p-8 bg-[#f0eeea] rounded-[1.5rem] sm:rounded-[2rem]">
           <h4 class="text-lg sm:text-xl font-bold mb-3 flex items-start gap-3">
             <span class="text-[#565f45] material-symbols-outlined shrink-0">help</span>
             Este terapia dureroasă?
@@ -290,7 +288,7 @@
           </p>
         </div>
 
-        <div class="p-5 sm:p-6 lg:p-8 bg-[#f0eeea] rounded-[1.5rem] sm:rounded-[2rem]">
+        <div appRevealOnScroll [delay]="280" class="p-5 sm:p-6 lg:p-8 bg-[#f0eeea] rounded-[1.5rem] sm:rounded-[2rem]">
           <h4 class="text-lg sm:text-xl font-bold mb-3 flex items-start gap-3">
             <span class="text-[#565f45] material-symbols-outlined shrink-0">help</span>
             De câte ședințe voi avea nevoie?
@@ -301,7 +299,7 @@
           </p>
         </div>
 
-        <div class="p-5 sm:p-6 lg:p-8 bg-[#f0eeea] rounded-[1.5rem] sm:rounded-[2rem]">
+        <div appRevealOnScroll [delay]="360" class="p-5 sm:p-6 lg:p-8 bg-[#f0eeea] rounded-[1.5rem] sm:rounded-[2rem]">
           <h4 class="text-lg sm:text-xl font-bold mb-3 flex items-start gap-3">
             <span class="text-[#565f45] material-symbols-outlined shrink-0">help</span>
             Mă voi simți relaxat imediat după?
@@ -313,7 +311,7 @@
           </p>
         </div>
 
-        <div class="p-5 sm:p-6 lg:p-8 bg-[#f0eeea] rounded-[1.5rem] sm:rounded-[2rem]">
+        <div appRevealOnScroll [delay]="440" class="p-5 sm:p-6 lg:p-8 bg-[#f0eeea] rounded-[1.5rem] sm:rounded-[2rem]">
           <h4 class="text-lg sm:text-xl font-bold mb-3 flex items-start gap-3">
             <span class="text-[#565f45] material-symbols-outlined shrink-0">help</span>
             Cum se face programarea?
@@ -337,16 +335,16 @@
         </div>
 
         <div class="relative z-10">
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif italic text-[#70624d] mb-6">
+          <h2 appRevealOnScroll [delay]="100" class="text-3xl sm:text-4xl md:text-5xl font-serif italic text-[#70624d] mb-6">
             Pregătit să îți regăsești liniștea?
           </h2>
 
-          <p class="text-base sm:text-lg text-[#70624d]/80 mb-8 sm:mb-10 max-w-2xl mx-auto">
+          <p appRevealOnScroll [delay]="180" class="text-base sm:text-lg text-[#70624d]/80 mb-8 sm:mb-10 max-w-2xl mx-auto">
             Suntem aici să te ghidăm pas cu pas către o stare de bine durabilă. Alege timpul tău pentru
             sănătate.
           </p>
 
-          <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+          <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4" appRevealOnScroll [delay]="260">
             <a routerLink="/contact"
               class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
               Programează acum

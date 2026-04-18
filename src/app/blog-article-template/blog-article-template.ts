@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 
 import { NavbarComponent } from '../navbar/navbar';
 import { FooterComponent } from '../footer/footer';
+import { RevealOnScrollDirective } from '../../reveal-on-scroll.directive';
 
 export interface BlogArticleSection {
   id: string;
@@ -72,7 +73,7 @@ export interface BlogArticleData {
 @Component({
   selector: 'app-blog-article-template',
   standalone: true,
-  imports: [CommonModule, RouterLink, NavbarComponent, FooterComponent],
+  imports: [CommonModule, RouterLink, NavbarComponent, FooterComponent, RevealOnScrollDirective],
   templateUrl: './blog-article-template.html',
 })
 export class BlogArticleTemplateComponent {

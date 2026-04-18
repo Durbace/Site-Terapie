@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 import { NavbarComponent } from '../navbar/navbar';
+import {RevealOnScrollDirective} from "../../reveal-on-scroll.directive";
 
 type Category = 'Toate' | 'Postură' | 'Relaxare' | 'Recuperare' | 'Stil de viață' | 'Stres';
 
@@ -19,7 +20,7 @@ interface BlogArticle {
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, RouterLink],
+  imports: [CommonModule, NavbarComponent, RouterLink, RevealOnScrollDirective],
   templateUrl: './blog.html'
 })
 export class BlogComponent {

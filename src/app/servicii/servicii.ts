@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 import { NavbarComponent } from '../navbar/navbar';
 import { FooterComponent } from '../footer/footer';
-import { RevealOnScrollDirective } from '../../reveal-on-scroll.directive';
+import {RevealOnScrollDirective} from "../../reveal-on-scroll.directive";
 
 @Component({
   selector: 'app-servicii',
