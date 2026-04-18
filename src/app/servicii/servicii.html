@@ -3,40 +3,37 @@
 
 <main class="bg-[#fbf9f5] text-[#1b1c1a] font-body selection:bg-[#f3e0c4] selection:text-[#70624d]">
   <!-- Hero Section -->
-  <section class="relative min-h-[716px] flex items-center overflow-hidden pt-20 pb-12">
+  <section class="relative min-h-[calc(100svh-88px)] flex items-center overflow-hidden pt-20 pb-12">
     <div class="absolute inset-0 z-0">
       <div class="absolute inset-0 bg-gradient-to-r from-[#fbf9f5] via-[#fbf9f5]/40 to-transparent z-10"></div>
-      <img
-        class="w-full h-full object-cover object-center opacity-40"
-        alt="Spațiu de terapie"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy9e9rjmHkjCcPfng1sJeKSDJq36JyqgjIgGrZXpRqiJs_Kg2hHwvMbIJZT0NuKDtQ-Y4KYhFpqDWVWMUOZeUAe_JtAHue7DlGQyLHT_5iRbqIrcu1HgszAcYlQ3XApHiMaL_MwfQ5prI9hKFfR2jnhSiBrvaTVcdK1mplKvLm84uQjwAgdYUDp3dmmlCVD5_UcNFMzOaZZFz3ZtudQjsmDQr4FnXDOg2PQVX6zrqwz6F8CzXx7c-niNVeelj2O_e7zQJ8NZTbbUOx"
-      />
+      <img class="w-full h-full object-cover object-center opacity-40" alt="Spațiu de terapie"
+        src="assets/images/servicii-hero.png" />
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
       <div class="max-w-3xl">
         <span
-          class="inline-block px-4 py-1 bg-[#565f45]/10 text-[#565f45] rounded-full text-xs font-semibold tracking-widest uppercase mb-6"
-        >
+          class="inline-block px-4 py-1 bg-[#565f45]/10 text-[#565f45] rounded-full text-xs font-semibold tracking-widest uppercase mb-6">
           Tratamente personalizate
         </span>
 
-        <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif italic leading-tight mb-8 text-[#565f45]">
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif italic leading-[1.05] mb-6 sm:mb-8 text-[#565f45]">
           Servicii concepute <br />
           pentru binele tău
         </h1>
 
-        <p class="text-lg sm:text-xl md:text-2xl text-[#454840] font-light leading-relaxed mb-10 max-w-xl">
+        <p
+          class="text-base sm:text-lg md:text-xl lg:text-2xl text-[#454840] font-light leading-relaxed mb-8 sm:mb-10 max-w-xl">
           Descoperă o abordare terapeutică blândă, menită să aline durerea și să redea corpului tău
           echilibrul și libertatea de mișcare.
         </p>
 
         <div class="flex flex-wrap gap-4">
-          <button
-            class="bg-[#565f45] text-white px-10 py-4 rounded-full text-lg font-medium hover:scale-105 active:scale-95 transition-all"
-          >
+          <a routerLink="/contact"
+            class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
             Fă o programare
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -47,15 +44,19 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row gap-16 items-center">
         <div class="md:w-1/2">
-          <div class="relative">
-            <img
-              class="rounded-[2rem] shadow-2xl relative z-10"
-              alt="Terapie osteopatică"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAdWCEXK6Ue92I0yQHOrf-3eVsub1LT2OnnpRXl0Dq1zzwzZtqCgjLj8LpHwaRmTTIwC2uMtCxmdPBn7ISAdCpgN2S1s7BO3uIMNzWH9uxn4N76UMZpi3mQCFFySVxdTCCGetmsYo-rf7ghJp3HSsDTN0iByb3F70viwxVIq-kJJ06rEJQGT0g23bzFjKgUx65Q7BCAbmVni5MSzGoNXYuh-9Be2AJgnAR6LTDs2j4Bpb7mcSxnmekoAFJsnliUiKUNmAmpp896Y-K"
-            />
-            <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-[#e9c349]/30 rounded-[2rem] -z-10"></div>
-          </div>
-        </div>
+  <div class="relative group h-[220px] sm:h-[280px] md:h-[320px] lg:h-[420px] lg:max-h-[420px]">
+
+    <div
+      class="absolute inset-0 bg-primary-fixed/20 rounded-xl -rotate-2 scale-105 transition-all duration-500 group-hover:scale-[1.07] group-hover:-translate-y-2">
+    </div>
+
+    <div
+      class="absolute inset-0 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
+      <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        alt="Terapie osteopatică" src="assets/images/servicii1.png" />
+    </div>
+  </div>
+</div>
 
         <div class="md:w-1/2">
           <h2 class="text-3xl sm:text-4xl font-serif italic mb-8 text-[#565f45]">
@@ -100,14 +101,11 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Initial Session -->
         <div
-          class="bg-white p-10 rounded-[2rem] flex flex-col h-full border border-[#c6c7bd]/20 hover:shadow-xl transition-all duration-500 group"
-        >
+          class="bg-white p-10 rounded-[2rem] flex flex-col h-full border border-[#c6c7bd]/20 hover:shadow-xl transition-all duration-500 group">
           <div class="mb-8 overflow-hidden rounded-[1.5rem]">
-            <img
-              class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
+            <img class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
               alt="Ședință inițială"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgDHXfVfNEZLCZckYb7kj5imLiTScC7WrzFZbf5pszkZ3-wc7CmklfsB7BPvPVC_s-07ge2ofLF56TQcSDpeCbpc76mvNrFWr3YVW9cu4_0zDKpET8T2aD6WdmDnDakPMGfpXRZ_j5xhJ2P-BvGdlgtF2lnf9hukcSVZV1rAeg2ViUcPJLILoCeDHgklTbksMqcq000R--pGEQkudKv6nRF9w-NNN5jnKsXXSgxSjQVBk5Zrr_sPWg0joThglQO79tMSDiBXTOPemU"
-            />
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgDHXfVfNEZLCZckYb7kj5imLiTScC7WrzFZbf5pszkZ3-wc7CmklfsB7BPvPVC_s-07ge2ofLF56TQcSDpeCbpc76mvNrFWr3YVW9cu4_0zDKpET8T2aD6WdmDnDakPMGfpXRZ_j5xhJ2P-BvGdlgtF2lnf9hukcSVZV1rAeg2ViUcPJLILoCeDHgklTbksMqcq000R--pGEQkudKv6nRF9w-NNN5jnKsXXSgxSjQVBk5Zrr_sPWg0joThglQO79tMSDiBXTOPemU" />
           </div>
 
           <div class="flex-grow">
@@ -135,16 +133,14 @@
           </div>
 
           <button
-            class="w-full py-3 rounded-full border border-[#565f45] text-[#565f45] hover:bg-[#565f45] hover:text-white transition-colors font-medium"
-          >
+            class="w-full py-3 rounded-full border border-[#565f45] text-[#565f45] hover:bg-[#565f45] hover:text-white transition-colors font-medium">
             Detalii ședință
           </button>
         </div>
 
         <!-- Targeted Therapy -->
         <div
-          class="bg-[#6e785c] p-10 rounded-[2rem] flex flex-col h-full text-white shadow-2xl md:scale-105 relative z-10 overflow-hidden"
-        >
+          class="bg-[#6e785c] p-10 rounded-[2rem] flex flex-col h-full text-white shadow-2xl md:scale-105 relative z-10 overflow-hidden">
           <div class="absolute top-0 right-0 p-4 opacity-20">
             <span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1">spa</span>
           </div>
@@ -174,22 +170,18 @@
           </div>
 
           <button
-            class="w-full py-3 rounded-full bg-[#fbf9f5] text-[#565f45] hover:bg-[#eae8e4] transition-colors font-bold relative z-10"
-          >
+            class="w-full py-3 rounded-full bg-[#fbf9f5] text-[#565f45] hover:bg-[#eae8e4] transition-colors font-bold relative z-10">
             Programează prioritar
           </button>
         </div>
 
         <!-- Relaxation & Recovery -->
         <div
-          class="bg-white p-10 rounded-[2rem] flex flex-col h-full border border-[#c6c7bd]/20 hover:shadow-xl transition-all duration-500 group"
-        >
+          class="bg-white p-10 rounded-[2rem] flex flex-col h-full border border-[#c6c7bd]/20 hover:shadow-xl transition-all duration-500 group">
           <div class="mb-8 overflow-hidden rounded-[1.5rem]">
-            <img
-              class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
+            <img class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
               alt="Ședință relaxare"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBISUaTpmCoIRbEGoPo4y6coDQkCIy_WmJI59ib-UP4t7NCOZCa2vsKOGUEzxxtxsqLZsneKoFzcPJEf3muUn2Ai5vgK4AHS9BznjXa3XJEHbzGHQr4e1hKRs5k8okLym8bbvZfjn0mNEAZoxXMBEfDZ2sJmV8HtqUMXGktLvqJ1WuAEAzn9h8VbmeflyytFvV_hw4ZMbjFQUZpis9aw3iU_UqGWLktp5niNs1AawOzHzWYPztH2FWmXf_eBvxyrGMuW2v8Bg0r8Dcs"
-            />
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBISUaTpmCoIRbEGoPo4y6coDQkCIy_WmJI59ib-UP4t7NCOZCa2vsKOGUEzxxtxsqLZsneKoFzcPJEf3muUn2Ai5vgK4AHS9BznjXa3XJEHbzGHQr4e1hKRs5k8okLym8bbvZfjn0mNEAZoxXMBEfDZ2sJmV8HtqUMXGktLvqJ1WuAEAzn9h8VbmeflyytFvV_hw4ZMbjFQUZpis9aw3iU_UqGWLktp5niNs1AawOzHzWYPztH2FWmXf_eBvxyrGMuW2v8Bg0r8Dcs" />
           </div>
 
           <div class="flex-grow">
@@ -217,8 +209,7 @@
           </div>
 
           <button
-            class="w-full py-3 rounded-full border border-[#565f45] text-[#565f45] hover:bg-[#565f45] hover:text-white transition-colors font-medium"
-          >
+            class="w-full py-3 rounded-full border border-[#565f45] text-[#565f45] hover:bg-[#565f45] hover:text-white transition-colors font-medium">
             Alege relaxarea
           </button>
         </div>
@@ -235,27 +226,32 @@
         </h2>
 
         <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-          <div class="bg-white p-8 rounded-[2rem] text-center flex flex-col items-center justify-center gap-4 hover:bg-[#f3e0c4] transition-colors duration-500">
+          <div
+            class="bg-white p-8 rounded-[2rem] text-center flex flex-col items-center justify-center gap-4 hover:bg-[#f3e0c4] transition-colors duration-500">
             <span class="material-symbols-outlined text-4xl text-[#565f45]">accessibility_new</span>
             <span class="text-sm font-medium">Dureri lombare</span>
           </div>
 
-          <div class="bg-white p-8 rounded-[2rem] text-center flex flex-col items-center justify-center gap-4 hover:bg-[#f3e0c4] transition-colors duration-500 md:translate-y-8">
+          <div
+            class="bg-white p-8 rounded-[2rem] text-center flex flex-col items-center justify-center gap-4 hover:bg-[#f3e0c4] transition-colors duration-500 md:translate-y-8">
             <span class="material-symbols-outlined text-4xl text-[#565f45]">location_on</span>
             <span class="text-sm font-medium">Tensiune cervicală</span>
           </div>
 
-          <div class="bg-white p-8 rounded-[2rem] text-center flex flex-col items-center justify-center gap-4 hover:bg-[#f3e0c4] transition-colors duration-500">
+          <div
+            class="bg-white p-8 rounded-[2rem] text-center flex flex-col items-center justify-center gap-4 hover:bg-[#f3e0c4] transition-colors duration-500">
             <span class="material-symbols-outlined text-4xl text-[#565f45]">hardware</span>
             <span class="text-sm font-medium">Rigiditate</span>
           </div>
 
-          <div class="bg-white p-8 rounded-[2rem] text-center flex flex-col items-center justify-center gap-4 hover:bg-[#f3e0c4] transition-colors duration-500 md:translate-y-8">
+          <div
+            class="bg-white p-8 rounded-[2rem] text-center flex flex-col items-center justify-center gap-4 hover:bg-[#f3e0c4] transition-colors duration-500 md:translate-y-8">
             <span class="material-symbols-outlined text-4xl text-[#565f45]">psychology</span>
             <span class="text-sm font-medium">Stres</span>
           </div>
 
-          <div class="bg-white p-8 rounded-[2rem] text-center flex flex-col items-center justify-center gap-4 hover:bg-[#f3e0c4] transition-colors duration-500">
+          <div
+            class="bg-white p-8 rounded-[2rem] text-center flex flex-col items-center justify-center gap-4 hover:bg-[#f3e0c4] transition-colors duration-500">
             <span class="material-symbols-outlined text-4xl text-[#565f45]">align_vertical_center</span>
             <span class="text-sm font-medium">Postură</span>
           </div>
@@ -335,8 +331,11 @@
   <!-- Final CTA -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-[#f3e0c4] rounded-[2rem] p-8 sm:p-12 lg:p-16 text-center max-w-5xl mx-auto relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.22),_transparent)]"></div>
+      <div
+        class="bg-[#f3e0c4] rounded-[2rem] p-8 sm:p-12 lg:p-16 text-center max-w-5xl mx-auto relative overflow-hidden">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.22),_transparent)]">
+        </div>
 
         <div class="relative z-10">
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif italic text-[#70624d] mb-6">
@@ -348,19 +347,17 @@
             sănătate.
           </p>
 
-          <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <button
-              class="bg-[#565f45] text-white px-10 py-4 rounded-full text-lg font-medium shadow-lg hover:scale-105 active:scale-95 transition-all"
-            >
+          <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <a routerLink="/contact"
+              class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
               Programează acum
-            </button>
+            </a>
 
-            <button
-              class="bg-white text-[#565f45] px-10 py-4 rounded-full text-lg font-medium flex items-center justify-center gap-2 hover:bg-[#eae8e4] transition-colors"
-            >
-              <span class="material-symbols-outlined">chat</span>
+            <a href="https://wa.me/40742638613"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-[#eae8e4] active:scale-95 transition-all">
+              <span class="material-symbols-outlined text-[20px]">chat</span>
               WhatsApp
-            </button>
+            </a>
           </div>
         </div>
       </div>
