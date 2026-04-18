@@ -9,12 +9,17 @@
 
             <!-- Text -->
             <div class="lg:col-span-6 order-2 lg:order-1 text-left py-2 sm:py-4 lg:py-0">
+                <a routerLink="/blog"
+                    class="inline-flex items-center gap-2 text-primary text-sm sm:text-base font-medium mb-4 sm:mb-5 hover:translate-x-[-2px] transition-all">
+                    <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                    Înapoi la articole
+                </a>
+
                 <!-- Mobile / tablet image -->
                 <div class="lg:hidden mb-6 sm:mb-8">
-                    <div class="relative h-[220px] sm:h-[300px] md:h-[360px] w-full rounded-xl overflow-hidden shadow-xl">
-                        <img
-                            [src]="articleData.heroImage"
-                            [alt]="articleData.heroImageAlt"
+                    <div
+                        class="relative h-[220px] sm:h-[300px] md:h-[360px] w-full rounded-xl overflow-hidden shadow-xl">
+                        <img [src]="articleData.heroImage" [alt]="articleData.heroImageAlt"
                             class="w-full h-full object-cover" />
                     </div>
                 </div>
@@ -42,9 +47,7 @@
 
                 <div class="flex items-center gap-3 sm:gap-4">
                     <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-surface-container shrink-0">
-                        <img
-                            [src]="articleData.authorImage"
-                            [alt]="articleData.authorName"
+                        <img [src]="articleData.authorImage" [alt]="articleData.authorName"
                             class="w-full h-full object-cover" />
                     </div>
 
@@ -67,9 +70,7 @@
 
                 <div
                     class="absolute inset-0 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
-                    <img
-                        [src]="articleData.heroImage"
-                        [alt]="articleData.heroImageAlt"
+                    <img [src]="articleData.heroImage" [alt]="articleData.heroImageAlt"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
             </div>
@@ -85,9 +86,7 @@
                 </h4>
 
                 <nav class="space-y-3">
-                    <a
-                        *ngFor="let section of tocSections; let i = index"
-                        [attr.href]="'#' + section.id"
+                    <a *ngFor="let section of tocSections; let i = index" [attr.href]="'#' + section.id"
                         class="block text-sm text-on-surface-variant hover:text-primary transition-colors">
                         {{ i + 1 }}. {{ section.title }}
                     </a>
@@ -100,8 +99,7 @@
                     {{ articleData.sidebarCtaText }}
                 </p>
 
-                <a
-                    [routerLink]="articleData.sidebarCtaLink"
+                <a [routerLink]="articleData.sidebarCtaLink"
                     class="w-full inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
                     {{ articleData.sidebarCtaLabel }}
                 </a>
@@ -122,34 +120,33 @@
     </section>
 
     <!-- Main content + sidebar -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[minmax(0,1fr)_300px] gap-10 sm:gap-12 lg:gap-16 relative">
+    <section
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[minmax(0,1fr)_300px] gap-10 sm:gap-12 lg:gap-16 relative">
         <!-- Article Body -->
         <article class="min-w-0 space-y-10 sm:space-y-12">
             <!-- Learnings -->
             <div class="bg-surface-container-low rounded-lg p-6 sm:p-8 lg:p-12 border-l-4 border-primary">
-                <h2 class="text-2xl sm:text-3xl text-primary mb-5 sm:mb-6 font-serif">Ce vei învăța din acest articol</h2>
+                <h2 class="text-2xl sm:text-3xl text-primary mb-5 sm:mb-6 font-serif">Ce vei învăța din acest articol
+                </h2>
 
                 <ul class="grid lg:grid-cols-2 gap-4">
-                    <li
-                        *ngFor="let item of articleData.learnings"
+                    <li *ngFor="let item of articleData.learnings"
                         class="flex items-start gap-3 text-on-surface-variant leading-relaxed text-sm sm:text-base">
-                        <span class="material-symbols-outlined text-primary text-[20px] sm:text-[22px] mt-0.5">check_circle</span>
+                        <span
+                            class="material-symbols-outlined text-primary text-[20px] sm:text-[22px] mt-0.5">check_circle</span>
                         <span>{{ item }}</span>
                     </li>
                 </ul>
             </div>
 
             <!-- Quote -->
-            <blockquote
-                *ngIf="articleData.quote"
+            <blockquote *ngIf="articleData.quote"
                 class="text-lg sm:text-xl font-light italic text-on-surface border-l-2 border-outline-variant pl-5 sm:pl-8">
                 “{{ articleData.quote }}”
             </blockquote>
 
             <!-- Dynamic sections -->
-            <section
-                *ngFor="let section of articleData.sections"
-                [attr.id]="section.id"
+            <section *ngFor="let section of articleData.sections" [attr.id]="section.id"
                 class="scroll-mt-28 sm:scroll-mt-32 space-y-5 sm:space-y-6">
 
                 <h2 *ngIf="section.level !== 'h3'" class="text-2xl sm:text-3xl text-primary font-serif">
@@ -160,25 +157,24 @@
                     {{ section.title }}
                 </h3>
 
-                <p
-                    *ngFor="let paragraph of section.paragraphs"
+                <p *ngFor="let paragraph of section.paragraphs"
                     class="text-on-surface-variant leading-relaxed text-base sm:text-lg">
                     {{ paragraph }}
                 </p>
 
                 <div *ngIf="section.imageSrc" class="rounded-lg overflow-hidden aspect-video my-6 sm:my-8">
-                    <img
-                        [src]="section.imageSrc"
-                        [alt]="section.imageAlt || section.title"
+                    <img [src]="section.imageSrc" [alt]="section.imageAlt || section.title"
                         class="w-full h-full object-cover" />
                 </div>
 
-                <div *ngIf="section.tipText" class="bg-tertiary-fixed-dim/20 p-6 sm:p-8 rounded-lg relative overflow-hidden">
+                <div *ngIf="section.tipText"
+                    class="bg-tertiary-fixed-dim/20 p-6 sm:p-8 rounded-lg relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-3 sm:p-4 opacity-10">
                         <span class="material-symbols-outlined text-5xl sm:text-6xl">lightbulb</span>
                     </div>
 
-                    <h4 class="text-on-tertiary-fixed-variant font-bold uppercase tracking-widest text-xs sm:text-sm mb-3 sm:mb-4">
+                    <h4
+                        class="text-on-tertiary-fixed-variant font-bold uppercase tracking-widest text-xs sm:text-sm mb-3 sm:mb-4">
                         {{ section.tipTitle || 'Sfat util' }}
                     </h4>
 
@@ -188,8 +184,7 @@
                 </div>
 
                 <ul *ngIf="section.bullets?.length" class="space-y-3 sm:space-y-4">
-                    <li
-                        *ngFor="let bullet of section.bullets"
+                    <li *ngFor="let bullet of section.bullets"
                         class="flex items-start gap-3 text-on-surface-variant leading-relaxed text-sm sm:text-base">
                         <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
                         <span>{{ bullet }}</span>
@@ -197,7 +192,8 @@
                 </ul>
 
                 <ul *ngIf="section.numberedItems?.length" class="space-y-3 sm:space-y-4">
-                    <li *ngFor="let item of section.numberedItems; let i = index" class="flex items-start gap-3 sm:gap-4">
+                    <li *ngFor="let item of section.numberedItems; let i = index"
+                        class="flex items-start gap-3 sm:gap-4">
                         <span
                             class="bg-primary text-on-primary w-6 h-6 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-1">
                             {{ i + 1 }}
@@ -211,15 +207,15 @@
             </section>
 
             <!-- Key takeaways -->
-            <div class="bg-primary-container text-on-primary-container p-6 sm:p-8 lg:p-12 rounded-lg shadow-xl shadow-primary/10">
+            <div
+                class="bg-primary-container text-on-primary-container p-6 sm:p-8 lg:p-12 rounded-lg shadow-xl shadow-primary/10">
                 <h2 class="text-2xl sm:text-3xl font-serif mb-6 sm:mb-8 flex items-center gap-3">
                     <span class="material-symbols-outlined">auto_awesome</span>
                     Concluzii esențiale
                 </h2>
 
                 <div class="grid sm:grid-cols-2 gap-5 sm:gap-8">
-                    <div
-                        *ngFor="let takeaway of articleData.keyTakeaways"
+                    <div *ngFor="let takeaway of articleData.keyTakeaways"
                         class="bg-white/10 p-5 sm:p-6 rounded-lg backdrop-blur-sm">
                         <p class="text-xs sm:text-sm font-bold uppercase tracking-widest opacity-70 mb-2">
                             {{ takeaway.label }}
@@ -234,12 +230,12 @@
                 <h2 class="text-2xl sm:text-3xl text-primary mb-8 sm:mb-10 font-serif">Întrebări frecvente</h2>
 
                 <div class="space-y-4 sm:space-y-6">
-                    <details
-                        *ngFor="let item of articleData.faq"
+                    <details *ngFor="let item of articleData.faq"
                         class="group bg-surface-container-lowest rounded-lg p-5 sm:p-6 border border-transparent hover:border-outline-variant transition-all duration-300">
                         <summary class="flex justify-between items-start gap-4 cursor-pointer list-none">
                             <span class="font-bold text-base sm:text-lg text-on-surface">{{ item.question }}</span>
-                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform shrink-0">expand_more</span>
                         </summary>
 
                         <p class="mt-4 text-sm sm:text-base text-on-surface-variant leading-relaxed">
@@ -259,9 +255,7 @@
                     </h4>
 
                     <nav class="space-y-4">
-                        <a
-                            *ngFor="let section of tocSections; let i = index"
-                            [attr.href]="'#' + section.id"
+                        <a *ngFor="let section of tocSections; let i = index" [attr.href]="'#' + section.id"
                             class="block text-on-surface-variant hover:text-primary hover:pl-2 transition-all duration-300">
                             {{ i + 1 }}. {{ section.title }}
                         </a>
@@ -274,8 +268,7 @@
                         {{ articleData.sidebarCtaText }}
                     </p>
 
-                    <a
-                        [routerLink]="articleData.sidebarCtaLink"
+                    <a [routerLink]="articleData.sidebarCtaLink"
                         class="w-full inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
                         {{ articleData.sidebarCtaLabel }}
                     </a>
@@ -301,13 +294,10 @@
         <h2 class="text-2xl sm:text-3xl text-primary mb-8 sm:mb-12 font-serif">Articole similare</h2>
 
         <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
-            <div
-                *ngFor="let related of articleData.relatedArticles"
+            <div *ngFor="let related of articleData.relatedArticles"
                 class="bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-stone-200/40 flex flex-col group">
                 <div class="aspect-[4/3] overflow-hidden">
-                    <img
-                        [src]="related.imageSrc"
-                        [alt]="related.imageAlt"
+                    <img [src]="related.imageSrc" [alt]="related.imageAlt"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
 
@@ -320,8 +310,7 @@
                         {{ related.title }}
                     </h3>
 
-                    <a
-                        [routerLink]="related.link"
+                    <a [routerLink]="related.link"
                         class="mt-auto text-sm font-bold text-on-surface flex items-center gap-2 group-hover:gap-4 transition-all">
                         Citește mai mult
                         <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -344,14 +333,12 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-                    <a
-                        [routerLink]="articleData.finalCtaPrimaryLink"
+                    <a [routerLink]="articleData.finalCtaPrimaryLink"
                         class="w-full sm:w-auto inline-flex items-center justify-center bg-surface text-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all">
                         {{ articleData.finalCtaPrimaryLabel }}
                     </a>
 
-                    <a
-                        [routerLink]="articleData.finalCtaSecondaryLink"
+                    <a [routerLink]="articleData.finalCtaSecondaryLink"
                         class="w-full sm:w-auto inline-flex items-center justify-center border border-surface/30 text-surface px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 hover:bg-white/10 transition-all">
                         {{ articleData.finalCtaSecondaryLabel }}
                     </a>
@@ -360,8 +347,7 @@
 
             <div class="absolute inset-0 opacity-10 pointer-events-none">
                 <svg height="100%" viewBox="0 0 1000 1000" width="100%" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M0,500 C200,300 400,700 600,500 C800,300 1000,500 1000,500 L1000,1000 L0,1000 Z"
+                    <path d="M0,500 C200,300 400,700 600,500 C800,300 1000,500 1000,500 L1000,1000 L0,1000 Z"
                         fill="currentColor"></path>
                 </svg>
             </div>
