@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -9,8 +9,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   mobileMenuOpen = false;
+  scrollProgress = 0;
+
+  ngOnInit(): void {
+    this.updateScrollProgress();
+  }
 
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
@@ -18,5 +23,25 @@ export class NavbarComponent {
 
   closeMobileMenu() {
     this.mobileMenuOpen = false;
+  }
+
+  @HostListener('window:scroll')
+  @HostListener('window:resize')
+  updateScrollProgress() {
+    const scrollTop =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+
+    const documentHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+
+    if (documentHeight <= 0) {
+      this.scrollProgress = 0;
+      return;
+    }
+
+    this.scrollProgress = (scrollTop / documentHeight) * 100;
   }
 }
