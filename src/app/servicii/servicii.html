@@ -3,38 +3,55 @@
 <main class="bg-[#fbf9f5] text-[#1b1c1a] font-body selection:bg-[#f3e0c4] selection:text-[#70624d]">
   <!-- Hero Section -->
   <section
-    class="relative min-h-[560px] sm:min-h-[640px] lg:min-h-[calc(100svh-88px)] flex items-center overflow-hidden pt-16 sm:pt-20 lg:pt-20 pb-10 sm:pb-12">
-    <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#fbf9f5]/85 via-[#fbf9f5]/55 to-[#fbf9f5]/75 lg:hidden z-10"></div>
-      <div class="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#fbf9f5] via-[#fbf9f5]/55 to-transparent z-10"></div>
-      <img class="w-full h-full object-cover object-center opacity-40" alt="Spațiu de terapie"
+    class="relative min-h-[560px] sm:min-h-[640px] md:min-h-[720px] lg:min-h-[calc(100svh-88px)] flex items-center overflow-hidden pt-6 sm:pt-8 lg:pt-10 pb-8 sm:pb-10 lg:pb-6">
+    <!-- Mobile / tablet hero background -->
+    <div class="absolute inset-0 lg:hidden">
+      <img class="w-full h-full object-cover object-center" alt="Spațiu de terapie"
         src="assets/images/servicii-hero.webp" />
+      <div class="absolute inset-0 bg-black/45"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-black/60"></div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
-      <div class="max-w-xl sm:max-w-2xl lg:max-w-3xl">
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center w-full">
+      <div
+        class="lg:col-span-6 z-10 order-1 text-center lg:text-left py-4 sm:py-6 lg:py-0 max-w-3xl mx-auto lg:max-w-none lg:mx-0">
         <span appRevealOnScroll [delay]="100"
-          class="inline-block px-3 sm:px-4 py-1 bg-[#565f45]/10 text-[#565f45] rounded-full text-[10px] sm:text-xs font-semibold tracking-widest uppercase mb-5 sm:mb-6">
+          class="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-white/15 lg:bg-primary-fixed text-white lg:text-on-primary-fixed-variant backdrop-blur-sm text-[10px] sm:text-xs font-semibold tracking-wide mb-5 sm:mb-6 lg:mb-8 uppercase border border-white/20 lg:border-0">
           Tratamente personalizate
         </span>
 
         <h1 appRevealOnScroll [delay]="200"
-          class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-serif italic leading-[1.05] mb-5 sm:mb-6 lg:mb-8 text-[#565f45]">
+          class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white lg:text-[#565f45] leading-tight mb-5 sm:mb-6 lg:mb-8 tracking-tight">
           Servicii concepute <br />
-          pentru binele tăuKs
+          pentru <span class="italic text-primary">binele tău</span>
         </h1>
 
         <p appRevealOnScroll [delay]="300"
-          class="text-sm sm:text-base md:text-lg lg:text-2xl text-[#454840] font-light leading-relaxed mb-7 sm:mb-8 lg:mb-10 max-w-xl">
+          class="text-sm sm:text-base md:text-lg lg:text-lg text-white/85 lg:text-[#454840] leading-relaxed mb-7 sm:mb-8 lg:mb-10 max-w-xl mx-auto lg:mx-0">
           Descoperă o abordare terapeutică blândă, menită să aline durerea și să redea corpului tău
           echilibrul și libertatea de mișcare.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4" appRevealOnScroll [delay]="400">
+        <div appRevealOnScroll [delay]="400"
+          class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto lg:mx-0">
           <a routerLink="/contact"
-            class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
-            Fă o programare
+            class="w-full sm:w-[220px] lg:w-auto inline-flex items-center justify-center whitespace-nowrap bg-primary text-on-primary px-5 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
+            Programează-te
           </a>
+        </div>
+      </div>
+
+      <div appRevealOnScroll [delay]="250"
+        class="hidden lg:block lg:col-span-6 relative lg:h-[420px] xl:h-[520px] lg:max-h-[520px] order-2 group">
+        <div
+          class="absolute inset-0 bg-primary-fixed/20 rounded-xl -rotate-2 scale-105 transition-all duration-500 group-hover:scale-[1.07] group-hover:-translate-y-2">
+        </div>
+
+        <div
+          class="absolute inset-0 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            alt="Spațiu de terapie" src="assets/images/servicii-hero.webp" />
         </div>
       </div>
     </div>
@@ -42,7 +59,7 @@
 
   <!-- Introduction Section -->
   <section class="py-16 sm:py-20 lg:py-24 bg-[#f5f3ef]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
       <div class="flex flex-col lg:flex-row gap-10 sm:gap-12 lg:gap-16 items-center">
         <div class="w-full lg:w-1/2" appRevealOnScroll [delay]="100">
           <div class="relative group w-full h-[220px] sm:h-[280px] md:h-[340px] lg:h-[420px] lg:max-h-[420px]">
@@ -59,7 +76,8 @@
         </div>
 
         <div class="w-full lg:w-1/2">
-          <h2 appRevealOnScroll [delay]="180" class="text-2xl sm:text-3xl lg:text-4xl font-serif italic mb-6 sm:mb-8 text-[#565f45]">
+          <h2 appRevealOnScroll [delay]="180"
+            class="text-2xl sm:text-3xl lg:text-4xl font-serif italic mb-6 sm:mb-8 text-[#565f45]">
             O abordare unică pentru fiecare pacient
           </h2>
 
@@ -88,9 +106,10 @@
 
   <!-- Service Cards -->
   <section class="py-16 sm:py-20 lg:py-32 bg-[#fbf9f5]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
       <div class="text-center mb-12 sm:mb-16 lg:mb-20">
-        <h2 appRevealOnScroll [delay]="100" class="text-3xl sm:text-4xl lg:text-5xl font-serif italic text-[#565f45] mb-4">
+        <h2 appRevealOnScroll [delay]="100"
+          class="text-3xl sm:text-4xl lg:text-5xl font-serif italic text-[#565f45] mb-4">
           Experiențele noastre terapeutice
         </h2>
         <p appRevealOnScroll [delay]="180" class="text-sm sm:text-base text-[#454840] max-w-2xl mx-auto">
@@ -98,7 +117,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
         <div appRevealOnScroll [delay]="120"
           class="bg-white p-6 sm:p-8 lg:p-10 rounded-[1.5rem] sm:rounded-[2rem] flex flex-col h-full border border-[#c6c7bd]/20 hover:shadow-xl transition-all duration-500 group">
           <div class="mb-6 sm:mb-8 overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem]">
@@ -139,7 +158,8 @@
         <div appRevealOnScroll [delay]="220"
           class="bg-[#6e785c] p-6 sm:p-8 lg:p-10 rounded-[1.5rem] sm:rounded-[2rem] flex flex-col h-full text-white shadow-2xl xl:scale-105 relative z-10 overflow-hidden">
           <div class="absolute top-0 right-0 p-4 opacity-20">
-            <span class="material-symbols-outlined text-7xl sm:text-8xl" style="font-variation-settings: 'FILL' 1">spa</span>
+            <span class="material-symbols-outlined text-7xl sm:text-8xl"
+              style="font-variation-settings: 'FILL' 1">spa</span>
           </div>
 
           <div class="flex-grow relative z-10">
@@ -173,7 +193,7 @@
         </div>
 
         <div appRevealOnScroll [delay]="320"
-          class="bg-white p-6 sm:p-8 lg:p-10 rounded-[1.5rem] sm:rounded-[2rem] flex flex-col h-full border border-[#c6c7bd]/20 hover:shadow-xl transition-all duration-500 group md:col-span-2 xl:col-span-1">
+          class="bg-white p-6 sm:p-8 lg:p-10 rounded-[1.5rem] sm:rounded-[2rem] flex flex-col h-full border border-[#c6c7bd]/20 hover:shadow-xl transition-all duration-500 group">
           <div class="mb-6 sm:mb-8 overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem]">
             <img class="w-full h-44 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-700"
               alt="Ședință relaxare" src="assets/images/servicii3.webp" />
@@ -214,7 +234,7 @@
 
   <!-- Why choose a session -->
   <section class="py-16 sm:py-20 lg:py-24 bg-[#f5f3ef] overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
       <div class="max-w-5xl mx-auto">
         <h2 appRevealOnScroll [delay]="100"
           class="text-2xl sm:text-3xl lg:text-4xl font-serif italic text-center mb-10 sm:mb-12 lg:mb-16 text-[#565f45]">
@@ -258,7 +278,7 @@
 
   <!-- FAQ -->
   <section class="py-16 sm:py-20 lg:py-32 bg-[#fbf9f5]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
       <h2 appRevealOnScroll [delay]="100"
         class="text-2xl sm:text-3xl lg:text-4xl font-serif italic text-center mb-10 sm:mb-12 lg:mb-16 text-[#565f45]">
         Întrebări frecvente
@@ -327,7 +347,7 @@
 
   <!-- Final CTA -->
   <section class="py-16 sm:py-20 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
       <div
         class="bg-[#f3e0c4] rounded-[1.5rem] sm:rounded-[2rem] p-8 sm:p-12 lg:p-16 text-center max-w-5xl mx-auto relative overflow-hidden">
         <div
@@ -335,11 +355,13 @@
         </div>
 
         <div class="relative z-10">
-          <h2 appRevealOnScroll [delay]="100" class="text-3xl sm:text-4xl md:text-5xl font-serif italic text-[#70624d] mb-6">
+          <h2 appRevealOnScroll [delay]="100"
+            class="text-3xl sm:text-4xl md:text-5xl font-serif italic text-[#70624d] mb-6">
             Pregătit să îți regăsești liniștea?
           </h2>
 
-          <p appRevealOnScroll [delay]="180" class="text-base sm:text-lg text-[#70624d]/80 mb-8 sm:mb-10 max-w-2xl mx-auto">
+          <p appRevealOnScroll [delay]="180"
+            class="text-base sm:text-lg text-[#70624d]/80 mb-8 sm:mb-10 max-w-2xl mx-auto">
             Suntem aici să te ghidăm pas cu pas către o stare de bine durabilă. Alege timpul tău pentru
             sănătate.
           </p>
