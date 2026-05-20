@@ -65,22 +65,23 @@
     <!-- About Section -->
     <section class="py-16 sm:py-20 lg:py-28 bg-surface-container-low" id="about">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-20 mb-10 sm:mb-12 lg:mb-20">
-                <div>
-                    <h2 appRevealOnScroll
-                        class="text-2xl sm:text-3xl lg:text-4xl font-serif text-on-surface mb-5 sm:mb-6 lg:mb-8">
-                        O abordare holistică a eliberării de tensiune
-                    </h2>
-                    <p appRevealOnScroll [delay]="120"
-                        class="text-base sm:text-lg text-on-surface-variant leading-relaxed">
-                        La The Breath of Silence, nu tratăm doar simptomele, ci căutăm rădăcina disconfortului tău.
-                        Terapia noastră corporală combină tehnici moderne cu o înțelegere profundă a anatomiei umane,
-                        oferindu-ți un spațiu unde corpul tău poate, în sfârșit, să expire.
-                    </p>
-                </div>
-                <div class="hidden lg:flex items-end justify-end">
-                    <div class="h-px w-full bg-outline-variant/30"></div>
-                </div>
+            <div class="max-w-4xl mx-auto text-center mb-10 sm:mb-12 lg:mb-20">
+                <span appRevealOnScroll [delay]="80"
+                    class="text-primary font-medium tracking-widest uppercase text-[10px] sm:text-xs mb-4 block">
+                    Terapie corporală
+                </span>
+
+                <h2 appRevealOnScroll [delay]="100"
+                    class="text-2xl sm:text-3xl lg:text-4xl font-serif text-on-surface mb-5 sm:mb-6 lg:mb-8">
+                    O abordare holistică a eliberării de tensiune
+                </h2>
+
+                <p appRevealOnScroll [delay]="180"
+                    class="text-base sm:text-lg text-on-surface-variant leading-relaxed max-w-3xl mx-auto">
+                    La The Breath of Silence, nu tratăm doar simptomele, ci căutăm rădăcina disconfortului tău.
+                    Terapia noastră corporală combină tehnici moderne cu o înțelegere profundă a anatomiei umane,
+                    oferindu-ți un spațiu unde corpul tău poate, în sfârșit, să expire.
+                </p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8">
@@ -434,12 +435,6 @@
                             class="w-full sm:w-auto inline-flex items-center justify-center bg-surface text-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all">
                             Fă o programare
                         </a>
-
-                        <a href="https://wa.me/40742638613"
-                            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 border border-surface/30 text-surface px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 hover:bg-white/10 transition-all">
-                            <span class="material-symbols-outlined text-[20px]">chat</span>
-                            WhatsApp
-                        </a>
                     </div>
                 </div>
 
@@ -455,78 +450,112 @@
 
     <!-- Contact Section -->
     <section class="py-16 sm:py-20 lg:py-28" id="contact">
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20">
-            <div>
-                <h2 appRevealOnScroll class="text-2xl sm:text-3xl lg:text-4xl font-serif mb-8 sm:mb-10 lg:mb-12">Unde ne
-                    găsești</h2>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
+        <!-- Header -->
+        <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-12 lg:mb-16">
+            <span appRevealOnScroll [delay]="80"
+                class="text-primary font-medium tracking-widest uppercase text-[10px] sm:text-xs mb-4 block">
+                Contact
+            </span>
 
-                <div class="space-y-6 sm:space-y-8 lg:space-y-10">
-                    <div appRevealOnScroll [delay]="0" class="flex gap-4 sm:gap-6">
-                        <span class="material-symbols-outlined text-primary text-3xl">location_on</span>
-                        <div>
-                            <h4 class="font-bold text-lg mb-1">Adresă</h4>
-                            <p class="text-on-surface-variant">Strada Brașovului Nr. 100, Brașov</p>
-                        </div>
-                    </div>
+            <h2 appRevealOnScroll [delay]="100"
+                class="text-2xl sm:text-3xl lg:text-4xl font-serif mb-5 sm:mb-6">
+                Unde ne găsești
+            </h2>
 
-                    <div appRevealOnScroll [delay]="100" class="flex gap-4 sm:gap-6">
-                        <span class="material-symbols-outlined text-primary text-3xl">call</span>
-                        <div>
-                            <h4 class="font-bold text-lg mb-1">Telefon</h4>
-                            <p class="text-on-surface-variant">+40 742 638 613</p>
-                        </div>
-                    </div>
+            <p appRevealOnScroll [delay]="180"
+                class="text-sm sm:text-base text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+                Te așteptăm într-un spațiu calm și primitor, dedicat echilibrului, relaxării și recuperării.
+                Ne poți contacta telefonic, pe WhatsApp sau prin email.
+            </p>
+        </div>
 
-                    <div appRevealOnScroll [delay]="200" class="flex gap-4 sm:gap-6">
-                        <span class="material-symbols-outlined text-primary text-3xl">mail</span>
-                        <div>
-                            <h4 class="font-bold text-lg mb-1">Email</h4>
-                            <p class="text-on-surface-variant">contact@breathofsilence.ro</p>
-                        </div>
-                    </div>
-
-                    <div appRevealOnScroll [delay]="300" class="flex gap-4 sm:gap-6">
-                        <span class="material-symbols-outlined text-primary text-3xl">schedule</span>
-                        <div>
-                            <h4 class="font-bold text-lg mb-1">Program</h4>
-                            <p class="text-on-surface-variant">L-V: 10:00 - 20:00<br />S-D: Închis</p>
-                        </div>
-                    </div>
+        <!-- Contact cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6 mb-8 sm:mb-10 lg:mb-12">
+            <div appRevealOnScroll [delay]="0"
+                class="bg-surface-container-lowest p-6 sm:p-8 rounded-lg border border-outline-variant/10 shadow-sm hover:shadow-lg transition-all">
+                <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined">location_on</span>
                 </div>
+
+                <h3 class="text-lg font-bold mb-2">Adresă</h3>
+                <p class="text-on-surface-variant text-sm sm:text-base">
+                    Strada Brașovului Nr. 100, Brașov
+                </p>
             </div>
 
-            <div appRevealOnScroll [delay]="180"
-                class="h-[320px] sm:h-[400px] lg:h-[500px] bg-surface-container rounded-lg overflow-hidden relative shadow-inner">
-                <iframe id="mapFrame" class="w-full h-full grayscale"
-                    src="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed"
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <button type="button"
-                        onclick="document.getElementById('mapFrame').src='https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed'"
-                        class="bg-primary text-on-primary p-4 rounded-full animate-bounce shadow-lg pointer-events-auto hover:scale-110 transition-all"
-                        aria-label="Centrează harta pe locație">
-                        <span class="material-symbols-outlined">location_on</span>
-                    </button>
+            <div appRevealOnScroll [delay]="100"
+                class="bg-surface-container-lowest p-6 sm:p-8 rounded-lg border border-outline-variant/10 shadow-sm hover:shadow-lg transition-all">
+                <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined">call</span>
                 </div>
+
+                <h3 class="text-lg font-bold mb-2">Telefon</h3>
+                <p class="text-on-surface-variant text-sm sm:text-base mb-4">
+                    +40 742 638 613
+                </p>
+
+                <a href="tel:+40742638613"
+                    class="text-primary font-bold inline-flex items-center gap-2 text-sm sm:text-base">
+                    Sună acum
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+            </div>
+
+            <div appRevealOnScroll [delay]="200"
+                class="bg-surface-container-lowest p-6 sm:p-8 rounded-lg border border-outline-variant/10 shadow-sm hover:shadow-lg transition-all">
+                <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined">mail</span>
+                </div>
+
+                <h3 class="text-lg font-bold mb-2">Email</h3>
+                <p class="text-on-surface-variant text-sm sm:text-base break-words">
+                    contact@breathofsilence.ro
+                </p>
+            </div>
+
+            <div appRevealOnScroll [delay]="300"
+                class="bg-primary text-on-primary p-6 sm:p-8 rounded-lg hero-gradient shadow-lg">
+                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined">schedule</span>
+                </div>
+
+                <h3 class="text-lg font-bold mb-4">Program</h3>
+
+                <ul class="space-y-2 text-sm opacity-90">
+                    <li class="flex justify-between gap-4">
+                        <span>L-V</span>
+                        <span>10:00 - 20:00</span>
+                    </li>
+
+                    <li class="flex justify-between gap-4">
+                        <span>S-D</span>
+                        <span>Închis</span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+
+        <!-- Map below -->
+        <div appRevealOnScroll [delay]="180"
+            class="h-[320px] sm:h-[400px] md:h-[460px] lg:h-[520px] bg-surface-container rounded-xl overflow-hidden relative shadow-inner border border-outline-variant/10">
+            <iframe id="mapFrame" class="w-full h-full grayscale"
+                src="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <button type="button"
+                    onclick="document.getElementById('mapFrame').src='https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed'"
+                    class="bg-primary text-on-primary p-4 rounded-full animate-bounce shadow-lg pointer-events-auto hover:scale-110 transition-all"
+                    aria-label="Centrează harta pe locație">
+                    <span class="material-symbols-outlined">location_on</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 </main>
 
 <!-- Footer -->
 <app-footer></app-footer>
-
-<!-- Floating WhatsApp -->
-<div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 z-50">
-    <a class="bg-primary dark:bg-stone-800 text-white rounded-full p-3 sm:p-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center shadow-2xl shadow-primary/20 hover:scale-110 hover:rotate-3 transition-all animate-pulse group relative"
-        href="https://wa.me/40742638613">
-        <span class="material-symbols-outlined filled-icon">chat</span>
-        <div
-            class="absolute right-16 sm:right-20 bg-primary text-white py-2 px-4 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block">
-            Contact Rapid pe WhatsApp
-        </div>
-    </a>
-</div>

@@ -96,101 +96,97 @@
 
   <!-- Cum te putem ajuta -->
   <section class="py-16 sm:py-20 lg:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
-      <h2 appRevealOnScroll [delay]="100"
-        class="text-2xl sm:text-3xl md:text-4xl font-serif text-center mb-10 sm:mb-12 lg:mb-16">
-        Cum te putem ajuta?
-      </h2>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
+    <h2 appRevealOnScroll [delay]="100"
+      class="text-2xl sm:text-3xl md:text-4xl font-serif text-center mb-10 sm:mb-12 lg:mb-16">
+      Cum te putem ajuta?
+    </h2>
 
-      <div class="space-y-5 sm:space-y-6">
-        <!-- Card mare -->
-        <div appRevealOnScroll [delay]="150"
-          class="bg-white p-6 sm:p-8 lg:p-10 rounded-lg flex flex-col justify-center hover:bg-surface-container-low transition-colors duration-500 min-h-[220px] sm:min-h-[260px] lg:min-h-[300px]">
-          <div class="max-w-3xl">
-            <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl mb-4 sm:mb-6">
-              back_hand
-            </span>
+    <div class="space-y-5 sm:space-y-6">
+      <!-- Card mare -->
+      <div appRevealOnScroll [delay]="150"
+        class="bg-white p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/15 flex flex-col justify-center hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300 min-h-[220px] sm:min-h-[260px] lg:min-h-[300px]">
+        <div class="max-w-3xl">
+          <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl mb-4">
+            back_hand
+          </span>
 
-            <h3 class="text-xl sm:text-2xl lg:text-3xl font-serif mb-3 sm:mb-4">
-              Dureri de spate și coloană
-            </h3>
+          <h3 class="text-xl sm:text-2xl lg:text-3xl font-serif mb-3 sm:mb-4">
+            Dureri de spate și coloană
+          </h3>
 
-            <p appRevealOnScroll [delay]="180" class="text-sm sm:text-base text-on-surface-variant leading-relaxed">
-              De la disconfortul lombar cronic la tensiuni acute, restabilim aliniamentul natural pentru o
-              postură fără efort.
-            </p>
-          </div>
+          <p appRevealOnScroll [delay]="180" class="text-sm sm:text-base text-on-surface-variant leading-relaxed">
+            De la disconfortul lombar cronic la tensiuni acute, restabilim aliniamentul natural pentru o
+            postură fără efort.
+          </p>
+        </div>
+      </div>
+
+      <!-- Cele 4 carduri aliniate -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6">
+        <div appRevealOnScroll [delay]="220"
+          class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/15 min-h-[220px] flex flex-col justify-start hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+          <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl mb-4">
+            relax
+          </span>
+
+          <h3 class="text-lg sm:text-xl font-serif mb-2">
+            Stres și oboseală
+          </h3>
+
+          <p class="text-sm text-on-surface-variant">
+            Eliberarea tensiunii acumulate în sistemul nervos pentru o stare de calm profund.
+          </p>
         </div>
 
-        <!-- Cele 4 carduri aliniate -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6">
-          <div appRevealOnScroll [delay]="220"
-            class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/15 min-h-[220px] flex flex-col justify-start hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all group">
-            <span
-              class="material-symbols-outlined text-primary text-3xl sm:text-4xl mb-4 group-hover:scale-110 transition-transform">
-              relax
-            </span>
+        <div appRevealOnScroll [delay]="290"
+          class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/15 min-h-[220px] flex flex-col justify-start hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+          <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl mb-4">
+            personal_injury
+          </span>
 
-            <h3 class="text-lg sm:text-xl font-serif mb-2">
-              Stres și oboseală
-            </h3>
+          <h3 class="text-lg sm:text-xl font-serif mb-2">
+            Dureri cervicale
+          </h3>
 
-            <p class="text-sm text-on-surface-variant">
-              Eliberarea tensiunii acumulate în sistemul nervos pentru o stare de calm profund.
-            </p>
-          </div>
+          <p class="text-sm text-on-surface-variant">
+            Reducerea tensiunii din zona gâtului și umerilor cauzată de lucrul la birou.
+          </p>
+        </div>
 
-          <div appRevealOnScroll [delay]="290"
-            class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/15 min-h-[220px] flex flex-col justify-start hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all group">
-            <span
-              class="material-symbols-outlined text-primary text-3xl sm:text-4xl mb-4 group-hover:scale-110 transition-transform">
-              personal_injury
-            </span>
+        <div appRevealOnScroll [delay]="360"
+          class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/15 min-h-[220px] flex flex-col justify-start hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+          <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl mb-4">
+            fitness_center
+          </span>
 
-            <h3 class="text-lg sm:text-xl font-serif mb-2">
-              Dureri cervicale
-            </h3>
+          <h3 class="text-lg sm:text-xl font-serif mb-2">
+            Rigiditate musculară
+          </h3>
 
-            <p class="text-sm text-on-surface-variant">
-              Reducerea tensiunii din zona gâtului și umerilor cauzată de lucrul la birou.
-            </p>
-          </div>
+          <p class="text-sm text-on-surface-variant">
+            Îmbunătățirea flexibilității și amplitudinii mișcărilor în articulații.
+          </p>
+        </div>
 
-          <div appRevealOnScroll [delay]="360"
-            class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/15 min-h-[220px] flex flex-col justify-start hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all group">
-            <span
-              class="material-symbols-outlined text-primary text-3xl sm:text-4xl mb-4 group-hover:scale-110 transition-transform">
-              fitness_center
-            </span>
+        <div appRevealOnScroll [delay]="430"
+          class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/15 min-h-[220px] flex flex-col justify-start hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+          <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl mb-4">
+            self_improvement
+          </span>
 
-            <h3 class="text-lg sm:text-xl font-serif mb-2">
-              Rigiditate musculară
-            </h3>
+          <h3 class="text-lg sm:text-xl font-serif mb-2">
+            Tensiune în umeri
+          </h3>
 
-            <p class="text-sm text-on-surface-variant">
-              Îmbunătățirea flexibilității și amplitudinii mișcărilor în articulații.
-            </p>
-          </div>
-
-          <div appRevealOnScroll [delay]="430"
-            class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg border border-outline-variant/15 min-h-[220px] flex flex-col justify-start hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all group">
-            <span
-              class="material-symbols-outlined text-primary text-3xl sm:text-4xl mb-4 group-hover:scale-110 transition-transform">
-              self_improvement
-            </span>
-
-            <h3 class="text-lg sm:text-xl font-serif mb-2">
-              Tensiune în umeri
-            </h3>
-
-            <p class="text-sm text-on-surface-variant">
-              Decongestionarea zonelor tensionate pentru o mobilitate superioară a brațelor.
-            </p>
-          </div>
+          <p class="text-sm text-on-surface-variant">
+            Decongestionarea zonelor tensionate pentru o mobilitate superioară a brațelor.
+          </p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Our approach -->
   <section class="py-16 sm:py-20 lg:py-28 bg-primary text-on-primary relative overflow-hidden">

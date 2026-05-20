@@ -1,12 +1,12 @@
 <nav class="bg-surface/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50">
-    <div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6 max-w-7xl mx-auto">
+    <div class="flex justify-between items-center w-full px-3 sm:px-4 lg:px-6 py-4 sm:py-5 mx-auto">
         <a class="text-lg sm:text-2xl font-serif tracking-tight text-primary dark:text-stone-100" routerLink="/"
             (click)="closeMobileMenu()">
             The Breath of Silence
         </a>
 
         <!-- Desktop Nav -->
-        <div class="hidden min-[1147px]:flex items-center gap-10">
+        <div class="hidden min-[1147px]:flex items-center gap-6 xl:gap-8 2xl:gap-10">
             <a routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
                 routerLinkActive="text-primary font-semibold border-b-2 border-primary/30 pb-1"
                 class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300">
@@ -26,7 +26,7 @@
 
             <a routerLink="/blog" routerLinkActive="text-primary font-semibold border-b-2 border-primary/30 pb-1"
                 class="text-on-surface-variant/70 hover:text-primary transition-colors hover:scale-102 transition-transform duration-300">
-                Blogs
+                Blog
             </a>
 
             <a routerLink="/contact" routerLinkActive="text-primary font-semibold border-b-2 border-primary/30 pb-1"
@@ -37,7 +37,7 @@
 
         <!-- Desktop CTA -->
         <a [routerLink]="['/']" fragment="contact"
-            class="hidden min-[1147px]:inline-flex bg-primary text-on-primary px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:scale-102 active:scale-95 transition-all shadow-sm">
+            class="hidden min-[1147px]:inline-flex bg-primary text-on-primary px-5 xl:px-7 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:scale-102 active:scale-95 transition-all shadow-sm whitespace-nowrap">
             Programează-te
         </a>
 
@@ -51,45 +51,64 @@
         </button>
     </div>
 
-    <!-- Mobile Menu -->
-    <div *ngIf="mobileMenuOpen" class="min-[1147px]:hidden px-4 sm:px-6 pb-4 sm:pb-6 max-w-7xl mx-auto">
-        <div class="bg-surface-container-low rounded-2xl p-4 shadow-lg flex flex-col gap-2">
-            <a routerLink="/" (click)="closeMobileMenu()"
-                class="px-4 py-3 rounded-xl text-primary font-semibold bg-primary/10">
-                Acasă
-            </a>
-
-            <a routerLink="/despre-osteopatie" (click)="closeMobileMenu()"
-                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors">
-                Despre Osteopatie
-            </a>
-
-            <a routerLink="/servicii" (click)="closeMobileMenu()"
-                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors">
-                Servicii
-            </a>
-
-            <a routerLink="/blog" (click)="closeMobileMenu()"
-                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors">
-                Blog
-            </a>
-
-            <a routerLink="/contact" (click)="closeMobileMenu()"
-                class="px-4 py-3 rounded-xl text-on-surface-variant hover:bg-black/5 transition-colors">
-                Contact
-            </a>
-
-            <a [routerLink]="['/']" fragment="contact" (click)="closeMobileMenu()"
-                class="mt-2 bg-primary text-on-primary px-6 py-3 rounded-full text-sm font-medium shadow-sm text-center">
-                Programează-te
-            </a>
-        </div>
-    </div>
-
     <!-- Scroll Progress Bar -->
     <div class="w-full h-[3px] bg-transparent">
         <div class="h-full bg-primary transition-[width] duration-150 ease-out" [style.width.%]="scrollProgress">
         </div>
     </div>
-
 </nav>
+
+<!-- Mobile Fullscreen Menu - IMPORTANT: este DUPĂ nav, nu în nav -->
+<div *ngIf="mobileMenuOpen"
+    class="fixed inset-0 w-screen h-screen z-[99999] min-[1147px]:hidden bg-[#fbf9f5] dark:bg-stone-950 text-on-surface dark:text-stone-100 overflow-y-auto"
+    style="position: fixed; inset: 0; background-color: #fbf9f5;">
+    <!-- Top bar inside menu -->
+    <div class="flex items-center justify-between px-4 sm:px-6 py-4 sm:py-5">
+        <a class="text-lg sm:text-2xl font-serif tracking-tight text-primary dark:text-stone-100" routerLink="/"
+            (click)="closeMobileMenu()">
+            The Breath of Silence
+        </a>
+
+        <button type="button" (click)="closeMobileMenu()"
+            class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface dark:text-stone-100 hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+            aria-label="Închide meniul">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+
+    <!-- Center menu -->
+    <div class="min-h-[calc(100svh-84px)] flex flex-col items-center justify-center text-center px-4 sm:px-6">
+        <div class="flex flex-col items-center gap-7 sm:gap-9">
+            <a routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="!text-primary"
+                (click)="closeMobileMenu()"
+                class="text-2xl sm:text-3xl font-semibold tracking-wide text-on-surface dark:text-stone-100 hover:text-primary transition-colors">
+                Acasă
+            </a>
+
+            <a routerLink="/despre-osteopatie" routerLinkActive="!text-primary" (click)="closeMobileMenu()"
+                class="text-2xl sm:text-3xl font-semibold tracking-wide text-on-surface dark:text-stone-100 hover:text-primary transition-colors">
+                Despre Osteopatie
+            </a>
+
+            <a routerLink="/servicii" routerLinkActive="!text-primary" (click)="closeMobileMenu()"
+                class="text-2xl sm:text-3xl font-semibold tracking-wide text-on-surface dark:text-stone-100 hover:text-primary transition-colors">
+                Servicii
+            </a>
+
+            <a routerLink="/blog" routerLinkActive="!text-primary" (click)="closeMobileMenu()"
+                class="text-2xl sm:text-3xl font-semibold tracking-wide text-on-surface dark:text-stone-100 hover:text-primary transition-colors">
+                Blog
+            </a>
+
+            <a routerLink="/contact" routerLinkActive="!text-primary" (click)="closeMobileMenu()"
+                class="text-2xl sm:text-3xl font-semibold tracking-wide text-on-surface dark:text-stone-100 hover:text-primary transition-colors">
+                Contact
+            </a>
+
+            <a [routerLink]="['/']" fragment="contact" (click)="closeMobileMenu()"
+                class="mt-4 inline-flex items-center justify-center bg-primary text-on-primary px-8 py-3.5 rounded-full text-sm sm:text-base font-semibold shadow-lg hover:scale-102 active:scale-95 transition-all">
+                Programează-te
+            </a>
+        </div>
+    </div>
+</div>
