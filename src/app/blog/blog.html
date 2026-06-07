@@ -3,171 +3,147 @@
 <main class="bg-[#fbf9f5] text-[#1b1c1a] selection:bg-[#c0cbaa] selection:text-[#161e09]">
   <!-- Hero Section -->
   <!-- Hero Section -->
-<section
-  class="relative min-h-[420px] sm:min-h-[500px] md:min-h-[560px] lg:min-h-[620px] flex items-center overflow-hidden bg-[#fbf9f5] pt-14 sm:pt-16 lg:pt-20 pb-14 sm:pb-16 lg:pb-20"
->
-  <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#f3e0c4]/40 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-[#c0cbaa]/30 rounded-full blur-3xl pointer-events-none"></div>
+  <section
+    class="relative min-h-[420px] sm:min-h-[500px] md:min-h-[560px] lg:min-h-[620px] flex items-center overflow-hidden bg-[#fbf9f5] pt-14 sm:pt-16 lg:pt-20 pb-14 sm:pb-16 lg:pb-20">
+    <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#f3e0c4]/40 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-[#c0cbaa]/30 rounded-full blur-3xl pointer-events-none"></div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8 w-full">
-    <div class="max-w-4xl mx-auto text-center">
-      <span
-        appRevealOnScroll
-        [delay]="100"
-        class="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#f3e0c4]/70 text-[#70624d] text-[10px] sm:text-xs font-semibold tracking-widest uppercase mb-5 sm:mb-6 lg:mb-8 border border-[#70624d]/10"
-      >
-        Educație &amp; Wellness
-      </span>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8 w-full">
+      <div class="max-w-4xl mx-auto text-center">
+        <span appRevealOnScroll [delay]="100"
+          class="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#f3e0c4]/70 text-[#70624d] text-[10px] sm:text-xs font-semibold tracking-widest uppercase mb-5 sm:mb-6 lg:mb-8 border border-[#70624d]/10">
+          Educație &amp; Wellness
+        </span>
 
-      <h1
-        appRevealOnScroll
-        [delay]="200"
-        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-[#565f45] leading-tight mb-5 sm:mb-6 lg:mb-8 tracking-tight"
-      >
-        Gânduri despre <br />
-        <span class="italic text-primary">echilibru</span>
-      </h1>
+        <h1 appRevealOnScroll [delay]="200"
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-[#565f45] leading-tight mb-5 sm:mb-6 lg:mb-8 tracking-tight">
+          Gânduri despre <br />
+          <span class="italic text-primary">echilibru</span>
+        </h1>
 
-      <p
-        appRevealOnScroll
-        [delay]="300"
-        class="text-base sm:text-lg md:text-xl text-[#6a5c47] leading-relaxed max-w-2xl mx-auto"
-      >
-        Descoperă sfaturi utile pentru sănătatea corpului tău, explicate cu blândețe și autoritate medicală.
-        Un spațiu dedicat regăsirii liniștii interioare.
-      </p>
+        <p appRevealOnScroll [delay]="300"
+          class="text-base sm:text-lg md:text-xl text-[#6a5c47] leading-relaxed max-w-2xl mx-auto">
+          Descoperă sfaturi utile pentru sănătatea corpului tău, explicate cu blândețe și autoritate medicală.
+          Un spațiu dedicat regăsirii liniștii interioare.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
   <!-- Categories Section -->
   <section class="px-4 sm:px-6 md:px-10 lg:px-8 pb-12">
-  <div
-    appRevealOnScroll
-    [delay]="100"
-    class="max-w-7xl mx-auto flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 items-center border-y border-[#c6c7bd]/30 py-6 sm:py-8"
-  >
-    <span class="w-full lg:w-auto text-center lg:text-left text-sm font-bold text-[#565f45] lg:mr-4">
-      Categorii:
-    </span>
+    <div appRevealOnScroll [delay]="100"
+      class="max-w-7xl mx-auto flex flex-wrap justify-center gap-3 sm:gap-4 items-center border-y border-[#c6c7bd]/30 py-6 sm:py-8">
 
-    <button
-      *ngFor="let category of categories"
-      type="button"
-      (click)="setCategory(category)"
-      [ngClass]="
-        activeCategory === category
-          ? 'bg-[#f3e0c4] text-[#70624d]'
-          : 'bg-[#f5f3ef] text-[#6a5c47] hover:bg-[#f3e0c4] hover:text-[#70624d]'
-      "
-      class="px-5 sm:px-6 py-2 rounded-full text-sm font-medium hover:scale-105 transition-all"
-    >
-      {{ category }}
-    </button>
-  </div>
-</section>
+      <button *ngFor="let category of categories" type="button" (click)="setCategory(category)" [ngClass]="
+      activeCategory === category
+        ? 'bg-[#f3e0c4] text-[#70624d] shadow-sm'
+        : 'bg-[#f5f3ef] text-[#6a5c47] hover:bg-[#f3e0c4] hover:text-[#70624d] hover:shadow-sm'
+    " class="cursor-pointer px-5 sm:px-6 py-2 rounded-full text-sm font-medium hover:scale-105 active:scale-95 transition-all">
+        {{ category }}
+      </button>
+
+    </div>
+  </section>
 
   <!-- Featured Article -->
   <!-- Featured Article -->
-<section *ngIf="showFeaturedArticle" class="px-4 sm:px-6 md:px-10 lg:px-8 pb-20 sm:pb-24">
-  <div class="max-w-7xl mx-auto">
-    <div
-      appRevealOnScroll
-      [delay]="120"
-      class="group relative grid grid-cols-1 lg:grid-cols-12 items-center gap-0 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-[#f5f3ef] shadow-sm"
-    >
-      <div class="lg:col-span-7 h-[300px] sm:h-[420px] md:h-[460px] lg:h-[500px] overflow-hidden">
-        <img
-          alt="Articol recomandat"
-          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVEpYHfVZyAxB2tPoR21KeA3tpHR86Fx6AMv0SzzyrAqyvraLN3lPq02qz-py22FjbYK68IxbBi5OPKoBDVhYi9dmHmWFgiQVmr_EG1RkprDyiK4Kkttg0n-QamjhbG0uUhqnH8_w42npNC4tKSFurrYAjZdnSzHGGbLU5pea8RMiakTm9zA79RO7oej0VokD-gK7WRJEQq46KPOrF_6snCFG1bDp47krykKTVUbJIISFH3q7oVHXecVaCEdtgQXd2nfI9bvnCANmh"
-        />
-      </div>
-
-      <div class="lg:col-span-5 p-6 sm:p-10 md:p-12 lg:p-16 flex flex-col justify-center text-center lg:text-left">
-        <div class="mb-4 inline-flex items-center justify-center lg:justify-start gap-2 text-[#735c00] font-bold tracking-wide text-xs uppercase">
-          <span class="w-2 h-2 rounded-full bg-[#735c00]"></span>
-          Articol recomandat
+  <section *ngIf="showFeaturedArticle" class="px-4 sm:px-6 md:px-10 lg:px-8 pb-20 sm:pb-24">
+    <div class="max-w-7xl mx-auto">
+      <div appRevealOnScroll [delay]="120"
+        class="group relative grid grid-cols-1 lg:grid-cols-12 items-center gap-0 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-[#f5f3ef] shadow-sm">
+        <div class="lg:col-span-7 h-[300px] sm:h-[420px] md:h-[460px] lg:h-[500px] overflow-hidden">
+          <img alt="Articol recomandat"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVEpYHfVZyAxB2tPoR21KeA3tpHR86Fx6AMv0SzzyrAqyvraLN3lPq02qz-py22FjbYK68IxbBi5OPKoBDVhYi9dmHmWFgiQVmr_EG1RkprDyiK4Kkttg0n-QamjhbG0uUhqnH8_w42npNC4tKSFurrYAjZdnSzHGGbLU5pea8RMiakTm9zA79RO7oej0VokD-gK7WRJEQq46KPOrF_6snCFG1bDp47krykKTVUbJIISFH3q7oVHXecVaCEdtgQXd2nfI9bvnCANmh" />
         </div>
 
-        <h2 class="text-2xl sm:text-4xl md:text-5xl font-serif italic text-[#565f45] mb-6 leading-tight">
-          Cum recunoști tensiunea acumulată în zona gâtului
-        </h2>
+        <div class="lg:col-span-5 p-6 sm:p-10 md:p-12 lg:p-16 flex flex-col justify-center text-center lg:text-left">
+          <div
+            class="mb-4 inline-flex items-center justify-center lg:justify-start gap-2 text-[#735c00] font-bold tracking-wide text-xs uppercase">
+            <span class="w-2 h-2 rounded-full bg-[#735c00]"></span>
+            Articol recomandat
+          </div>
 
-        <p class="text-[#6a5c47] mb-8 leading-relaxed text-sm sm:text-base">
-          Află care sunt primele semne ale stresului somatic și cum poți interveni prin tehnici simple de
-          relaxare osteopatică înainte ca disconfortul să devină cronic.
-        </p>
+          <h2 class="text-2xl sm:text-4xl md:text-5xl font-serif italic text-[#565f45] mb-6 leading-tight">
+            Cum recunoști tensiunea acumulată în zona gâtului
+          </h2>
 
-        <a class="inline-flex items-center justify-center lg:justify-start gap-3 text-[#565f45] font-bold group/link" href="#">
-          Citește tot articolul
-          <span class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_forward</span>
-        </a>
+          <p class="text-[#6a5c47] mb-8 leading-relaxed text-sm sm:text-base">
+            Află care sunt primele semne ale stresului somatic și cum poți interveni prin tehnici simple de
+            relaxare osteopatică înainte ca disconfortul să devină cronic.
+          </p>
+
+          <a class="inline-flex items-center justify-center lg:justify-start gap-3 text-[#565f45] font-bold group/link"
+            href="#">
+            Citește tot articolul
+            <span
+              class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_forward</span>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Articles Grid -->
   <section class="px-4 sm:px-6 md:px-10 lg:px-8 pb-24 lg:pb-32 bg-[#f5f3ef]/40 py-16 sm:py-20 lg:py-24">
     <div class="max-w-7xl mx-auto">
-      <div class="flex flex-col sm:flex-row justify-between sm:items-end gap-4 mb-10 sm:mb-12 lg:mb-16 text-center sm:text-left">
+      <div
+        class="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-4 mb-10 sm:mb-12 lg:mb-16 text-center lg:text-left">
         <h3 appRevealOnScroll [delay]="100" class="text-3xl sm:text-4xl font-serif italic text-[#565f45]">
           Ultimele descoperiri
         </h3>
-        <div appRevealOnScroll [delay]="180" class="hidden md:block text-[#6a5c47]/60 font-medium">
+
+        <div appRevealOnScroll [delay]="180"
+          class="hidden md:block text-[#6a5c47]/60 font-medium text-center lg:text-right">
           Pagina 1 din 4
         </div>
-      </div>
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12 lg:gap-y-16">
-        <article
-          *ngFor="let article of filteredArticles; let i = index"
-          appRevealOnScroll
-          [delay]="120 + (i * 80)"
-          class="flex flex-col">
-          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-[#eae8e4] shadow-sm">
-            <img
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              [src]="article.image"
-              [alt]="article.alt" />
-          </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12 lg:gap-y-16">
+      <article *ngFor="let article of filteredArticles; let i = index" appRevealOnScroll [delay]="120 + (i * 80)"
+        class="flex flex-col">
+        <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-[#eae8e4] shadow-sm">
+          <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            [src]="article.image" [alt]="article.alt" />
+        </div>
 
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold uppercase tracking-widest text-[#565f45] shadow-sm">
-              {{ article.category }}
-            </span>
-            <span class="text-xs text-[#6a5c47]/50 font-medium italic">{{ article.readTime }}</span>
-          </div>
+        <div class="flex items-center gap-3 mb-4">
+          <span
+            class="px-3 py-1 bg-white rounded-full text-[10px] font-bold uppercase tracking-widest text-[#565f45] shadow-sm">
+            {{ article.category }}
+          </span>
+          <span class="text-xs text-[#6a5c47]/50 font-medium italic">{{ article.readTime }}</span>
+        </div>
 
-          <h4 class="text-2xl font-serif text-[#565f45] mb-4 leading-snug">
-            {{ article.title }}
-          </h4>
+        <h4 class="text-2xl font-serif text-[#565f45] mb-4 leading-snug">
+          {{ article.title }}
+        </h4>
 
-          <p class="text-[#6a5c47] text-sm leading-relaxed mb-6">
-            {{ article.excerpt }}
-          </p>
+        <p class="text-[#6a5c47] text-sm leading-relaxed mb-6">
+          {{ article.excerpt }}
+        </p>
 
-          <a
-            [routerLink]="article.link"
-            class="mt-auto text-[#565f45] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group">
-            Detalii
-            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
-          </a>
-        </article>
-      </div>
+        <a [routerLink]="article.link"
+          class="mt-auto text-[#565f45] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group">
+          Detalii
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+        </a>
+      </article>
+    </div>
 
-      <div appRevealOnScroll [delay]="200" class="mt-24 flex justify-center">
-        <button
-          class="px-12 py-4 rounded-full border border-[#565f45]/20 text-[#565f45] font-bold hover:bg-[#565f45] hover:text-white transition-all duration-300">
-          Încarcă mai multe articole
-        </button>
-      </div>
+    <div appRevealOnScroll [delay]="200" class="mt-24 flex justify-center">
+      <button
+        class="px-12 py-4 rounded-full border border-[#565f45]/20 text-[#565f45] font-bold hover:bg-[#565f45] hover:text-white transition-all duration-300">
+        Încarcă mai multe articole
+      </button>
+    </div>
     </div>
   </section>
 </main>
 
 <footer class="bg-[#f5f3ef] py-12">
-  <div class="flex flex-col lg:flex-row justify-between items-center px-4 sm:px-6 md:px-10 lg:px-8 max-w-7xl mx-auto gap-8">
+  <div
+    class="flex flex-col lg:flex-row justify-between items-center px-4 sm:px-6 md:px-10 lg:px-8 max-w-7xl mx-auto gap-8">
     <div appRevealOnScroll [delay]="100" class="flex flex-col items-center lg:items-start gap-4">
       <div class="font-serif text-lg italic text-[#565f45]">Respirația Liniștii</div>
       <div class="font-sans text-sm tracking-wide text-[#6a5c47]">
@@ -183,10 +159,12 @@
     </div>
 
     <div appRevealOnScroll [delay]="260" class="flex gap-4">
-      <a class="w-10 h-10 rounded-full border border-[#c6c7bd]/50 flex items-center justify-center text-[#565f45] hover:bg-[#565f45] hover:text-white transition-all" href="#">
+      <a class="w-10 h-10 rounded-full border border-[#c6c7bd]/50 flex items-center justify-center text-[#565f45] hover:bg-[#565f45] hover:text-white transition-all"
+        href="#">
         <span class="material-symbols-outlined text-lg">share</span>
       </a>
-      <a class="w-10 h-10 rounded-full border border-[#c6c7bd]/50 flex items-center justify-center text-[#565f45] hover:bg-[#565f45] hover:text-white transition-all" href="#">
+      <a class="w-10 h-10 rounded-full border border-[#c6c7bd]/50 flex items-center justify-center text-[#565f45] hover:bg-[#565f45] hover:text-white transition-all"
+        href="#">
         <span class="material-symbols-outlined text-lg">mail</span>
       </a>
     </div>

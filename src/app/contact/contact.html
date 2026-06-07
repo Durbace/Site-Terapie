@@ -2,7 +2,7 @@
 
 <main class="bg-surface text-on-surface selection:bg-primary/20">
   <section
-    class="relative min-h-[420px] sm:min-h-[500px] md:min-h-[560px] lg:min-h-[620px] flex items-center overflow-hidden bg-surface pt-14 sm:pt-16 lg:pt-20 pb-14 sm:pb-16 lg:pb-20">
+    class="relative min-h-[420px] sm:min-h-[500px] md:min-h-[560px] lg:min-h-[620px] flex items-center overflow-hidden bg-surface-container-low pt-14 sm:pt-16 lg:pt-20 pb-14 sm:pb-16 lg:pb-20">
     <div class="absolute -top-24 -right-24 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-tertiary-fixed/20 rounded-full blur-3xl pointer-events-none">
     </div>
@@ -34,7 +34,7 @@
           </a>
 
           <a href="https://wa.me/40742638613" target="_blank" rel="noopener noreferrer"
-            class="w-full sm:w-[210px] lg:w-auto inline-flex items-center justify-center whitespace-nowrap border border-primary/20 text-primary px-5 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-primary hover:text-on-primary transition-all">
+            class="cursor-pointer w-full sm:w-[210px] lg:w-auto inline-flex items-center justify-center whitespace-nowrap bg-white text-primary border border-primary/10 px-5 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
             WhatsApp
           </a>
         </div>
@@ -45,143 +45,79 @@
   <section class="py-16 sm:py-20 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+
         <div appRevealOnScroll [delay]="100"
-          class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg shadow-sm border border-outline-variant/10 hover:border-primary/20 transition-all group">
-          <div
-            class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+          class="bg-[#f6f6f4] p-6 sm:p-8 xl:p-6 2xl:p-8 rounded-lg shadow-sm border border-[#ebeae6] hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-[#ecebe7] text-[#5f6b55] rounded-full flex items-center justify-center mb-5 sm:mb-6">
             <span class="material-symbols-outlined">location_on</span>
           </div>
-          <h3 class="text-lg font-bold mb-2">Adresă</h3>
-          <p class="text-on-surface-variant font-light text-sm sm:text-base">Strada Brașovului Nr. 100, Brașov</p>
+
+          <h3 class="text-lg font-bold mb-2 text-[#2d2a26]">Adresă</h3>
+
+          <p class="text-[#6e6a64] font-light text-sm sm:text-base">
+            Strada Brașovului Nr. 100, Brașov
+          </p>
         </div>
 
         <div appRevealOnScroll [delay]="180"
-          class="bg-surface-container-low p-6 sm:p-8 lg:p-10 rounded-lg flex flex-col justify-between">
+          class="bg-[#dce6d6] p-6 sm:p-8 xl:p-6 2xl:p-8 rounded-lg shadow-sm border border-[#cbd8c5] hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300 flex flex-col justify-between">
           <div>
             <div
-              class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5 sm:mb-6">
+              class="w-12 h-12 bg-[#eef4ea] text-[#526247] rounded-full flex items-center justify-center mb-5 sm:mb-6">
               <span class="material-symbols-outlined">call</span>
             </div>
-            <h3 class="text-lg font-bold mb-2">Telefon &amp; WhatsApp</h3>
-            <p class="text-on-surface-variant font-light mb-4 text-sm sm:text-base">+40 742 638 613</p>
+
+            <h3 class="text-lg font-bold mb-2 text-[#2d2a26]">Telefon</h3>
+
+            <p class="text-[#5f675c] font-light mb-4 text-sm sm:text-base">
+              +40 742 638 613
+            </p>
           </div>
-          <a class="text-primary font-bold flex items-center group text-sm sm:text-base"
+
+          <a class="cursor-pointer text-[#526247] font-bold inline-flex items-center gap-2 text-sm sm:text-base group"
             href="https://wa.me/40742638613" target="_blank" rel="noopener noreferrer">
             Trimite mesaj
-            <span
-              class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">arrow_forward</span>
+            <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">
+              arrow_forward
+            </span>
           </a>
         </div>
 
         <div appRevealOnScroll [delay]="260"
-          class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-lg shadow-sm border border-outline-variant/10">
-          <div class="w-12 h-12 bg-primary/5 text-primary rounded-full flex items-center justify-center mb-5 sm:mb-6">
+          class="bg-[#5f6f55] p-6 sm:p-8 xl:p-6 2xl:p-8 rounded-lg shadow-sm border border-[#53624a] hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-white/30 transition-all duration-300">
+          <div class="w-12 h-12 bg-white/15 text-white rounded-full flex items-center justify-center mb-5 sm:mb-6">
             <span class="material-symbols-outlined">mail</span>
           </div>
-          <h3 class="text-lg font-bold mb-2">Email</h3>
-          <p class="text-on-surface-variant font-light text-sm sm:text-base break-words">contact@breathofsilence.ro</p>
-        </div>
 
-        <div appRevealOnScroll [delay]="340"
-          class="bg-primary text-on-primary p-6 sm:p-8 lg:p-10 rounded-lg hero-gradient">
-          <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-5 sm:mb-6">
-            <span class="material-symbols-outlined">schedule</span>
-          </div>
-          <h3 class="text-lg font-bold mb-4">Program</h3>
-          <ul class="space-y-2 text-sm font-light opacity-90">
-            <li class="flex justify-between gap-4"><span>Luni - Vineri</span> <span>10:00 - 20:00</span></li>
-            <li class="flex justify-between gap-4"><span>Sâmbătă - Duminică</span> <span>Închis</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+          <h3 class="text-lg font-bold mb-2 text-white">Email</h3>
 
-  <section class="bg-surface-container-low py-16 sm:py-20 lg:py-28 overflow-hidden relative">
-    <div
-      class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8 grid grid-cols-1 xl:grid-cols-12 gap-12 sm:gap-14 lg:gap-16 items-start">
-      <div class="xl:col-span-5 space-y-8 sm:space-y-10 lg:space-y-12">
-        <div>
-          <h2 appRevealOnScroll [delay]="100"
-            class="text-2xl sm:text-3xl lg:text-4xl font-serif mb-6 sm:mb-8 leading-tight">
-            Cum poți face o programare?
-          </h2>
-          <p appRevealOnScroll [delay]="180"
-            class="text-on-surface-variant font-light leading-relaxed text-base sm:text-lg">
-            Prețuim timpul și liniștea ta. Procesul nostru de rezervare este creat pentru a fi cât mai simplu și empatic
-            posibil.
+          <p
+            class="text-white/80 font-light text-[13px] sm:text-sm xl:text-[13px] 2xl:text-sm whitespace-nowrap overflow-hidden text-ellipsis">
+            contact@breathofsilence.ro
           </p>
         </div>
 
-        <div class="space-y-6 sm:space-y-8">
-          <div appRevealOnScroll [delay]="260" class="flex gap-4 sm:gap-6">
-            <span class="text-2xl sm:text-3xl font-serif text-tertiary-container shrink-0">01</span>
-            <div>
-              <h4 class="font-bold text-base sm:text-lg mb-2">Alege metoda preferată</h4>
-              <p class="text-on-surface-variant text-sm font-light">
-                Fie că preferi un apel telefonic rapid, un mesaj pe WhatsApp sau completarea formularului alăturat,
-                suntem pregătiți să îți răspundem.
-              </p>
-            </div>
+        <div appRevealOnScroll [delay]="340"
+          class="bg-[#e8dac8] p-6 sm:p-8 xl:p-6 2xl:p-8 rounded-lg shadow-sm border border-[#dccab5] hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-[#f4eadf] text-[#4f4439] rounded-full flex items-center justify-center mb-5 sm:mb-6">
+            <span class="material-symbols-outlined">schedule</span>
           </div>
 
-          <div appRevealOnScroll [delay]="340" class="flex gap-4 sm:gap-6">
-            <span class="text-2xl sm:text-3xl font-serif text-tertiary-container shrink-0">02</span>
-            <div>
-              <h4 class="font-bold text-base sm:text-lg mb-2">Confirmarea</h4>
-              <p class="text-on-surface-variant text-sm font-light">
-                Vei primi o confirmare a detaliilor și instrucțiunile necesare pentru prima ta vizită în sanctuarul
-                nostru.
-              </p>
-            </div>
-          </div>
+          <h3 class="text-lg font-bold mb-4 text-[#2d2a26]">Program</h3>
+
+          <ul class="space-y-2 text-sm text-[#6c6057] font-light">
+            <li class="flex justify-between gap-4">
+              <span>L-V</span>
+              <span>10:00 - 20:00</span>
+            </li>
+
+            <li class="flex justify-between gap-4">
+              <span>S-D</span>
+              <span>Închis</span>
+            </li>
+          </ul>
         </div>
 
-        <div appRevealOnScroll [delay]="420"
-          class="p-6 sm:p-8 bg-surface-container-lowest rounded-lg border border-outline-variant/20 italic text-on-surface-variant font-light text-sm sm:text-base">
-          "Sănătatea nu este doar absența bolii, ci o stare de armonie deplină între minte, corp și suflet."
-        </div>
-      </div>
-
-      <div appRevealOnScroll [delay]="180"
-        class="xl:col-span-7 bg-surface-container-lowest p-6 sm:p-8 lg:p-10 xl:p-12 rounded-xl shadow-2xl shadow-primary/5">
-        <form class="space-y-6 sm:space-y-8">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-            <div class="space-y-2">
-              <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Nume
-                Complet</label>
-              <input
-                class="w-full bg-surface-variant/30 border-none rounded-lg px-5 sm:px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none"
-                placeholder="Ex: Maria Popescu" type="text" />
-            </div>
-
-            <div class="space-y-2">
-              <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Telefon</label>
-              <input
-                class="w-full bg-surface-variant/30 border-none rounded-lg px-5 sm:px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none"
-                placeholder="07xx xxx xxx" type="tel" />
-            </div>
-          </div>
-
-          <div class="space-y-2">
-            <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Email</label>
-            <input
-              class="w-full bg-surface-variant/30 border-none rounded-lg px-5 sm:px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none"
-              placeholder="nume@exemplu.ro" type="email" />
-          </div>
-
-          <div class="space-y-2">
-            <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Mesajul tău</label>
-            <textarea
-              class="w-full bg-surface-variant/30 border-none rounded-lg px-5 sm:px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none"
-              placeholder="Cum te putem ajuta?" rows="4"></textarea>
-          </div>
-
-          <button
-            class="w-full inline-flex items-center justify-center bg-primary text-on-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
-            Trimite mesajul
-          </button>
-        </form>
       </div>
     </div>
   </section>
@@ -233,7 +169,7 @@
               </a>
 
               <a href="tel:+40742638613"
-                class="w-full sm:w-auto inline-flex items-center justify-center border border-primary/20 text-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-primary hover:text-on-primary transition-all">
+                class="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center border border-primary/20 text-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all shadow-xl shadow-primary/10">
                 <span class="material-symbols-outlined mr-2">call</span>
                 Sună acum
               </a>
@@ -261,55 +197,88 @@
     </div>
   </section>
 
-  <section class="py-16 sm:py-20 lg:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
-      <div class="text-center mb-12 sm:mb-16 lg:mb-20">
-        <h2 appRevealOnScroll [delay]="100" class="text-2xl sm:text-3xl lg:text-4xl font-serif mb-4">
+  <section class="bg-surface-container-low py-16 sm:py-20 lg:py-28 relative overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-tertiary-fixed/20 rounded-full blur-3xl pointer-events-none">
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-12 lg:mb-16">
+        <span appRevealOnScroll [delay]="80"
+          class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-5">
           Întrebări frecvente
+        </span>
+
+        <h2 appRevealOnScroll [delay]="100" class="text-2xl sm:text-3xl lg:text-4xl font-serif mb-5">
+          Răspunsuri rapide pentru programare
         </h2>
-        <div appRevealOnScroll [delay]="180" class="w-20 h-1 bg-tertiary-fixed-dim mx-auto rounded-full"></div>
+
+        <p appRevealOnScroll [delay]="160"
+          class="text-sm sm:text-base text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+          Am adunat cele mai importante informații ca să știi exact cum ne poți contacta și ce urmează după programare.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-10 lg:gap-y-12">
-        <div appRevealOnScroll [delay]="120" class="space-y-4">
-          <h4 class="text-lg font-bold flex items-center">
-            <span class="w-2 h-2 rounded-full bg-primary mr-3"></span>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
+        <div appRevealOnScroll [delay]="120"
+          class="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-outline-variant/10 shadow-sm hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
+            <span class="material-symbols-outlined">event_available</span>
+          </div>
+
+          <h4 class="text-lg sm:text-xl font-bold mb-3">
             Cum fac o programare?
           </h4>
-          <p class="text-on-surface-variant font-light pl-5 text-sm sm:text-base">
+
+          <p class="text-on-surface-variant font-light leading-relaxed text-sm sm:text-base">
             Poți folosi formularul de pe site, ne poți suna direct sau ne poți scrie pe WhatsApp. Recomandăm WhatsApp
             pentru cel mai rapid răspuns.
           </p>
         </div>
 
-        <div appRevealOnScroll [delay]="200" class="space-y-4">
-          <h4 class="text-lg font-bold flex items-center">
-            <span class="w-2 h-2 rounded-full bg-primary mr-3"></span>
+        <div appRevealOnScroll [delay]="200"
+          class="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-outline-variant/10 shadow-sm hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
+            <span class="material-symbols-outlined">schedule</span>
+          </div>
+
+          <h4 class="text-lg sm:text-xl font-bold mb-3">
             Cât durează o ședință?
           </h4>
-          <p class="text-on-surface-variant font-light pl-5 text-sm sm:text-base">
+
+          <p class="text-on-surface-variant font-light leading-relaxed text-sm sm:text-base">
             O ședință standard durează între 50 și 60 de minute, în funcție de nevoile specifice identificate în timpul
             evaluării inițiale.
           </p>
         </div>
 
-        <div appRevealOnScroll [delay]="280" class="space-y-4">
-          <h4 class="text-lg font-bold flex items-center">
-            <span class="w-2 h-2 rounded-full bg-primary mr-3"></span>
+        <div appRevealOnScroll [delay]="280"
+          class="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-outline-variant/10 shadow-sm hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
+            <span class="material-symbols-outlined">location_on</span>
+          </div>
+
+          <h4 class="text-lg sm:text-xl font-bold mb-3">
             Unde este locația?
           </h4>
-          <p class="text-on-surface-variant font-light pl-5 text-sm sm:text-base">
+
+          <p class="text-on-surface-variant font-light leading-relaxed text-sm sm:text-base">
             Ne aflăm pe Strada Brașovului nr. 100, Brașov. Te așteptăm într-un spațiu calm și primitor, dedicat stării
             tale de bine.
           </p>
         </div>
 
-        <div appRevealOnScroll [delay]="360" class="space-y-4">
-          <h4 class="text-lg font-bold flex items-center">
-            <span class="w-2 h-2 rounded-full bg-primary mr-3"></span>
+        <div appRevealOnScroll [delay]="360"
+          class="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-outline-variant/10 shadow-sm hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
+            <span class="material-symbols-outlined">chat</span>
+          </div>
+
+          <h4 class="text-lg sm:text-xl font-bold mb-3">
             Pot lua legătura pe WhatsApp?
           </h4>
-          <p class="text-on-surface-variant font-light pl-5 text-sm sm:text-base">
+
+          <p class="text-on-surface-variant font-light leading-relaxed text-sm sm:text-base">
             Desigur! Este metoda noastră preferată de comunicare pentru a gestiona programările în mod eficient și
             discret.
           </p>
@@ -318,36 +287,44 @@
     </div>
   </section>
 
-  <section class="py-16 sm:py-20 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
-      <div appRevealOnScroll [delay]="120"
-        class="bg-primary text-on-primary rounded-xl p-8 sm:p-12 lg:p-16 hero-gradient relative overflow-hidden text-center">
-        <div class="relative z-10 space-y-6 sm:space-y-8">
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif">Începe călătoria către echilibru</h2>
-          <p class="text-base sm:text-lg font-light opacity-90 max-w-2xl mx-auto">
-            Suntem aici să te sprijinim. Alege metoda care ți se potrivește cel mai bine și hai să vorbim.
-          </p>
+  <section class="py-16 sm:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
+    <div class="bg-primary text-surface rounded-xl p-8 sm:p-12 lg:p-16 text-center relative overflow-hidden">
+      <div class="relative z-10">
+        <h2 appRevealOnScroll [delay]="100"
+          class="text-3xl sm:text-4xl lg:text-5xl font-serif mb-6 sm:mb-8 max-w-3xl mx-auto">
+          Începe călătoria către echilibru
+        </h2>
 
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-2 sm:pt-4">
-            <a href="tel:+40742638613"
-              class="w-full sm:w-auto inline-flex items-center justify-center bg-surface-container-lowest text-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all">
-              <span class="material-symbols-outlined mr-2">phone_in_talk</span>
-              Sună acum
-            </a>
+        <p appRevealOnScroll [delay]="180"
+          class="text-base sm:text-lg lg:text-xl mb-8 sm:mb-12 opacity-90 max-w-2xl mx-auto">
+          Suntem aici să te sprijinim. Alege metoda care ți se potrivește cel mai bine și hai să vorbim.
+        </p>
 
-            <a href="https://wa.me/40742638613" target="_blank" rel="noopener noreferrer"
-              class="w-full sm:w-auto inline-flex items-center justify-center bg-secondary-container text-on-secondary-container px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all">
-              <span class="material-symbols-outlined mr-2">chat</span>
-              Scrie-ne pe WhatsApp
-            </a>
-          </div>
+        <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4" appRevealOnScroll [delay]="240">
+          <a href="tel:+40742638613"
+            class="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center bg-surface text-primary px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all">
+            <span class="material-symbols-outlined mr-2">phone_in_talk</span>
+            Sună acum
+          </a>
+
+          <a href="https://wa.me/40742638613" target="_blank" rel="noopener noreferrer"
+            class="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center border border-surface/30 text-surface px-5 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:scale-102 active:scale-95 transition-all">
+            <span class="material-symbols-outlined mr-2">chat</span>
+            Scrie-ne pe WhatsApp
+          </a>
         </div>
+      </div>
 
-        <div class="absolute -top-24 -right-24 w-72 sm:w-96 h-72 sm:h-96 bg-white/5 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-24 -left-24 w-72 sm:w-96 h-72 sm:h-96 bg-white/5 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <svg height="100%" viewBox="0 0 1000 1000" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,500 C200,300 400,700 600,500 C800,300 1000,500 1000,500 L1000,1000 L0,1000 Z"
+            fill="currentColor"></path>
+        </svg>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </main>
 
 <app-footer></app-footer>

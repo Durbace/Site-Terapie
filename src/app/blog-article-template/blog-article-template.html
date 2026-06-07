@@ -148,16 +148,18 @@
             <section *ngFor="let section of articleData.sections; let i = index" [attr.id]="section.id"
                 appRevealOnScroll [delay]="120 + (i * 80)" class="scroll-mt-28 sm:scroll-mt-32 space-y-5 sm:space-y-6">
 
-                <h2 *ngIf="section.level !== 'h3'" class="text-2xl sm:text-3xl text-primary font-serif">
+                <h2 *ngIf="section.level !== 'h3'"
+                    class="text-2xl sm:text-3xl text-primary font-serif text-center lg:text-left">
                     {{ section.title }}
                 </h2>
 
-                <h3 *ngIf="section.level === 'h3'" class="text-xl sm:text-2xl text-secondary font-serif">
+                <h3 *ngIf="section.level === 'h3'"
+                    class="text-xl sm:text-2xl text-secondary font-serif text-center lg:text-left">
                     {{ section.title }}
                 </h3>
 
                 <p *ngFor="let paragraph of section.paragraphs"
-                    class="text-on-surface-variant leading-relaxed text-base sm:text-lg">
+                    class="text-on-surface-variant leading-relaxed text-base sm:text-lg max-w-3xl mx-auto lg:mx-0 text-left">
                     {{ paragraph }}
                 </p>
 
@@ -182,7 +184,7 @@
                     </p>
                 </div>
 
-                <ul *ngIf="section.bullets?.length" class="space-y-3 sm:space-y-4">
+                <ul *ngIf="section.bullets?.length" class="space-y-3 sm:space-y-4 max-w-3xl mx-auto lg:mx-0 text-left">
                     <li *ngFor="let bullet of section.bullets"
                         class="flex items-start gap-3 text-on-surface-variant leading-relaxed text-sm sm:text-base">
                         <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
@@ -190,7 +192,8 @@
                     </li>
                 </ul>
 
-                <ul *ngIf="section.numberedItems?.length" class="space-y-3 sm:space-y-4">
+                <ul *ngIf="section.numberedItems?.length"
+                    class="space-y-3 sm:space-y-4 max-w-3xl mx-auto lg:mx-0 text-left">
                     <li *ngFor="let item of section.numberedItems; let i = index"
                         class="flex items-start gap-3 sm:gap-4">
                         <span
@@ -207,8 +210,9 @@
 
             <!-- Key takeaways -->
             <div appRevealOnScroll [delay]="120"
-                class="bg-primary-container text-on-primary-container p-6 sm:p-8 lg:p-12 rounded-lg shadow-xl shadow-primary/10">
-                <h2 class="text-2xl sm:text-3xl font-serif mb-6 sm:mb-8 flex items-center gap-3">
+                class="bg-primary-container text-on-primary-container p-6 sm:p-8 lg:p-12 rounded-lg shadow-xl shadow-primary/10 text-center lg:text-left">
+                <h2
+                    class="text-2xl sm:text-3xl font-serif mb-6 sm:mb-8 flex items-center justify-center lg:justify-start gap-3">
                     <span class="material-symbols-outlined">auto_awesome</span>
                     Concluzii esențiale
                 </h2>
@@ -225,13 +229,14 @@
             </div>
 
             <!-- FAQ -->
-            <div appRevealOnScroll [delay]="120" class="pt-12 sm:pt-16 border-t border-outline-variant">
+            <div appRevealOnScroll [delay]="120"
+                class="pt-12 sm:pt-16 border-t border-outline-variant text-center lg:text-left">
                 <h2 class="text-2xl sm:text-3xl text-primary mb-8 sm:mb-10 font-serif">Întrebări frecvente</h2>
 
                 <div class="space-y-4 sm:space-y-6">
                     <details *ngFor="let item of articleData.faq"
                         class="group bg-surface-container-lowest rounded-lg p-5 sm:p-6 border border-transparent hover:border-outline-variant transition-all duration-300">
-                        <summary class="flex justify-between items-start gap-4 cursor-pointer list-none">
+                        <summary class="flex justify-between items-start gap-4 cursor-pointer list-none text-left">
                             <span class="font-bold text-base sm:text-lg text-on-surface">{{ item.question }}</span>
                             <span
                                 class="material-symbols-outlined group-open:rotate-180 transition-transform shrink-0">expand_more</span>
@@ -290,7 +295,8 @@
 
     <!-- Related articles -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8 mt-20 sm:mt-24 lg:mt-32">
-        <h2 appRevealOnScroll [delay]="100" class="text-2xl sm:text-3xl text-primary mb-8 sm:mb-12 font-serif">
+        <h2 appRevealOnScroll [delay]="100"
+            class="text-2xl sm:text-3xl text-primary mb-8 sm:mb-12 font-serif text-center lg:text-left">
             Articole similare
         </h2>
 
@@ -303,7 +309,7 @@
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
 
-                <div class="p-6 sm:p-8 flex flex-col flex-1">
+                <div class="p-6 sm:p-8 flex flex-col flex-1 text-center lg:text-left">
                     <span class="text-xs font-bold uppercase tracking-widest text-secondary mb-3 block">
                         {{ related.category }}
                     </span>
@@ -313,7 +319,7 @@
                     </h3>
 
                     <a [routerLink]="related.link"
-                        class="mt-auto text-sm font-bold text-on-surface flex items-center gap-2 group-hover:gap-4 transition-all">
+                        class="mt-auto text-sm font-bold text-on-surface flex items-center justify-center lg:justify-start gap-2 group-hover:gap-4 transition-all">
                         Citește mai mult
                         <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>

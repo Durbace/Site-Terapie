@@ -277,8 +277,9 @@
     <!-- Services Section -->
     <section class="py-16 sm:py-20 lg:py-28" id="services">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between md:items-end mb-10 sm:mb-12 lg:mb-16 gap-6 sm:gap-8">
-                <div class="max-w-2xl">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center md:items-end mb-10 sm:mb-12 lg:mb-16 gap-6 sm:gap-8 text-center md:text-left">
+                <div class="max-w-2xl mx-auto md:mx-0">
                     <h2 appRevealOnScroll class="text-2xl sm:text-3xl lg:text-5xl font-serif mb-4 sm:mb-6">
                         Alege terapia potrivită ție
                     </h2>
@@ -286,7 +287,7 @@
                         Fiecare sesiune este o investiție în sănătatea și longevitatea corpului tău.
                     </p>
                 </div>
-                <div class="pb-2">
+                <div class="pb-2 text-center md:text-right">
                     <span class="text-sm font-bold tracking-widest text-primary uppercase">Meniu Servicii</span>
                 </div>
             </div>
@@ -450,111 +451,117 @@
 
     <!-- Contact Section -->
     <section class="py-16 sm:py-20 lg:py-28" id="contact">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
-        <!-- Header -->
-        <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-12 lg:mb-16">
-            <span appRevealOnScroll [delay]="80"
-                class="text-primary font-medium tracking-widest uppercase text-[10px] sm:text-xs mb-4 block">
-                Contact
-            </span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8">
+            <!-- Header -->
+            <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-12 lg:mb-16">
+                <span appRevealOnScroll [delay]="80"
+                    class="text-primary font-medium tracking-widest uppercase text-[10px] sm:text-xs mb-4 block">
+                    Contact
+                </span>
 
-            <h2 appRevealOnScroll [delay]="100"
-                class="text-2xl sm:text-3xl lg:text-4xl font-serif mb-5 sm:mb-6">
-                Unde ne găsești
-            </h2>
+                <h2 appRevealOnScroll [delay]="100" class="text-2xl sm:text-3xl lg:text-4xl font-serif mb-5 sm:mb-6">
+                    Unde ne găsești
+                </h2>
 
-            <p appRevealOnScroll [delay]="180"
-                class="text-sm sm:text-base text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
-                Te așteptăm într-un spațiu calm și primitor, dedicat echilibrului, relaxării și recuperării.
-                Ne poți contacta telefonic, pe WhatsApp sau prin email.
-            </p>
-        </div>
-
-        <!-- Contact cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6 mb-8 sm:mb-10 lg:mb-12">
-            <div appRevealOnScroll [delay]="0"
-                class="bg-surface-container-lowest p-6 sm:p-8 rounded-lg border border-outline-variant/10 shadow-sm hover:shadow-lg transition-all">
-                <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
-                    <span class="material-symbols-outlined">location_on</span>
-                </div>
-
-                <h3 class="text-lg font-bold mb-2">Adresă</h3>
-                <p class="text-on-surface-variant text-sm sm:text-base">
-                    Strada Brașovului Nr. 100, Brașov
+                <p appRevealOnScroll [delay]="180"
+                    class="text-sm sm:text-base text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+                    Te așteptăm într-un spațiu calm și primitor, dedicat echilibrului, relaxării și recuperării.
+                    Ne poți contacta telefonic, pe WhatsApp sau prin email.
                 </p>
             </div>
 
-            <div appRevealOnScroll [delay]="100"
-                class="bg-surface-container-lowest p-6 sm:p-8 rounded-lg border border-outline-variant/10 shadow-sm hover:shadow-lg transition-all">
-                <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
-                    <span class="material-symbols-outlined">call</span>
+            <!-- Contact cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6 mb-8 sm:mb-10 lg:mb-12">
+                <div appRevealOnScroll [delay]="0"
+                    class="bg-surface-container-lowest p-6 sm:p-8 rounded-lg border border-outline-variant/10 shadow-sm hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+
+                    <h3 class="text-lg font-bold mb-2">Adresă</h3>
+
+                    <p class="text-on-surface-variant text-sm sm:text-base">
+                        Strada Brașovului Nr. 100, Brașov
+                    </p>
                 </div>
 
-                <h3 class="text-lg font-bold mb-2">Telefon</h3>
-                <p class="text-on-surface-variant text-sm sm:text-base mb-4">
-                    +40 742 638 613
-                </p>
+                <div appRevealOnScroll [delay]="100"
+                    class="bg-surface-container-lowest p-6 sm:p-8 rounded-lg border border-outline-variant/10 shadow-sm hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
+                        <span class="material-symbols-outlined">call</span>
+                    </div>
 
-                <a href="tel:+40742638613"
-                    class="text-primary font-bold inline-flex items-center gap-2 text-sm sm:text-base">
-                    Sună acum
-                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                </a>
+                    <h3 class="text-lg font-bold mb-2">Telefon</h3>
+
+                    <p class="text-on-surface-variant text-sm sm:text-base mb-4">
+                        +40 742 638 613
+                    </p>
+
+                    <a href="tel:+40742638613"
+                        class="cursor-pointer text-primary font-bold inline-flex items-center gap-2 text-sm sm:text-base">
+                        Sună acum
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                </div>
+
+                <div appRevealOnScroll [delay]="200"
+                    class="bg-surface-container-lowest p-6 sm:p-8 rounded-lg border border-outline-variant/10 shadow-sm hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
+                        <span class="material-symbols-outlined">mail</span>
+                    </div>
+
+                    <h3 class="text-lg font-bold mb-2">Email</h3>
+
+                    <p class="text-on-surface-variant text-sm sm:text-base break-words">
+                        contact@breathofsilence.ro
+                    </p>
+                </div>
+
+                <div appRevealOnScroll [delay]="300"
+                    class="bg-surface-container-lowest p-6 sm:p-8 rounded-lg border border-outline-variant/10 shadow-sm hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
+                        <span class="material-symbols-outlined">schedule</span>
+                    </div>
+
+                    <h3 class="text-lg font-bold mb-4">Program</h3>
+
+                    <ul class="space-y-2 text-sm text-on-surface-variant">
+                        <li class="flex justify-between gap-4">
+                            <span>L-V</span>
+                            <span>10:00 - 20:00</span>
+                        </li>
+
+                        <li class="flex justify-between gap-4">
+                            <span>S-D</span>
+                            <span>Închis</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div appRevealOnScroll [delay]="200"
-                class="bg-surface-container-lowest p-6 sm:p-8 rounded-lg border border-outline-variant/10 shadow-sm hover:shadow-lg transition-all">
-                <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-5">
-                    <span class="material-symbols-outlined">mail</span>
+            <!-- Map below -->
+            <div appRevealOnScroll [delay]="180"
+                class="h-[320px] sm:h-[400px] md:h-[460px] lg:h-[520px] bg-surface-container rounded-xl overflow-hidden relative shadow-inner border border-outline-variant/10">
+                <iframe id="mapFrame" class="w-full h-full grayscale"
+                    src="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <button type="button"
+                        onclick="document.getElementById('mapFrame').src='https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed'"
+                        class="bg-primary text-on-primary p-4 rounded-full animate-bounce shadow-lg pointer-events-auto hover:scale-110 transition-all"
+                        aria-label="Centrează harta pe locație">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </button>
                 </div>
-
-                <h3 class="text-lg font-bold mb-2">Email</h3>
-                <p class="text-on-surface-variant text-sm sm:text-base break-words">
-                    contact@breathofsilence.ro
-                </p>
-            </div>
-
-            <div appRevealOnScroll [delay]="300"
-                class="bg-primary text-on-primary p-6 sm:p-8 rounded-lg hero-gradient shadow-lg">
-                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-5">
-                    <span class="material-symbols-outlined">schedule</span>
-                </div>
-
-                <h3 class="text-lg font-bold mb-4">Program</h3>
-
-                <ul class="space-y-2 text-sm opacity-90">
-                    <li class="flex justify-between gap-4">
-                        <span>L-V</span>
-                        <span>10:00 - 20:00</span>
-                    </li>
-
-                    <li class="flex justify-between gap-4">
-                        <span>S-D</span>
-                        <span>Închis</span>
-                    </li>
-                </ul>
             </div>
         </div>
-
-        <!-- Map below -->
-        <div appRevealOnScroll [delay]="180"
-            class="h-[320px] sm:h-[400px] md:h-[460px] lg:h-[520px] bg-surface-container rounded-xl overflow-hidden relative shadow-inner border border-outline-variant/10">
-            <iframe id="mapFrame" class="w-full h-full grayscale"
-                src="https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-
-            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <button type="button"
-                    onclick="document.getElementById('mapFrame').src='https://www.google.com/maps?q=Strada+Brasovului+nr+100,+Brasov,+Romania&output=embed'"
-                    class="bg-primary text-on-primary p-4 rounded-full animate-bounce shadow-lg pointer-events-auto hover:scale-110 transition-all"
-                    aria-label="Centrează harta pe locație">
-                    <span class="material-symbols-outlined">location_on</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 </main>
 
 <!-- Footer -->
